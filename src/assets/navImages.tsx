@@ -7,7 +7,7 @@ import noteHover from './nav/3-note-hover.svg';
 import mail from './nav/4-mail.svg';
 import mailHover from './nav/4-mail-hover.svg';
 
-export const navAssets = {
+export const navImage = {
     computer,
     computerHover,
     art,

@@ -21,9 +21,7 @@
 }
 
 * {
-  
-  /* font-family: "Tiny5", sans-serif;
-  font-family: "Pixelify Sans", sans-serif; */
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,12 +32,69 @@
 }
 
 body {
-  /* color: var(--foreground); */
-  /* background: var(--background); */
   font-family: "roc-grotesk", sans-serif;
+  /* font-family: "Tiny5", sans-serif;
+  font-family: "Pixelify Sans", sans-serif; */
   
 }
 
-p {
+hr {
+  margin-bottom: 1rem;
+}
+
+p, ul {
   max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size:1.7rem;
+  line-height: 110%;
+}
+
+/* Small screens (sm) - min-width: 640px */
+@media (min-width: 640px) {
+  h1 {
+    font-size: 1.85rem; 
+    p {
+      max-width: 650px;
+    }
+  }
+}
+
+/* Medium screens (md) - min-width: 768px */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Equivalent to Tailwind's text-4xl */
+    max-width: 650px;
+  }
+  p {
+    max-width: 650px;
+  }
+}
+
+/* Large screens (lg) - min-width: 1024px */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem; /* Equivalent to Tailwind's text-5xl */
+    max-width: 650px;
+  }
+}
+
+/* Extra Large screens (xl) - min-width: 1280px */
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 2.5rem; /* Equivalent to Tailwind's text-6xl */
+    max-width: 800px;
+  }
+  
+}
+
+/* Extra Large screens (xl) - min-width: 1280px */
+@media (min-width: 1536px) {
+  h1 {
+    font-size: 2.75rem; /* Equivalent to Tailwind's text-6xl */
+    max-width: 800px;
+  }
+  
 }

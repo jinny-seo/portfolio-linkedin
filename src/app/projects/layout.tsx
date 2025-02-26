@@ -1,13 +1,12 @@
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
     return (
-      <div className="p-10 bg-gray-100 min-h-screen">
+      <div className=" min-h-screen">
         {/* Shared Navbar or Sidebar */}
-        <nav className="mb-6 bg-purple-500 text-white p-4 text-center">
-          <h1 className="text-2xl font-bold">Projects</h1>
+        <nav className="">
         </nav>
   
         {/* Render the unique page content */}
-        <main className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <main className="bg-white max-w-[650px] lg:max-w-[800px] 2xl:max-w-[1024px] mx-auto rounded-md shadow-lg">
           {children}
         </main>
       </div>

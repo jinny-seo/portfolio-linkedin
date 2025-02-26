@@ -1,45 +1,16 @@
+import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import Image, { StaticImageData} from "next/image";
 
 export default function abProject() {
   
     return (
       <div className="">
+        <CaseStudyHeader/>
         
         
-        <div className="grid p-12 gap-4">
-          {/* Title & description */}
-          <h1 className="text-4xl font-PixelifySans">Transforming AmerisourceBergen's cost-savings platform</h1>
-          
 
-          <div className="grid">
-            <div className="flex flex-col gap-4 text-xl py-8">
-            <p className="max-w-full">I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p> 
-            <p className="max-w-full">Despite the push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
-            </div>
-            {/* Background */}
-            <div className="grid grid-cols-3 py-6">
-            <div className="w-full">
-            <h3 className="text-lg font-bold">Timeline</h3>
-            <p>March 2021 – December 2021 (10 months)</p>
-            </div>
-              <div className="w-full">
-                <h3 className="text-lg font-bold">Team</h3>
-                <ul className="list-disc pl-5">
-                  <li>Sole designer (Me)</li>
-                  <li>Senior Director of Product Development</li>
-                  <li>Product Owner</li>
-                  <li>Engineering team of 6 developers</li>
-                </ul>
-              </div>
-              <div className="w-full">
-                <h3 className="text-lg font-bold ">My role</h3>
-                <p>Led end-to-end process from discovery to MVP launch</p>
-              </div>
-            </div>
-          </div>
-        </div>
         
-        <div className="grid p-10 gap-4">
+        <div className="grid gap-4">
           {/* Strategic initiative */}
           
           <h2 className="text-[1.8rem] font-PixelifySans w-full">Strategic initiative</h2>

@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: { 
+        RocGrotesk: ["roc-grotesk", 'sans-serif'],
+        Tiny5: ['Tiny5', 'sans-serif'],
+        PixelifySans: ['Pixelify Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],

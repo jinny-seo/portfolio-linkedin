@@ -35,7 +35,7 @@ export default function Home() {
           <h1>Work</h1>
           {projAssets.map(
             (project) => (
-              <div className="relative lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]  bg-yellow-500/50">
+              <div key={project.name} className="relative lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]  bg-yellow-500/50">
                 <div className="bg-red-500/50">
                   <Image src={project.image} alt={project.name}/>
                 </div>

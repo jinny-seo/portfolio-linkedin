@@ -37,4 +37,9 @@ body {
   /* color: var(--foreground); */
   /* background: var(--background); */
   font-family: "roc-grotesk", sans-serif;
+  
+}
+
+p {
+  max-width: 800px;
 }

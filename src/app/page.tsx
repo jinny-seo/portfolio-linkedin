@@ -38,7 +38,17 @@ export default function Home() {
         />
 
         <NavItem image={navItemAsset[0].image} label={navItemAsset[0].image}/>
-          <p>Save and see your changes instantly.</p>
+        <p>Save and see your changes instantly.</p>
+
+        <nav>
+          {navItemAsset.map(
+            (item) => (
+              <li key={item.label}>
+                <NavItem image={item.image} label={item.label} />
+              </li>
+            )
+          )}
+        </nav>
         
 
       </main>

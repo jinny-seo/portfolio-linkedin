@@ -31,7 +31,13 @@ export default function Home() {
         </div>
         <div id="work" className="h-[1000px]">
           <h1>Work</h1>
-          <div className="lg:mr-[300px] h-[400px] max-w-[1024px] 2xl:max-w-[1200px] bg-rose-500/50"></div> {/* Testing out content width */}
+          {/* Testing out content width */}
+          <div className="relative lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] h-[400px] max-w-[1024px]  bg-yellow-500/50">
+            <div className="w-full h-full bg-red-500/50"></div>
+            <div className="lg:absolute lg:top-1/2 lg:-right-[56px] xl:-right-[168px] w-[400px] xl:w-[480px] bg-blue-800/50">
+              <p className="p-8">Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives to products</p>
+            </div>
+          </div>
           <Image src={navImage.art} alt="" width={100} height={100} />
         </div>
         <div id="resume" className="h-[1000px]">

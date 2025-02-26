@@ -12,9 +12,10 @@ interface navItemProps {
     image: string | StaticImageData;
     imageHover: string | StaticImageData;
     size?: "lg" | "md" | "sm";
+    isActive?: boolean;
 }
 
-export const NavItem: React.FC<navItemProps> = ({ label, image, imageHover, link, size = "sm" }) => {
+export const NavItem: React.FC<navItemProps> = ({ label, image, imageHover, link, size = "sm", isActive }) => {
 
     const iconSize = {
         sm: 32,
@@ -24,7 +25,8 @@ export const NavItem: React.FC<navItemProps> = ({ label, image, imageHover, link
 
 
     return(
-        <div className="flex flex-col justify-center pt-1 w-[72px] h-[72px] rounded-[3px] bg-purple-200 hover:bg-purple-300 group">
+        <div className={`${isActive ? "bg-purple-300" : "bg-transparent"}
+            flex flex-col justify-center pt-1 w-[72px] h-[72px] rounded-[3px] hover:bg-purple-300 group`}>
             <a href={link} className="flex flex-col gap-1 items-center">
                 {/* Default image - Hide on hover */}
                 <Image src={image} alt={label} width={iconSize[size]} height={iconSize[size]} 

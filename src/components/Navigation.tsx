@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Image, { StaticImageData} from "next/image";
 import { navImage } from "../assets/navImages";
 import { NavItem } from "./NavItem";
+import { activeNavItem } from "../utils/activeNavItem"; // Import custom hook
+
 
 
 export const navItemAsset = [
@@ -30,6 +32,7 @@ export const navItemAsset = [
 ]
 
 export const Navigation = () => {
+    const activeSection = activeNavItem(["work", "resume", "contact"]);
     return(
         <nav className="w-fit rounded-[5px] bg-purple-400">
             <ul className="flex list-none gap-1 p-1">
@@ -41,7 +44,8 @@ export const Navigation = () => {
                         imageHover={item.imageHover} 
                         label={item.label}     
                         size="sm"
-                        link={ item.label === "home" ? "#" : `#${item.label}` } 
+                        link={ item.label === "home" ? "#" : `#${item.label}` }
+                        isActive={ item.label === activeSection}
                     />
                 </li>
                 )

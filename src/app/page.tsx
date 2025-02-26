@@ -37,17 +37,19 @@ export default function Home() {
           priority
         />
 
-        <NavItem image={navItemAsset[0].image} label={navItemAsset[0].image}/>
+        
         <p>Save and see your changes instantly.</p>
 
         <nav>
-          {navItemAsset.map(
-            (item) => (
-              <li key={item.label}>
-                <NavItem image={item.image} label={item.label} />
-              </li>
-            )
-          )}
+          <ul className="list-none pl-0">
+            {navItemAsset.map(
+              (item) => (
+                <li key={item.label}>
+                  <NavItem image={item.image} label={item.label} link={`#${item.label}`} size="sm"/>
+                </li>
+              )
+            )}
+          </ul>
         </nav>
         
 

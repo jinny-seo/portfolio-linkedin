@@ -38,7 +38,7 @@ export default function Home() {
           {projAssets.map(
             (project) => (
               <div key={project.name}>
-                <ProjectItem name={project.name} description={project.description} image={project.image} />
+                <ProjectItem name={project.name} date={project.date} description={project.description} link={project.link} image={project.image} />
               </div>
             )
           )}

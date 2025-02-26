@@ -24,7 +24,7 @@ export const NavItem: React.FC<navItemProps> = ({ label, image, imageHover, link
 
 
     return(
-        <div className="flex flex-col justify-center pt-1 min-w-[72px] min-h-[72px] rounded-[3px] bg-purple-200 hover:bg-purple-300 group">
+        <div className="flex flex-col justify-center pt-1 w-[72px] h-[72px] rounded-[3px] bg-purple-200 hover:bg-purple-300 group">
             <a href={link} className="flex flex-col gap-1 items-center">
                 {/* Default image - Hide on hover */}
                 <Image src={image} alt={label} width={iconSize[size]} height={iconSize[size]} 

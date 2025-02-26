@@ -31,18 +31,17 @@ export const navItemAsset = [
 
 export const Navigation = () => {
     return(
-
-<nav>
-<ul className="list-none pl-0 grid grid-cols-4 gap-2">
-  {navItemAsset.map(
-    (item) => (
-      <li key={item.label}>
-        <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
-      </li>
-    )
-  )}
-</ul>
-</nav>
+        <nav className="w-fit rounded-[5px] bg-purple-400">
+            <ul className="flex list-none gap-1 p-1">
+            {navItemAsset.map(
+                (item) => (
+                <li key={item.label}>
+                    <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
+                </li>
+                )
+            )}
+            </ul>
+        </nav>
 
 
 

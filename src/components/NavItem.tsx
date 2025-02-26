@@ -6,7 +6,7 @@ import { navImage } from "../assets/navImages";
 import { toTitleCase, toSentenceCase } from "@/utils/format";
 
 
-interface navItemProps {
+interface NavItemProps {
     link: string;
     label: string;
     image: string | StaticImageData;
@@ -15,7 +15,7 @@ interface navItemProps {
     isActive?: boolean;
 }
 
-export const NavItem: React.FC<navItemProps> = ({ label, image, imageHover, link, size = "sm", isActive }) => {
+export const NavItem: React.FC<NavItemProps> = ({ label, image, imageHover, link, size = "sm", isActive }) => {
 
     const iconSize = {
         sm: 32,

@@ -5,7 +5,7 @@ import { toSentenceCase } from "@/utils/format";
 
 export const CaseStudyHeader = () => {
     return(
-    <div className="grid gap-4 p-8 md:p-10 lg:p-16 xl:p-24 2xl:p-32">
+    <div className="grid gap-4 p-8 md:p-10 lg:p-16 xl:p-20 ">
         <h1 className="font-PixelifySans">Transforming a pharmaceutical cost-savings platform</h1>
         <div className="">
             <p className="text-md">

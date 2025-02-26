@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { navImage } from "../assets/navImages";
-import { NavItem } from "../components/Navigation";
+import { NavItem } from "../components/NavItem";
 
 export const navItemAsset = [
   {
@@ -41,11 +41,11 @@ export default function Home() {
         <p>Save and see your changes instantly.</p>
 
         <nav>
-          <ul className="list-none pl-0">
+          <ul className="list-none pl-0 grid grid-cols-4 gap-2">
             {navItemAsset.map(
               (item) => (
                 <li key={item.label}>
-                  <NavItem image={item.image} label={item.label} link={`#${item.label}`} size="sm"/>
+                  <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
                 </li>
               )
             )}

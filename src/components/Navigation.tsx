@@ -36,7 +36,13 @@ export const Navigation = () => {
             {navItemAsset.map(
                 (item) => (
                 <li key={item.label}>
-                    <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
+                    <NavItem 
+                        image={item.image} 
+                        imageHover={item.imageHover} 
+                        label={item.label}     
+                        size="sm"
+                        link={ item.label === "home" ? "#" : `#${item.label}` } 
+                    />
                 </li>
                 )
             )}

@@ -1,0 +1,50 @@
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
+import Image, { StaticImageData} from "next/image";
+import { navImage } from "../assets/navImages";
+import { NavItem } from "./NavItem";
+
+
+export const navItemAsset = [
+  {
+      label: "home",
+      image: navImage.computer,
+      imageHover: navImage.computerHover,
+  },
+  {
+      label: "work",
+      image: navImage.art,
+      imageHover: navImage.artHover,
+  },
+  {
+      label: "resume",
+      image: navImage.note,
+      imageHover: navImage.noteHover,
+  },
+  {
+      label: "contact",
+      image: navImage.mail,
+      imageHover: navImage.mailHover,
+  },
+]
+
+export const Navigation = () => {
+    return(
+
+<nav>
+<ul className="list-none pl-0 grid grid-cols-4 gap-2">
+  {navItemAsset.map(
+    (item) => (
+      <li key={item.label}>
+        <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
+      </li>
+    )
+  )}
+</ul>
+</nav>
+
+
+
+    );
+}

@@ -1,29 +1,8 @@
 import Image from "next/image";
 import { navImage } from "../assets/navImages";
 import { NavItem } from "../components/NavItem";
+import { Navigation } from "@/components/Navigation";
 
-export const navItemAsset = [
-  {
-      label: "home",
-      image: navImage.computer,
-      imageHover: navImage.computerHover,
-  },
-  {
-      label: "work",
-      image: navImage.art,
-      imageHover: navImage.artHover,
-  },
-  {
-      label: "resume",
-      image: navImage.note,
-      imageHover: navImage.noteHover,
-  },
-  {
-      label: "contact",
-      image: navImage.mail,
-      imageHover: navImage.mailHover,
-  },
-]
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -36,22 +15,12 @@ export default function Home() {
           height={38}
           priority
         />
+        <Navigation/>
 
         
         <p>Save and see your changes instantly.</p>
 
-        <nav>
-          <ul className="list-none pl-0 grid grid-cols-4 gap-2">
-            {navItemAsset.map(
-              (item) => (
-                <li key={item.label}>
-                  <NavItem image={item.image} imageHover={item.imageHover} label={item.label} link={`#${item.label}`} size="sm"/>
-                </li>
-              )
-            )}
-          </ul>
-        </nav>
-        
+
 
       </main>
     </div>

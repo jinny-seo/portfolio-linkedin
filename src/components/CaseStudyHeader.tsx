@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Image, { StaticImageData} from "next/image";
 import { toSentenceCase } from "@/utils/format";
+import { CardContainer } from "./CardContainer";
 
 interface CaseStudyData {
     title: string;
@@ -17,7 +18,7 @@ interface CaseStudyHeaderProps {
 
 export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
     return(
-    <div className="grid p-8 md:p-10 lg:p-16 xl:p-20 "> {/* <- Controls responsive padding on card, change this to <CardContainer> later? */}
+    <CardContainer>
         {/* Title & description */}
         <h1 className="font-PixelifySans mb-6">{data.title}</h1>
         <div className="">
@@ -66,7 +67,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                 </ul>
             </div>
         )}
-    </div>        
+    </CardContainer>        
     );
 }
 

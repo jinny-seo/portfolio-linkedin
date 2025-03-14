@@ -33,6 +33,14 @@ export default {
           lineHeight: "1.3",
           color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
         },
+        ".caption": {
+          marginTop: "0.75rem",
+          marginBottom: "1.5rem",
+          fontSize: "0.9rem",
+          lineHeight: "140%",
+          fontStyle: "italic",
+          color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
+        },
       });
     }),
   ],

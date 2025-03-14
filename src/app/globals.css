@@ -20,6 +20,10 @@
   --foreground: #171717;
 }
 
+.case-study-desc {
+  max-width: none;
+}
+
 body {
   font-family: "roc-grotesk", sans-serif;
   /* font-family: "Tiny5", sans-serif;
@@ -34,11 +38,13 @@ hr {
 p, ul {
   max-width: 650px;
   margin-bottom: 1rem;
+  
 }
 
 h1,h2,h3,h4,h5,h6 {
   line-height: 110%;
-  max-width: 650px;
+  
+  
 }
 
 h1 {
@@ -46,20 +52,23 @@ h1 {
 }
 h2 {
   font-size: 1.4rem; 
+  margin-bottom: 0.9rem;
 }
-
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem; 
+  margin-bottom: 0.9rem;
+  color: rgba(0,0,0,0.88)
+}
 
 /* Medium screens (md) - min-width: 768px */
 @media (min-width: 768px) {
   h1 {
     font-size: 2rem; 
-    max-width: 650px;
   }
   h2 {
     font-size: 1.5rem; 
-  }
-  p {
-    max-width: 650px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -69,7 +78,12 @@ h2 {
     font-size: 2.5rem; 
   }
   h2 {
-    font-size: 1.7rem; 
+    font-size: 1.6rem; 
+    margin-bottom: 1.1rem;
+  }
+  h3 {
+    font-size: 1.18rem; 
+    margin-bottom: 0.9rem;
   }
 }
 
@@ -77,9 +91,6 @@ h2 {
 @media (min-width: 1280px) {
   h1 {
     font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.75rem; 
   }
   
 }

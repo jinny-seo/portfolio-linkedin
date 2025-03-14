@@ -1,11 +1,33 @@
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import Image, { StaticImageData} from "next/image";
 
+const caseStudyData = {
+    title: "Transforming a pharmaceutical cost-savings platform",
+    description:[
+        "I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.",
+        "Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience."
+    ],
+    timeline: "Mar 2021 – Dec 2021 (10 months)",
+    team: [
+      "Sole designer (Me)",
+      "Senior Director of Product",
+      "Product Owner",
+      "Engineering team of 6 developers",
+    ],
+    role: [
+      "Discovery & requirements gathering",
+      "Stakeholder management",
+      "User interviews & usability testing",
+      "MVP launch & design QA",
+      "Future feature prioritization",
+    ],
+}
+
 export default function abProject() {
   
     return (
       <div className="">
-        <CaseStudyHeader/>
+        <CaseStudyHeader data={caseStudyData}/>
         
         
 

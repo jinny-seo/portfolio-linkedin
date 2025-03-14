@@ -1,3 +1,5 @@
+import { BulletList } from "@/components/BulletList";
+import { CardContainer } from "@/components/CardContainer";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import Image, { StaticImageData} from "next/image";
 
@@ -29,22 +31,23 @@ export default function abProject() {
       <div className="">
         <CaseStudyHeader data={caseStudyData}/>
         
-        
-
-        
+        {/* Strategic initiative */}
+        <CardContainer>
+          <h2 className="font-PixelifySans mb-6">Strategic initiative</h2>
+          <p>When I joined the project, I discovered the existing designs simply mirrored an internal PowerBI dashboard, ignoring external user needs. </p>
+          <p>Despite pressure to ship this version quickly, I advocated for a deeper redesign through...</p>
+          <BulletList>
+            <li>Highlighting the usability needs through cross-team discovery sessions</li>
+            <li>Documenting gaps in the current solution</li>
+            <li>Interviews with Sales to understand real-world usage patterns</li>
+            <li>Successfully convincing senior leadership to pursue a user-centered approach</li>
+          </BulletList>
+        </CardContainer>
         <div className="grid gap-4">
-          {/* Strategic initiative */}
           
-          <h2 className="text-[1.8rem] font-PixelifySans w-full">Strategic initiative</h2>
               
-              <p>When I joined the project, I discovered the existing designs simply mirrored an internal PowerBI dashboard, ignoring external user needs. </p>
-              <p>Despite pressure to ship this version quickly, I advocated for a deeper redesign through...</p>
-              <ul className="">
-                <li>Highlighting the usability needs through cross-team discovery sessions</li>
-                <li>Documenting gaps in the current solution</li>
-                <li>Interviews with Sales to understand real-world usage patterns</li>
-                <li>Successfully convincing senior leadership to pursue a user-centered approach</li>
-              </ul>
+
+
           
           {/* Challenges & Solutions */}
           <h2 className="text-[1.8rem] font-PixelifySans py-4">Challenges & Solutions</h2>

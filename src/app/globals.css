@@ -20,17 +20,6 @@
   --foreground: #171717;
 }
 
-* {
-
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   font-family: "roc-grotesk", sans-serif;
   /* font-family: "Tiny5", sans-serif;
@@ -43,30 +32,31 @@ hr {
 }
 
 p, ul {
-  max-width: 800px;
+  max-width: 650px;
   margin-bottom: 1rem;
 }
 
-h1 {
-  font-size:1.7rem;
+h1,h2,h3,h4,h5,h6 {
   line-height: 110%;
+  max-width: 650px;
 }
 
-/* Small screens (sm) - min-width: 640px */
-@media (min-width: 640px) {
-  h1 {
-    font-size: 1.85rem; 
-    p {
-      max-width: 650px;
-    }
-  }
+h1 {
+  font-size:1.8rem;
 }
+h2 {
+  font-size: 1.4rem; 
+}
+
 
 /* Medium screens (md) - min-width: 768px */
 @media (min-width: 768px) {
   h1 {
-    font-size: 2rem; /* Equivalent to Tailwind's text-4xl */
+    font-size: 2rem; 
     max-width: 650px;
+  }
+  h2 {
+    font-size: 1.5rem; 
   }
   p {
     max-width: 650px;
@@ -76,25 +66,25 @@ h1 {
 /* Large screens (lg) - min-width: 1024px */
 @media (min-width: 1024px) {
   h1 {
-    font-size: 2.5rem; /* Equivalent to Tailwind's text-5xl */
-    max-width: 650px;
+    font-size: 2.5rem; 
+  }
+  h2 {
+    font-size: 1.7rem; 
   }
 }
 
 /* Extra Large screens (xl) - min-width: 1280px */
 @media (min-width: 1280px) {
   h1 {
-    font-size: 2.5rem; /* Equivalent to Tailwind's text-6xl */
-    max-width: 800px;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.75rem; 
   }
   
 }
 
 /* Extra Large screens (xl) - min-width: 1280px */
 @media (min-width: 1536px) {
-  h1 {
-    font-size: 2.75rem; /* Equivalent to Tailwind's text-6xl */
-    max-width: 800px;
-  }
   
 }

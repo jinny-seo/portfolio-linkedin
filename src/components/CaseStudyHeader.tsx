@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Image, { StaticImageData} from "next/image";
 import { toSentenceCase } from "@/utils/format";
 import { CardContainer } from "./CardContainer";
+import { BulletList } from "./BulletList";
 
 interface CaseStudyData {
     title: string;
@@ -20,7 +21,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
     return(
     <CardContainer>
         {/* Title & description */}
-        <h1 className="font-PixelifySans mb-6">{data.title}</h1>
+        <h1 className="font-PixelifySans pt-8 md:pt-10 lg:pt-12 xl:pt-16 mb-6">{data.title}</h1>
         <div className="">
             {data.description.map(
                 (desc, index) => (
@@ -41,7 +42,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
         {data.team && data.team.length > 0 && (
             <div>
                 <h3 className="subheading">Team</h3>
-                <ul className="list-disc pl-5 pb-3">
+                <BulletList>
                     {
                         data.team.map(
                             (item, index) => (
@@ -49,14 +50,14 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                             )
                         )
                     }
-                </ul>
+                </BulletList>
             </div>
         )}
         {/* My role */}
         {data.role && data.role.length > 0 && (
             <div>
                 <h3 className="subheading">My role</h3>
-                <ul className="list-disc pl-5 pb-3">
+                <BulletList>
                     {
                         data.role.map(
                             (item, index) => (
@@ -64,7 +65,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                             )
                         )
                     }
-                </ul>
+                </BulletList>
             </div>
         )}
     </CardContainer>        

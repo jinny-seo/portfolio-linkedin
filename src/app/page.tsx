@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { navImage } from "../assets/navImages";
 import { NavItem } from "../components/NavItem";
@@ -11,6 +12,7 @@ export default function Home() {
 
   const isNavVisible = activeScroll();
 
+
   
   return (
     <div className="flex flex-col w-full bg-red-100 md:bg-yellow-200 lg:bg-blue-200 xl:bg-purple-200">
@@ -19,7 +21,7 @@ export default function Home() {
         {/* Navigation */}
         <div className={`${isNavVisible ? "translate-y-0" : "translate-y-full"} transition-transform duration-300 
         fixed flex justify-center bottom-0 left-0 right-0 z-10
-        lg:translate-y-0 lg:justify-end lg:m-4`}>
+        lg:translate-y-0 lg:justify-end md:m-4`}>
           <div className="bg-purple-500">
             <Navigation/>
           </div>
@@ -35,13 +37,15 @@ export default function Home() {
         {/* Work */}
         <div id="work" className=" bg-black/20">
           <h1>Work</h1>
-          {projAssets.map(
-            (project) => (
-              <div key={project.name}>
-                <ProjectItem name={project.name} date={project.date} description={project.description} link={project.link} image={project.image} />
-              </div>
-            )
-          )}
+          <div className="flex flex-col gap-8">
+            {projAssets.map(
+              (project) => (
+                <div key={project.name} id={`project-${project.link}`}>
+                  <ProjectItem name={project.name} date={project.date} description={project.description} link={`/projects/${project.link}`} image={project.image} />
+                </div>
+              )
+            )}
+          </div>
 
         </div>
         <div id="resume" className="h-[1000px] bg-black/40">

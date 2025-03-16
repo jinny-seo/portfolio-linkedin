@@ -6,6 +6,10 @@ import note from './nav/3-note.svg';
 import noteHover from './nav/3-note-hover.svg';
 import mail from './nav/4-mail.svg';
 import mailHover from './nav/4-mail-hover.svg';
+import arrowLeft from './nav/arrow-left.svg';
+import arrowLeftHover from './nav/arrow-left-hover.svg';
+import arrowRight from './nav/arrow-right.svg';
+import arrowRightHover from './nav/arrow-right-hover.svg';
 
 export const navImage = {
     computer,
@@ -16,4 +20,8 @@ export const navImage = {
     noteHover,
     mail,
     mailHover,
+    arrowLeft,
+    arrowLeftHover,
+    arrowRight,
+    arrowRightHover,
 };

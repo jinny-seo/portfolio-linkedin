@@ -1,3 +1,6 @@
+import { ProjectNav } from "@/components/ProjectNav";
+
+
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
     return (
       <div className=" min-h-screen">
@@ -6,8 +9,11 @@ export default function ProjectsLayout({ children }: { children: React.ReactNode
         </nav>
   
         {/* Render the unique page content */}
-        <main className="bg-white max-w-[650px] lg:max-w-[850px] xl:max-w-[1200px]  mx-auto rounded-md shadow-lg">
+        <main className="flex flex-col gap-8 max-w-[1200px] mx-auto">
+          
+          <ProjectNav/>
           {children}
+          
         </main>
       </div>
     );

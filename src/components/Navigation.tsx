@@ -7,7 +7,6 @@ import { NavItem } from "./NavItem";
 import { activeNavItem } from "../utils/activeNavItem"; // Import custom hook
 
 
-
 export const navItemAsset = [
   {
       label: "home",

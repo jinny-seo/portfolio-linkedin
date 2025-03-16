@@ -24,13 +24,13 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
     return(
         <div>
         
-            <CardContainer>
+            <CardContainer fullWidth={true}>
                 <div className="">
                     
                     {/* Title & desc */}
                     <div className="flex flex-col pb-8 pt-8 md:pt-10 lg:pt-14 xl:pt-16 gap-8">
                         <h1 className="font-PixelifySans">{data.title}</h1>
-                        <div className="text-lg">
+                        <div className="md:text-lg">
                             {data.description.map(
                                 (desc, index) => (
                                     <p key={index} className="text-md pb-2 max-w-none">{desc}</p> 

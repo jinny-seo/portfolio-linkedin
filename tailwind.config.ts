@@ -41,6 +41,16 @@ export default {
           fontStyle: "italic",
           color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
         },
+        ".quote": {
+          marginTop: "1.5rem",
+          marginBottom: "1.5rem",
+          paddingLeft: "1.75rem",
+          borderLeft: "4px solid rgba(0,0,0,.2)",
+          fontSize: "1.2rem",
+          lineHeight: "140%",
+          fontStyle: "italic",
+          color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
+        },
       });
     }),
   ],

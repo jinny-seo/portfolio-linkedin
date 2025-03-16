@@ -24,6 +24,16 @@
   max-width: none;
 }
 
+.border-emboss-tlr {
+  border-top: ridge 5px rgb(203, 213, 225);
+  border-left: ridge 5px rgb(203, 213, 225);
+  border-right: ridge 5px rgb(203, 213, 225);
+}
+
+.border-emboss {
+  border: ridge 5px rgb(203, 213, 225);
+}
+
 body {
   font-family: "roc-grotesk", sans-serif;
   /* font-family: "Tiny5", sans-serif;

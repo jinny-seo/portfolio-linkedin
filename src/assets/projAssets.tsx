@@ -1,4 +1,4 @@
-import projAB from './project/proj-ab.png';
+import projAB from './project/AB_hero.png';
 import projCrayon from './project/proj-crayon.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';

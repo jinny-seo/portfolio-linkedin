@@ -35,13 +35,13 @@ export default function Home() {
         </div>
 
         {/* Work */}
-        <div id="work" className=" bg-black/20">
-          <h1>Work</h1>
+        <div id="work" className="">
+          <h1 className="mb-8">Work</h1>
           <div className="flex flex-col gap-8">
             {projAssets.map(
               (project) => (
-                <div key={project.name} id={`project-${project.link}`}>
-                  <ProjectItem name={project.name} date={project.date} description={project.description} link={`/projects/${project.link}`} image={project.image} />
+                <div key={project.name} id={`project-${project.link}`} className="py-6">
+                  <ProjectItem name={project.name} company={project.company} date={project.date} description={project.description} link={`/projects/${project.link}`} image={project.image} />
                 </div>
               )
             )}

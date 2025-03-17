@@ -8,9 +8,9 @@ interface ProjectFrameProps {
 
 const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label", className = ""}) => {
     return (
-        <div className="bg-slate-300 border-slate-900 border-b-[0.5px] border-r-[0.5px] rounded-[4px] shadow-lg">
+        <div className="bg-slate-300 border-slate-900 border-b-[0.5px] border-r-[0.5px] rounded-[5px] shadow-lg">
         <div className="border-slate-400 border-t-[0.5px] border-l-[0.5px] rounded-[4px]">
-        <div className="border-slate-600 border-b-2 border-r-2 rounded-[3px]">
+        <div className="border-slate-600 border-b-2 border-r-2 rounded-[4px]">
         <div className="border-slate-300 border-t-[1px] border-l-[1px] rounded-[3px]">
             <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">

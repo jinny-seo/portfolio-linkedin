@@ -145,19 +145,26 @@ export default function abProject() {
             {/* Impact */}
             <CardContainer>
               <h2 className="font-PixelifySans">Impact</h2>
-              <p>The investment in proper discovery and design delivered significant results.</p>
-              <BulletList>
-                <li>Achieved 8.2/10 rating with 10 participants, receiving the highest score out of the three tools tested</li>
-                <li>Customers praised clarity, usability, and business value of the product</li>
-              </BulletList>
+              <p>The prototype was tested with <b>10 customers</b> and achieved <b>8.2/10 rating</b>, the highest out of the three tools tested. Customers praised clarity, usability, and business value of the product.</p>
               <Image className="lg:max-w-[650px]" src={caseStudyAB.ABscore} alt="Original internal PowerBI dashboard"/>
+              
               <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
               <p className="quote">This would give me a reason to log onto ABC.</p>
-              <p className="pt-4">The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
-              
-
             </CardContainer>
 
+            <CardContainer>
+              <h2 className="font-PixelifySans pt-4">C-Suite presentation</h2>
+              <p className="">The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
+            </CardContainer>
+            
+            {/* Figma prototype iframe: START */}
+            <div className="relative w-full">
+              <div className="relative w-full">
+                <iframe className="top-0 left-0 w-full aspect-[16/12]" src="https://embed.figma.com/proto/Fp1MLLi2sW5IoULLeFjHj4/AmerisourceBergen?page-id=25%3A23163&node-id=118-25938&viewport=239%2C474%2C0.19&scaling=fit-width&device-frame=0&content-scaling=fixed&embed-host=share&hide-ui=1" />
+              </div>
+            </div>
+            {/* Figma prototype iframe: END */}
+            
             {/* MVP delivery */}
             <CardContainer>
               <h2 className="font-PixelifySans">MVP delivery</h2>
@@ -168,13 +175,6 @@ export default function abProject() {
                 <li>Creating a strategic roadmap for future development phases</li>
               </BulletList>
             </CardContainer>
-                      {/* Figma prototype iframe: START */}
-                      <div className="relative w-full">
-              <div className="relative w-full">
-                <iframe className="top-0 left-0 w-full aspect-[16/12]" src="https://embed.figma.com/proto/Fp1MLLi2sW5IoULLeFjHj4/AmerisourceBergen?page-id=25%3A23163&node-id=118-25938&viewport=239%2C474%2C0.19&scaling=fit-width&device-frame=0&content-scaling=fixed&embed-host=share&hide-ui=1" />
-              </div>
-            </div>
-            {/* Figma prototype iframe: END */}
 
             {/* Future roadmapping */}
             <CardContainer>

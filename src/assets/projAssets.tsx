@@ -11,10 +11,7 @@ export const projAssets = [
         date: "03/2021 — 12/2021",
         duration: "10 months",
         description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives to products",
-        intro:[
-            "I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.",
-            "Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience."
-        ],
+
         link: "ab",
         image: projAB,
     },

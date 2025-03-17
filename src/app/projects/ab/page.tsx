@@ -13,21 +13,26 @@ import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 
 
 const caseStudyData = {
-    team: [
-      "Sole designer (Me)",
-      "Senior Director of Product",
-      "Product Owner",
-      "Engineering team of 6 developers",
-    ],
-    role: [
-      "Discovery & requirements gathering",
-      "Stakeholder management",
-      "Customer interviews & usability testing",
-      "MVP launch & design QA",
-      "Feature prioritization",
-    ],
-    heroImage: caseStudyAB.ABhero,
-    heroImageDesc: "AB  project hero image",
+  intro:[
+    "I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.",
+    "Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience."
+  ],
+  team: [
+    "Sole designer (Me)",
+    "Director of Product",
+    "Product Owner",
+    "Team of 6 developers",
+  ],
+  role: [
+    "Discovery",
+    "Stakeholder management",
+    "Customer interviews", 
+    "Usability testing",
+    "MVP launch",
+    "Future roadmapping",
+  ],
+  heroImage: caseStudyAB.ABhero,
+  heroImageDesc: "AB  project hero image",
 }
 
 export default function abProject() {
@@ -44,9 +49,17 @@ export default function abProject() {
   
     return (
         <CaseStudyContainer>
-          <CaseStudyHeader title={currentProject.name} desc={currentProject.intro} date={currentProject.date} duration={currentProject.duration} team={caseStudyData.team} role={caseStudyData.role} heroImage={caseStudyData.heroImage} heroImageDesc={caseStudyData.heroImageDesc} />
-          
-          
+          <CaseStudyHeader 
+            title={currentProject.name}
+            company={currentProject.company} 
+            intro={caseStudyData.intro} 
+            date={currentProject.date} 
+            duration={currentProject.duration} 
+            team={caseStudyData.team} 
+            role={caseStudyData.role} 
+            heroImage={caseStudyData.heroImage} 
+            heroImageDesc={caseStudyData.heroImageDesc} 
+          />
           <CardContainer>
             <h2 className="font-PixelifySans mt-8 ">Background</h2>
             <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>

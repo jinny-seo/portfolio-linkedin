@@ -4,23 +4,20 @@ import { toSentenceCase } from "@/utils/format";
 import { CardContainer } from "./CardContainer";
 import { BulletList } from "./BulletList";
 
-interface CaseStudyData {
+interface CaseStudyHeaderProps {
     title: string;
-    description: string[];
-    timeline: string;
-    duration: string;
+    desc: string[];
+    date?: string;
+    duration?: string;
     team?: string[];
     role?: string[];
     heroImage: string | StaticImageData; 
-    heroImageAlt: string; 
-}
-
-interface CaseStudyHeaderProps {
-    data: CaseStudyData;
+    heroImageDesc: string;
 }
 
 
-export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
+
+export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, desc, date, duration, team, role, heroImage, heroImageDesc }) => {
     return(
         <div>
         
@@ -29,11 +26,11 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                     
                     {/* Title & desc */}
                     <div className="flex flex-col pb-8 pt-8 md:pt-10 lg:pt-14 xl:pt-16 gap-8">
-                        <h1 className="font-PixelifySans">{data.title}</h1>
+                        <h1 className="font-PixelifySans">{title}</h1>
                         <div className="md:text-lg">
-                            {data.description.map(
-                                (desc, index) => (
-                                    <p key={index} className="text-md pb-2 max-w-none">{desc}</p> 
+                            {desc.map(
+                                (paragraph, index) => (
+                                    <p key={index} className="text-md pb-2 max-w-none">{paragraph}</p> 
                                 )
                             )}
                         </div>
@@ -47,19 +44,19 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                         
                         <div>
                             <h3 className="subheading">Timeline</h3>
-                            <p className="mb-1">{data.timeline}</p>
+                            <p className="mb-1">{date}</p>
                         
                         </div>
                         <div>
  
-                            {data.team && data.team.length > 0 && (
+                            {team && team.length > 0 && (
                                 <div>
                                     <h3 className="subheading">Team</h3>
                                     <BulletList>
                                         {
-                                            data.team.map(
-                                                (item, index) => (
-                                                    <li key={index}>{item}</li>
+                                            team.map(
+                                                (member, index) => (
+                                                    <li key={index}>{member}</li>
                                                 )
                                             )
                                         }
@@ -69,12 +66,12 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                         </div>
 
                         <div>
-                            {data.role && data.role.length > 0 && (
+                            {role && role.length > 0 && (
                                 <div>
                                     <h3 className="subheading">My role</h3>
                                     <BulletList>
                                     {
-                                        data.role.map(
+                                        role.map(
                                             (item, index) => (
                                                 <li key={index}>{item}</li>
                                             )
@@ -89,7 +86,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ data }) => {
                 </div>
             </CardContainer>
             
-            <Image src={data.heroImage} alt={data.heroImageAlt}/>
+            <Image src={heroImage} alt={heroImageDesc}/>
             
         </div>
         

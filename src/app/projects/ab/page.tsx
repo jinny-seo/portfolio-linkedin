@@ -2,24 +2,17 @@
 import { usePathname } from "next/navigation";
 import { BulletList } from "@/components/BulletList";
 import { CardContainer } from "@/components/CardContainer";
-import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import Image, { StaticImageData} from "next/image";
 import { caseStudyAB } from "@/assets/caseStudyImages";
 import { navImage } from "@/assets/navImages";
 import { CaseStudyContainer } from "@/components/CaseStudyContainer";
 import { NavItem } from "@/components/NavItem";
 import { projAssets } from "@/assets/projAssets";
+import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 
 
 
 const caseStudyData = {
-    title: "Transforming a pharmaceutical cost-savings platform",
-    description:[
-        "I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.",
-        "Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience."
-    ],
-    timeline: "Mar 2021 – Dec 2021 (10 months)",
-    duration: "10 months",
     team: [
       "Sole designer (Me)",
       "Senior Director of Product",
@@ -34,7 +27,7 @@ const caseStudyData = {
       "Feature prioritization",
     ],
     heroImage: caseStudyAB.ABhero,
-    heroImageAlt: "AB  project hero image",
+    heroImageDesc: "AB  project hero image",
 }
 
 export default function abProject() {
@@ -43,18 +36,17 @@ export default function abProject() {
   const currentPath = pathname.replace("/projects/", "");
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
+  const currentProject = projAssets[currentIndex];
 
   const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
   const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
 
   
     return (
-      
-        
-      
         <CaseStudyContainer>
+          <CaseStudyHeader title={currentProject.name} desc={currentProject.intro} date={currentProject.date} duration={currentProject.duration} team={caseStudyData.team} role={caseStudyData.role} heroImage={caseStudyData.heroImage} heroImageDesc={caseStudyData.heroImageDesc} />
           
-          <CaseStudyHeader data={caseStudyData}/>
+          
           <CardContainer>
             <h2 className="font-PixelifySans mt-8 ">Background</h2>
             <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>

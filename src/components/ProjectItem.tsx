@@ -22,7 +22,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
         <div className="relative md:mr-[72px] lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]  bg-yellow-500/50">
              <a href={link}>
                 {/* Project image */}
-                <ProjectFrame label={name}>
+                <ProjectFrame label={name} description={description}>
                     <Image src={image} alt={name} className=""/>
                 </ProjectFrame>
             </a>

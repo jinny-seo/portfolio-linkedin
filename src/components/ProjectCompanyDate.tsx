@@ -9,7 +9,7 @@ export const ProjectCompanyDate: React.FC<ProjectCompanyDateProps> = ({company, 
     return(
         <div>
             <span>{company}</span>
-            <span className="mx-2">|</span>
+            <span className="mx-2">•</span>
             <span>{date}</span>
         </div>
     );

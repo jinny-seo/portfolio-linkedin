@@ -43,13 +43,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                         <hr></hr>
                     </div>
                     {/* Timeline, Team, My role */}
-                    <div className="grid sm:grid-cols-3 gap-4 md:gap-8 mb-8">
-                        
-                        <div>
-                            <h3 className="subheading">Timeline</h3>
-                            <p className="mb-1">{date}</p>
-                        
-                        </div>
+                    <div className="grid sm:grid-cols-2 gap-4 md:gap-8 mb-8">
                         <div>
  
                             {team && team.length > 0 && (

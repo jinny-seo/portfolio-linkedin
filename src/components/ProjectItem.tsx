@@ -20,15 +20,17 @@ interface ProjectItemProps {
 export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevprojLink, nextProjLink}) => {
     return(
         <div className="relative md:mr-[72px] lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]  bg-yellow-500/50">
-             <a href={link}>
+             
                 {/* Project image */}
-                <ProjectFrame label={name} description={description}>
-                    <Image src={image} alt={name} className=""/>
+                <ProjectFrame label={name} description={description} currProjLink={link} prevProjLink={prevprojLink} nextProjLink={nextProjLink}>
+                    <a href={link}>
+                        <Image src={image} alt={name} className=""/>
+                    </a>
                 </ProjectFrame>
-            </a>
+            
             
             {/* Project description */}
-            <div className="md:absolute md:top-1/2 md:-right-[72px] md:w-[380px] lg:-right-[56px] xl:-right-[168px] lg:w-[400px] xl:w-[480px] ">
+            <div className="hidden md:block md:absolute md:top-1/2 md:-right-[72px] md:w-[380px] lg:-right-[56px] xl:-right-[168px] lg:w-[400px] xl:w-[480px] ">
                 <ProjectPanel company={company} date={date} currProjLink={link} prevProjLink={prevprojLink} nextProjLink={nextProjLink}>
                     <div className="grid">
                         <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>

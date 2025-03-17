@@ -9,11 +9,7 @@ import { projAssets } from "@/assets/projAssets";
 import { ProjectItem } from "@/components/ProjectItem";
 
 export default function Home() {
-
   const isNavVisible = activeScroll();
-
-
-  
   return (
     <div className="flex flex-col w-full bg-red-100 md:bg-yellow-200 lg:bg-blue-200 xl:bg-purple-200">
       <main className="grid gap-8 row-start-2 items-center sm:items-start">
@@ -39,12 +35,27 @@ export default function Home() {
           <h1 className="mb-8">Work</h1>
           <div className="flex flex-col gap-8">
             {projAssets.map(
-              (project) => (
-                <div key={project.name} id={`project-${project.link}`} className="py-6">
-                  <ProjectItem name={project.name} company={project.company} date={project.date} description={project.description} link={`/projects/${project.link}`} image={project.image} />
-                </div>
-              )
-            )}
+              (project, index) => {
+                const prevProjLink =
+                  index > 0 ? `#project-${projAssets[index - 1].link}` : null;
+                const nextProjLink =
+                  index < projAssets.length - 1 ? `#project-${projAssets[index + 1].link}` : null;
+          
+                return (
+                  <div key={project.name} id={`project-${project.link}`} className="py-6">
+                    <ProjectItem
+                      name={project.name}
+                      company={project.company}
+                      date={project.date}
+                      description={project.description}
+                      link={`/projects/${project.link}`}
+                      image={project.image}
+                      prevprojLink={prevProjLink}
+                      nextProjLink={nextProjLink}
+                    />
+                  </div>
+                );
+              })}
           </div>
 
         </div>

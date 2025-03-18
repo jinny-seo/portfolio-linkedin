@@ -25,9 +25,11 @@ export const NavItem: React.FC<NavItemProps> = ({ label, image, imageHover, link
 
 
     return(
+        <a href={link} className="">
         <div className={`${isActive ? "bg-purple-300" : "bg-transparent"}
-            flex flex-col justify-center pt-1 w-[72px] h-[72px] rounded-[3px] hover:bg-purple-300 group`}>
-            <a href={link} className="flex flex-col gap-1 items-center">
+            flex flex-col justify-center gap-1 items-center 
+            pt-1 w-[72px] h-[72px] rounded-[3px] hover:bg-purple-300 group`}>
+            
                 {/* Default image - Hide on hover */}
                 <Image src={image} alt={label} width={iconSize[size]} height={iconSize[size]}
                     className={`object-cover group-hover:hidden`} />
@@ -35,7 +37,8 @@ export const NavItem: React.FC<NavItemProps> = ({ label, image, imageHover, link
                 <Image src={imageHover} alt={label} width={iconSize[size]} height={iconSize[size]} 
                     className={`object-cover group-hover:block hidden`} />
                 <span className="font-Tiny5 text-sm">{toSentenceCase(label)}</span>
-            </a>
+            
         </div>
+        </a>
     );
 }

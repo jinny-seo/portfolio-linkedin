@@ -10,10 +10,11 @@ import { NavItem } from "@/components/NavItem";
 import { projAssets } from "@/assets/projAssets";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 
+
 const caseStudyData = {
   intro:[
-    "Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions.",
-    "After six years of organic growth, the platform had become fragmented and inefficient. What was originally a navigation redesign evolved into a reimagined onboarding experience that reduced support time and increased self-service.",
+    "Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.",
+    "What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.",
   ],
   team: [
     "Main designer (Me)",

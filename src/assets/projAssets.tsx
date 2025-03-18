@@ -1,5 +1,5 @@
 import projAB from './project/AB_hero-2.png';
-import projCrayon from './project/proj-crayon.png';
+import projCrayon from './project/Crayon_hero.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
 import projOM from './project/proj-om.png';
@@ -8,20 +8,18 @@ export const projAssets = [
     {
         name: "Transforming a pharmaceutical cost-savings platform",
         company: "AmerisourceBergen",
-        date: "03/2021 — 12/2021",
-        duration: "10 months",
+        date: "03/2021 - 12/2021",
+        duration: "10 mo",
         description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives to products",
-
         link: "ab",
         image: projAB,
     },
     {
-        name: "Redesigning Crayon's Core Onboarding Experience",
+        name: "Redesigning Crayon's Onboarding Experience",
         company: "Crayon",
         date: "02/2022 — 07/2022",
-        duration: "--",
-        description: "A new navigation experience for the landing page of Crayon, the Insights page.",
-        intro: [],
+        duration: "6 mo",
+        description: "A new onboarding and landing experience for a competitive intelligence platform.",
         link: "crayon",
         image: projCrayon,
     },
@@ -29,9 +27,8 @@ export const projAssets = [
         name: "riteHorizon 2.0 for ETC",
         company: "ETC",
         date: "02/2019 — 04/2019",
-        duration: "--",
+        duration: "12 weeks",
         description: "Reenvisioning a tolling management application used by customer service representatives",
-        intro: [],
         link: "etc",
         image: projETC,
     },
@@ -39,7 +36,7 @@ export const projAssets = [
         name: "Savings Summary for Ryan DXP",
         company: "Ryan",
         date: "09/2019 — 01/2020",
-        duration: "--",
+        duration: "5 mo",
         description: "Delivering the Savings Summary for Ryan’s DXP, a custom platform for tax consultants and their clients",
         intro: [],
         link: "ryan",
@@ -49,7 +46,7 @@ export const projAssets = [
         name: "Design Library for OpenMarket",
         company: "OpenMarket",
         date: "02/2020 — 02/2021",
-        duration: "--",
+        duration: "12 mo",
         description: "Creating a design library for a mobile messaging platform provider",
         intro: [],
         link: "om",

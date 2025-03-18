@@ -30,7 +30,10 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                         <div className="flex flex-col gap-2">
                             <h1 className="font-PixelifySans">{title}</h1>
                             <p className="font-Tiny5 mb-0 mt-2 lg:mb-2 lg:mt-4 md:text-lg lg:text-xl">
-                                <span>{company}</span><span className="mx-2">·</span><span>{date}</span>
+                                <span>{company}</span>
+                                <span className="mx-2">·</span>
+                                <span>{date}</span>
+                                <span className="ml-2">({duration})</span>
                             </p>
                         </div>
                         <div className="md:text-lg">

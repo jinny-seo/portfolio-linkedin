@@ -7,9 +7,9 @@ interface ProjectCompanyDateProps {
 
 export const ProjectCompanyDate: React.FC<ProjectCompanyDateProps> = ({company, date}) => {
     return(
-        <div>
+        <div className="text-[.94rem]">
             <span>{company}</span>
-            <span className="mx-2">•</span>
+            <span className="mx-1">·</span>
             <span>{date}</span>
         </div>
     );

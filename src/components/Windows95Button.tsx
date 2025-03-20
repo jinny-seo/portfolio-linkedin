@@ -38,7 +38,7 @@ export default function Windows95Button({ onClick, icon, label, disabled, compac
                 {icon && <span className={`flex items-center justify-center ${disabled ? "opacity-50" : ""} ${compact ? "w-[1rem] h-[0.9rem]" : "w-[1.5rem] h-[1.5rem]"}`}>
                     <Image src={icon} alt="" width={`${compact ? 12 : 14}`} height={`${compact ? 12 : 14}`} />
                 </span>}
-                {label && <span className="h-full text-center font-PixelifySans">{label}</span>}
+                {label && <span className="h-full text-center font-Doto text-[0.94rem] leading-[1.5rem]">{label}</span>}
             </div>
             </div>
         </div>

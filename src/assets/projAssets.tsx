@@ -1,5 +1,6 @@
 import projAB from './project/AB_hero-2.png';
 import projCrayon from './project/Crayon_hero.png';
+import projMimic from './project/Mimic_hero.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
 import projOM from './project/proj-om.png';
@@ -23,6 +24,38 @@ export const projAssets = [
         link: "crayon",
         image: projCrayon,
     },
+    {
+        name: "Building a cybersecurity platform from the ground up",
+        company: "Mimic",
+        date: "01/2024 — 02/2025",
+        duration: "14 monthes",
+        description: "Translating Mimic's complex cybersecurity needs into an intuitive product while simultaneously building the design infrastructure to support scale",
+        link: "etc",
+        image: projETC,
+    },
+    {
+        name: "Savings Summary for Ryan DXP",
+        company: "Ryan",
+        date: "09/2019 — 01/2020",
+        duration: "5 mo",
+        description: "Delivering the Savings Summary for Ryan’s DXP, a custom platform for tax consultants and their clients",
+        intro: [],
+        link: "ryan",
+        image: projRyan,
+    },
+    {
+        name: "Design Library for OpenMarket",
+        company: "OpenMarket",
+        date: "02/2020 — 02/2021",
+        duration: "12 mo",
+        description: "Creating a design library for a mobile messaging platform provider",
+        intro: [],
+        link: "om",
+        image: projOM,
+    },
+];
+
+export const projAssetsArchive = [
     {
         name: "riteHorizon 2.0 for ETC",
         company: "ETC",

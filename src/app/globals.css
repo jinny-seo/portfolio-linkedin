@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/eqi1vja.css");
+
 @font-face {
   font-family: "Tiny5";
   src: url("/fonts/Tiny5-Regular.ttf") format("truetype");
@@ -11,6 +12,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Doto";
+  src: url("/fonts/Doto.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; 
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

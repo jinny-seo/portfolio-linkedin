@@ -18,6 +18,7 @@ export default {
         RocGrotesk: ["roc-grotesk", 'sans-serif'],
         Tiny5: ['Tiny5', 'sans-serif'],
         PixelifySans: ['Pixelify Sans', 'sans-serif'],
+        Doto: ['Doto', 'sans-serif'],
       },
     },
   },

@@ -24,7 +24,7 @@ const ProjectPanel: React.FC<ProjectPanelProps> = ({children, company, date, cur
             <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
                 <div className="border-slate-300 border-2 rounded-[2px]">
-                    <div className="bg-blue-800 px-2 pb-[0.1rem] mx-[1px] mt-[.5px] font-PixelifySans text-white">
+                    <div className="bg-blue-800 px-2 pb-[0.1rem] mx-[1px] font-Doto text-white leading-[1.5rem]">
                         <ProjectCompanyDate company={company} date={date}></ProjectCompanyDate>
                     </div>
                 </div>

@@ -23,8 +23,8 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
                 <div className="border-slate-300 border-2 rounded-[2px]">
                     <div className="">
-                        <div className="flex items-center justify-center bg-blue-800 w-full pr-1 font-PixelifySans text-white">
-                            <span className="w-full px-2 truncate">{label}</span>
+                        <div className="flex items-center justify-center bg-blue-800 w-full pr-1">
+                            <span className="w-full px-2 truncate text-[0.95rem] font-Doto text-white leading-[1.5rem]">{label}</span>
                             <Windows95Button icon={icon.maximize} compact={true}/>
                         </div>
                         
@@ -37,7 +37,6 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label
                         <div className='border-slate-500 border-t-[1px] border-l-[1px]'>
                         <div className='border-slate-300 border-b-[1px] border-r-[1px]'>
                             {children}
-                            
                         </div>
                         </div>
                         

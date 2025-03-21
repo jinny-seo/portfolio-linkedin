@@ -77,7 +77,6 @@ export default function abProject() {
             <div className="flex flex-col gap-4">
               <div>
                 <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
-                <p>Additionally, I identified and resolved misalignment around MVP feature expectations, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
               </div>
               <div>
                 <Image className="lg:max-w-[650px]" src={caseStudyAB.ABinternaldash} alt="Original internal PowerBI dashboard"/>
@@ -86,7 +85,8 @@ export default function abProject() {
               <div>
                 <Image className="shadow-md lg:max-w-[650px]" src={caseStudyAB.ABinitialdesignfilters} alt="Proposed initial design with filters drawer"/>
                 <p className="caption">The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues.</p>
-              </div>  
+              </div> 
+              <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
             </div>
           </CardContainer>
 
@@ -110,20 +110,20 @@ export default function abProject() {
           <CardContainer>
             <h2 className="font-PixelifySans">KPI visualization</h2>
             <p>PRxO contribution metrics are critical for customers of AmerisourceBergen, as reaching certain thresholds impacts available discounts.</p>
-            <p>However, I identified a critical disconnect: AmerisourceBergen measured PRxO compliance in <b>percentages for discount qualification</b>, but the source design only displayed <b>absolute dollar amounts.</b></p>
+            <p>However, there was a critical disconnect: AmerisourceBergen measured PRxO compliance in <b>percentages for discount qualification</b>, but the source design only displayed <b>absolute dollar amounts.</b></p>
             <p>My solution was to transform this KPI into a more active decision-making tool by...</p>
             <BulletList>
               <li>Redesigning the metrics display to emphasize percentage contribution supported by dollar amounts</li>
               <li>Creating a prominent KPI showing total PRxO contribution with a companion percentage showing potential increase</li>
               <li>Connecting these metrics to the interactive filtering system so users could see real-time updates as they explored different product alternatives</li>
             </BulletList>
-            <p>This approach directly aligned the interface with the actual business decision-making process, allowing users to immediately see how close they were to discount thresholds and identify which product substitutions would be most effective.</p>
+            <p>This approach directly aligned the interface with the actual business decision-making process, allowing users to immediately see how close they were to discount thresholds to identify the most effective product substitutions.</p>
             <Image className="lg:max-w-[650px] pt-8 pb-12" src={caseStudyAB.ABimprovement2} alt="PRoX KPI visualization"/>
           </CardContainer>
 
           <CardContainer>
             <h2 className="font-PixelifySans">Usability enhancements</h2>
-            <p>Additionally, I identified and addressed several critical barriers to effective use of the application.</p>
+            <p>Finally, I identified and addressed several critical barriers to effective use of the application.</p>
             <h3 className="subheading">Streamlined information architecture</h3>
             <BulletList>
               <li>Reducing 23 jargon-heavy columns to 10 essential ones</li>
@@ -145,7 +145,7 @@ export default function abProject() {
             {/* Impact */}
             <CardContainer>
               <h2 className="font-PixelifySans">Impact</h2>
-              <p>The prototype was tested with <b>10 customers</b> and achieved <b>8.2/10 rating</b>, the highest out of the three tools tested. Customers praised clarity, usability, and business value of the product.</p>
+              <p>The prototype was tested with <b>10 customers</b> and achieved <b>8.2 rating</b>, the highest out of the three tools tested. Customers praised clarity, usability, and business value of the product.</p>
               <Image className="lg:max-w-[650px]" src={caseStudyAB.ABscore} alt="Original internal PowerBI dashboard"/>
               
               <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
@@ -153,7 +153,7 @@ export default function abProject() {
             </CardContainer>
 
             <CardContainer>
-              <h2 className="font-PixelifySans pt-4">C-Suite presentation</h2>
+            <h3 className="subheading">C-Suite presentation</h3>
               <p className="">The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
             </CardContainer>
             

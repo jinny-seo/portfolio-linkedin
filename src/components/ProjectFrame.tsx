@@ -2,6 +2,7 @@ import React from 'react';
 import Windows95Button from './Windows95Button';
 import { icon } from "@/assets/icon";
 import ProjectPreviewNav from './ProjectPreviewNav';
+import { ProjectTitleBar } from './ProjectTitleBar';
 
 interface ProjectFrameProps {
     children: React.ReactNode;
@@ -22,16 +23,9 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label
             <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
                 <div className="border-slate-300 border-2 rounded-[2px]">
-                    <div className="">
-                        <div className="flex items-center justify-center bg-blue-800 w-full pr-1">
-                            <span className="w-full px-2 truncate text-[0.95rem] font-Doto text-white leading-[1.5rem]">{label}</span>
-                            <Windows95Button icon={icon.maximize} compact={true}/>
-                        </div>
-                        
-                    </div>
+                    <ProjectTitleBar label={label} button></ProjectTitleBar>
                 </div>
                 <div className="border-slate-300 border-2">
-                    
                     <div className="border-slate-100 border-b-2 border-r-2">
                     <div className="border-slate-400 border-t-2 border-l-2">
                         <div className='border-slate-500 border-t-[1px] border-l-[1px]'>
@@ -39,7 +33,6 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label
                             {children}
                         </div>
                         </div>
-                        
                     </div>       
                     </div>
                     <div className='flex flex-col mx-1 mb-4 mt-1 md:hidden'>

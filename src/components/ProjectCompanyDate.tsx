@@ -14,3 +14,5 @@ export const ProjectCompanyDate: React.FC<ProjectCompanyDateProps> = ({company, 
         </div>
     );
 }
+
+

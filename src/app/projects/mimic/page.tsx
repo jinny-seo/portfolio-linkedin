@@ -8,7 +8,7 @@ import { NavItem } from "@/components/NavItem";
 import Image, { StaticImageData} from "next/image";
 import { navImage } from "@/assets/navImages";
 import { projAssets } from "@/assets/projAssets";
-import { caseStudyCrayon } from "@/assets/caseStudyImages";
+import { caseStudyMimic } from "@/assets/caseStudyImages";
 
 const caseStudyData = {
   team: [
@@ -20,13 +20,13 @@ const caseStudyData = {
   ],
   role: [
     "Research & Strategy",
-  "Usability testing",
-  "UI evolution",
-  "Design system development",
-  "Brand application",
+    "Usability testing",
+    "UI evolution",
+    "Design system development",
+    "Brand application",
   ],
-  heroImage: caseStudyCrayon.CrayonHero,
-  heroImageDesc: "AB  project hero image",
+  heroImage: caseStudyMimic.MimicHero,
+  heroImageDesc: "AB project hero image",
 }
 
 export default function crayonProject() {

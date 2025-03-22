@@ -7,6 +7,7 @@ import ABgif from './project/AB_video.gif';
 import ABimprovement2 from './project/AB_improvement-2.png';
 import ABimprovement3 from './project/AB_improvement-3.png';
 import CrayonHero from './project/Crayon_hero-2.png';
+import MimicHero from './project/Mimic_hero-2.png';
 
 export const caseStudyAB = {
     ABhero,
@@ -21,4 +22,8 @@ export const caseStudyAB = {
 
 export const caseStudyCrayon = {
     CrayonHero,
+};
+
+export const caseStudyMimic = {
+    MimicHero,
 };

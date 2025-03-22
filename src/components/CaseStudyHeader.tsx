@@ -26,22 +26,15 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                 <div className="">
                     
                     {/* Title & desc */}
-                    <div className="flex flex-col pb-8 pt-8 md:pt-10 lg:pt-14 xl:pt-16 gap-4">
-                        <div className="flex flex-col gap-2">
-                            <h1 className="font-PixelifySans">{title}</h1>
-                            <p className="font-Tiny5 mb-0 mt-2 lg:mb-2 lg:mt-4 md:text-lg lg:text-xl">
-                                <span>{company}</span>
-                                <span className="mx-2">·</span>
-                                <span>{date}</span>
-                                <span className="ml-2">({duration})</span>
-                            </p>
-                        </div>
+                    <div className="flex flex-col">
+                        <span className="font-Doto">{company}</span>
+                        <h1 className="title-1">{title}</h1>
+                        <p className="font-Doto">
+                            <span>{date}</span>
+                            <span className="ml-2">({duration})</span>
+                        </p>
                         <div className="md:text-lg">
-                            {intro.map(
-                                (paragraph, index) => (
-                                    <p key={index} className="text-md pb-2 max-w-none">{paragraph}</p> 
-                                )
-                            )}
+                            {intro.map((paragraph, index) => (<p key={index} className="text-md pb-2 max-w-none">{paragraph}</p>))}
                         </div>
                         <hr></hr>
                     </div>
@@ -51,7 +44,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
  
                             {team && team.length > 0 && (
                                 <div>
-                                    <h3 className="subheading">Team</h3>
+                                    <p className="title-3">Team</p>
                                     <BulletList>
                                         {
                                             team.map(
@@ -68,7 +61,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                         <div>
                             {role && role.length > 0 && (
                                 <div>
-                                    <h3 className="subheading">My role</h3>
+                                    <p className="title-3">My role</p>
                                     <BulletList>
                                     {
                                         role.map(
@@ -86,7 +79,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                 </div>
             </CardContainer>
             
-            <Image src={heroImage} alt={heroImageDesc}/>
+            <Image src={heroImage} alt={heroImageDesc} className="mb-12"/>
             
         </div>
         

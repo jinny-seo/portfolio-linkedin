@@ -61,7 +61,7 @@ export default function abProject() {
             heroImageDesc={caseStudyData.heroImageDesc} 
           />
           <CardContainer>
-            <h2 className="font-PixelifySans mt-8 ">Background</h2>
+            <h2 className="title-2">Background</h2>
             <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
             <BulletList>
               <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
@@ -73,14 +73,14 @@ export default function abProject() {
           
 
           <CardContainer>
-            <h2 className="font-PixelifySans">Stakeholder management</h2>
-            <div className="flex flex-col gap-4">
+            <h2 className="title-2">Stakeholder management</h2>
+            <div className="flex flex-col">
               <div>
                 <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
               </div>
               <div>
                 <Image className="lg:max-w-[650px]" src={caseStudyAB.ABinternaldash} alt="Original internal PowerBI dashboard"/>
-                <p className="caption mt-[0.5rem]">Original internal PowerBI dashboard contained a table with 23 columns.</p>
+                <p className="caption">Original internal PowerBI dashboard contained a table with 23 columns.</p>
               </div>
               <div>
                 <Image className="shadow-md lg:max-w-[650px]" src={caseStudyAB.ABinitialdesignfilters} alt="Proposed initial design with filters drawer"/>
@@ -91,7 +91,7 @@ export default function abProject() {
           </CardContainer>
 
           <CardContainer>
-            <h2 className="font-PixelifySans">Navigation strategy</h2>
+            <h2 className="title-2">Navigation strategy</h2>
             <p>When analyzing the PowerBI dashboard, I identified that traditional filters alone would overwhelm users with pharmaceutical jargon. Instead, I advocated for an interactive approach where...</p>
             <BulletList>
               <li>Upper tables acted as intuitive visual filters</li>
@@ -104,11 +104,11 @@ export default function abProject() {
               <li>Presenting clickable prototypes to illustrate the usability benefits</li>
               <li>Showing how this approach would encourage exploration of cost-saving opportunities</li>
             </BulletList>
-            <Image className="lg:max-w-[650px] pt-8 pb-12" src={caseStudyAB.ABgif} alt="Filter action for opps dash"/>
+            <Image className="lg:max-w-[650px]" src={caseStudyAB.ABgif} alt="Filter action for opps dash"/>
           </CardContainer>
           
           <CardContainer>
-            <h2 className="font-PixelifySans">KPI visualization</h2>
+            <h2 className="title-2">KPI visualization</h2>
             <p>PRxO contribution metrics are critical for customers of AmerisourceBergen, as reaching certain thresholds impacts available discounts.</p>
             <p>However, there was a critical disconnect: AmerisourceBergen measured PRxO compliance in <b>percentages for discount qualification</b>, but the source design only displayed <b>absolute dollar amounts.</b></p>
             <p>My solution was to transform this KPI into a more active decision-making tool by...</p>
@@ -122,38 +122,39 @@ export default function abProject() {
           </CardContainer>
 
           <CardContainer>
-            <h2 className="font-PixelifySans">Usability enhancements</h2>
+            <h2 className="title-2">Usability enhancements</h2>
             <p>Finally, I identified and addressed several critical barriers to effective use of the application.</p>
-            <h3 className="subheading">Streamlined information architecture</h3>
+            <h3 className="title-3">Streamlined information architecture</h3>
             <BulletList>
               <li>Reducing 23 jargon-heavy columns to 10 essential ones</li>
               <li>Grouping related information logically</li>
               <li>Translating internal terminology into user-friendly language</li>
             </BulletList>
-            <h3 className="subheading">Clear visual hierarchy</h3>
+            <h3 className="title-3">Clear visual hierarchy</h3>
             <BulletList>
               <li>Clearly separated Accounts, Products, and Opportunities sections</li>
               <li>Implemented visual indicators for savings potential</li>
               <li>Created distinct styling for interactive elements</li>
             </BulletList>
-            <h3 className="subheading">Enhanced product identification</h3>
+            <h3 className="title-3">Enhanced product identification</h3>
             <p>A pain point I discovered through customer and stakeholder interviews was that users were translating between different product identification systems (ABC, ABC8, NDC) using lookup tools.</p>
+            <Image className="lg:max-w-[650px]" src={caseStudyAB.ABimprovement3} alt="Dropdown to switch between product IDs"/>
             <p>My solution introduced a dropdown built directly into the product that seamlessly switches between ID systems without disrupting workflow or losing context.</p>
-            <Image className="lg:max-w-[650px] pt-8 pb-12" src={caseStudyAB.ABimprovement3} alt="Dropdown to switch between product IDs"/>
+            
             </CardContainer>
 
             {/* Impact */}
             <CardContainer>
-              <h2 className="font-PixelifySans">Impact</h2>
+              <h2 className="title-2">Impact</h2>
               <p>The prototype was tested with <b>10 customers</b> and achieved <b>8.2 rating</b>, the highest out of the three tools tested. Customers praised clarity, usability, and business value of the product.</p>
-              <Image className="lg:max-w-[650px]" src={caseStudyAB.ABscore} alt="Original internal PowerBI dashboard"/>
-              
+              <Image className="lg:max-w-[650px]" src={caseStudyAB.ABscore} alt="Original internal PowerBI dashboard"/>  
+              <h3 className="title-3">User feedback</h3>
               <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
               <p className="quote">This would give me a reason to log onto ABC.</p>
             </CardContainer>
 
             <CardContainer>
-            <h3 className="subheading">C-Suite presentation</h3>
+            <h3 className="title-3">C-Suite presentation</h3>
               <p className="">The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
             </CardContainer>
             
@@ -167,7 +168,7 @@ export default function abProject() {
             
             {/* MVP delivery */}
             <CardContainer>
-              <h2 className="font-PixelifySans">MVP delivery</h2>
+              <h2 className="title-2">MVP delivery</h2>
               <p>I led this project for just over a year, successfully launching a working MVP by the end-of-year deadline. My role included...</p>
               <BulletList>
                 <li>Facilitating feature prioritization sessions with product and engineering teams</li>
@@ -178,15 +179,15 @@ export default function abProject() {
 
             {/* Future roadmapping */}
             <CardContainer>
-              <h2 className="font-PixelifySans">Future roadmapping</h2>
+              <h2 className="title-2">Future roadmapping</h2>
               <p>Before transitioning off the project, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive enhancement roadmap. I prioritized features based on urgency and implementation complexity to guide resource allocation.</p>
-              <h3 className="subheading">Short-term enhancements</h3>
+              <h3 className="title-3">Short-term enhancements</h3>
               <BulletList>
                 <li>Collapsible rows for managing multiple alternate options</li>
                 <li>"Show X more..." patterns for improved discovery</li>
                 <li>Export functionality for external analysis</li>
               </BulletList>
-              <h3 className="subheading">Long-term enhancements</h3>
+              <h3 className="title-3">Long-term enhancements</h3>
               <BulletList>
                 <li>Workflow assistance features including hide/favorite capabilities for alternative products</li>
                 <li>Overview dashboard page for executive-level insights</li>
@@ -195,7 +196,7 @@ export default function abProject() {
             </CardContainer>
 
             <CardContainer>
-              <h2 className="font-PixelifySans">Impact</h2>
+              <h2 className="title-2">Impact</h2>
               <p>The redesigned platform delivered significant business value.</p>
               <BulletList>
                 <li>Transformed complex pricing data into clear decision support for customers</li>

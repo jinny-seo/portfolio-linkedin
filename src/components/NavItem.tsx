@@ -36,7 +36,7 @@ export const NavItem: React.FC<NavItemProps> = ({ label, image, imageHover, link
                 {/* Hover image - Show on hover */}
                 <Image src={imageHover} alt={label} width={iconSize[size]} height={iconSize[size]} 
                     className={`object-cover group-hover:block hidden`} />
-                <span className="font-Tiny5 text-sm">{toSentenceCase(label)}</span>
+                <span className="font-Tiny5 text-[0.82rem]">{toSentenceCase(label)}</span>
             
         </div>
         </a>

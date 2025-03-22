@@ -22,8 +22,6 @@
 @font-face {
   font-family: "Albert Sans";
   src: url("/fonts/AlbertSans.ttf") format("truetype");
-  
-  
 }
 
 @tailwind base;
@@ -37,7 +35,6 @@
 
 body {
   font-family: "Albert Sans", sans-serif;
-  
 }
 
 .case-study-desc {
@@ -50,35 +47,42 @@ hr {
 
 p, ul {
   max-width: 650px;
-  margin-bottom: 1rem;
-  
+  line-height: 155%;
+  margin-bottom: 1.2rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Doto", serif;
+li {
+  margin-bottom: .2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
   line-height: 110%;
 }
 
-h1 {
+.title-1 {
+  font-family: "Doto", serif;
   font-size: 1.8rem;
 }
-h2 {
+.title-2 {
+  font-family: "Doto", serif;
   font-size: 1.4rem; 
   margin-bottom: 0.9rem;
 }
-h3 {
+
+.title-3 {
+  font-family: "Albert Sans", sans-serif;
   font-weight: 600;
-  font-size: 1.1rem; 
-  margin-bottom: 0.9rem;
-  color: rgba(0,0,0,0.88)
+  font-size: 1.05rem; 
+  margin-bottom: 0.7rem;
 }
 
 /* Medium screens (md) - min-width: 768px */
 @media (min-width: 768px) {
-  h1 {
+  .title-1 {
     font-size: 2rem; 
   }
-  h2 {
+  .title-2 {
     font-size: 1.5rem; 
     margin-bottom: 1rem;
   }
@@ -86,22 +90,20 @@ h3 {
 
 /* Large screens (lg) - min-width: 1024px */
 @media (min-width: 1024px) {
-  h1 {
+  .title-1 {
     font-size: 2.5rem; 
   }
-  h2 {
+  .title-2 {
     font-size: 1.6rem; 
     margin-bottom: 1.1rem;
   }
-  h3 {
-    font-size: 1.18rem; 
-    margin-bottom: 0.9rem;
+  .title-3 {
   }
 }
 
 /* Extra Large screens (xl) - min-width: 1280px */
 @media (min-width: 1280px) {
-  h1 {
+  .title-1 {
     font-size: 2.5rem;
   }
   

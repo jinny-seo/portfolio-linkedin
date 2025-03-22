@@ -25,15 +25,6 @@ export default {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
-        ".subheading": {
-          marginBottom: ".5rem",
-          letterSpacing: ".05rem",
-          // textTransform: "uppercase",
-          fontSize: ".9rem",
-          fontWeight: "800",
-          lineHeight: "1.3",
-          color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
-        },
         ".caption": {
           marginTop: "0.75rem",
           marginBottom: "1.5rem",

@@ -62,10 +62,35 @@ export default function abProject() {
           </CaseStudyHeader>
 
           {/* Case study content: START */}
+          <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Background</h2></Windows95FrameInner>
           <Windows95FrameInner>
             <div className="bg-white">
+            
               <CardContainer>
-                <h2 className="title-2">Background</h2>
+                
+                <div className="grid grid-cols-2">
+                  <div>
+                    <h3 className="title-2">Team</h3>
+                    <BulletList>
+                      {caseStudyData.team.map(
+                        (member, index) => (<li key={index}>{member}</li>)
+                      )}
+                    </BulletList>
+                  </div>
+
+                  <div>
+                  <h3 className="title-2">My role</h3>
+                    <BulletList>
+                      {caseStudyData.role.map(
+                        (member, index) => (<li key={index}>{member}</li>)
+                      )}
+                    </BulletList>
+                  </div>
+                </div>
+              </CardContainer>
+
+              <CardContainer>
+                <h2 className="title-2">Problem</h2>
                 <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
                 <BulletList>
                   <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
@@ -94,10 +119,9 @@ export default function abProject() {
               </CardContainer>
             </div>
           </Windows95FrameInner>
-          <Windows95FrameInner>
-            <h2 className="font-Doto p-4 m-0 text-xl">Solution</h2>
+
+          <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Solution</h2></Windows95FrameInner>
           
-          </Windows95FrameInner>
           <Windows95FrameInner>
             <div className="bg-white">
               <CardContainer>

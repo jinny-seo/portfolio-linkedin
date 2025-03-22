@@ -21,22 +21,20 @@ interface CaseStudyHeaderProps {
 export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, company, date, duration, team, role, heroImage, heroImageDesc }) => {
     return(
         <div>
-            {/* Title & intro: START */}
-            <div className="p-8 border-transparent">
-                <h1 className="title-1 mb-8">{title}</h1>
+            <Windows95FrameInner>
+            <div className="p-6 border-transparent">
+                <h1 className="title-1 mb-6 ">{title}</h1>
+                <div className="text-[1.08rem]">
                 {children}
+                </div>
             </div>
-            {/* Title & intro: END */}
-            {/* Hero image: START */}
+            </Windows95FrameInner>
+            
             <Windows95FrameInner>
                 <Image src={heroImage} alt={heroImageDesc} />
             </Windows95FrameInner>
-            {/* Hero image: END */}
 
-            
-            {/* Project metadata: START */}
-            <div className="grid grid-cols-2 gap-[3px]">
-                
+            {/* <div className="grid grid-cols-2 gap-[3px]">
                 <Windows95FrameInner>
                     {team && team.length > 0 && (
                     <div className="p-4">
@@ -49,7 +47,6 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, com
                     </div>
                     )}
                 </Windows95FrameInner>
-    
                 <Windows95FrameInner>
                     {role && role.length > 0 && (
                     <div className="p-4">
@@ -62,9 +59,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, com
                     </div>
                     )}
                 </Windows95FrameInner>
-                </div>
-                {/* Project metadata: END */}
-
+            </div> */}
 
         </div>
         

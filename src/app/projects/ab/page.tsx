@@ -62,9 +62,11 @@ export default function abProject() {
           </CaseStudyHeader>
 
           {/* Case study content: START */}
-          <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Background</h2></Windows95FrameInner>
           <Windows95FrameInner>
-            <div className="bg-white">
+            <h2 className="font-Doto p-6 m-0 text-xl">Background</h2>
+          </Windows95FrameInner>
+          
+          <Windows95FrameInner>
             
               <CardContainer>
                 
@@ -117,7 +119,7 @@ export default function abProject() {
                   <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
                 </div>
               </CardContainer>
-            </div>
+            
           </Windows95FrameInner>
 
           <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Solution</h2></Windows95FrameInner>

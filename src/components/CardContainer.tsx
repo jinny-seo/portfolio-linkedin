@@ -7,11 +7,13 @@ interface CardContainerProps {
 
 export const CardContainer: FC<CardContainerProps> = ({ children, fullWidth = false }) => {
     return(
-        <div className="bg-white pt-2">
-            <div className={`p-6 mx-auto
+        <div className="bg-white">
+        <div className="p-6">
+            <div className={`mx-auto flex flex-col gap-6
             ${fullWidth ? "w-full" : "max-w-[810px]"}`}>
                 {children}
             </div>
+        </div>
         </div>
         
     );

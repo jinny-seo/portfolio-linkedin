@@ -42,9 +42,7 @@ hr {
 }
 
 p, ul {
-  /* max-width: 650px; */
   line-height: 155%;
-  margin-bottom: 1.2rem;
 }
 
 li {
@@ -52,7 +50,6 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  
   line-height: 110%;
 }
 
@@ -60,17 +57,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Doto", serif;
   font-size: 1.8rem;
 }
+
 .title-2 {
   font-family: "Doto", serif;
   font-size: 1.4rem; 
-  margin-bottom: 0.9rem;
 }
 
 .title-3 {
-  font-family: "Albert Sans", sans-serif;
+  font-family: "Doto", serif;
+  font-size: 1.2rem; 
+}
+
+.title-4 {
+  /* font-family: "Albert Sans", sans-serif; */
   font-weight: 600;
   font-size: 1.05rem; 
-  margin-bottom: 0.7rem;
 }
 
 /* Medium screens (md) - min-width: 768px */

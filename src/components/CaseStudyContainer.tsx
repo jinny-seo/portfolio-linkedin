@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 
 interface CaseStudyProps {
-    children: ReactNode;
+    children: React.ReactNode;
 }
 
 export const CaseStudyContainer: FC<CaseStudyProps> = ({ children }) => {

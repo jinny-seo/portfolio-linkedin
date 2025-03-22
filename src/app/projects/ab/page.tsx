@@ -12,6 +12,8 @@ import { caseStudyAB } from "@/assets/caseStudyImages";
 import Windows95FrameInner from "@/components/Windows95FrameInner";
 import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
+import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
+import { CardSection } from "@/components/CardSection";
 
 const caseStudyData = {
   team: [
@@ -60,47 +62,43 @@ export default function abProject() {
             <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
             <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
           </CaseStudyHeader>
-
-          {/* Case study content: START */}
-          <Windows95FrameInner>
-            <h2 className="font-Doto p-6 m-0 text-xl">Background</h2>
-          </Windows95FrameInner>
+  
+          <CaseStudyTitleDivider title="Background"/>
           
-          <Windows95FrameInner>
-            
+          <Windows95FrameInner>  
               <CardContainer>
-                
-                <div className="grid grid-cols-2">
-                  <div>
+                <div className="grid grid-cols-2 gap-6">
+                  <CardSection>
                     <h3 className="title-2">Team</h3>
                     <BulletList>
                       {caseStudyData.team.map(
                         (member, index) => (<li key={index}>{member}</li>)
                       )}
                     </BulletList>
-                  </div>
+                  </CardSection>
 
-                  <div>
+                  <CardSection>
                   <h3 className="title-2">My role</h3>
                     <BulletList>
                       {caseStudyData.role.map(
                         (member, index) => (<li key={index}>{member}</li>)
                       )}
                     </BulletList>
-                  </div>
+                  </CardSection>
                 </div>
-              </CardContainer>
 
-              <CardContainer>
-                <h2 className="title-2">Problem</h2>
-                <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
-                <BulletList>
-                  <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
-                  <li>Customers missed time-sensitive opportunities between scheduled calls</li>
-                  <li>Access to savings information depended entirely on sales rep availability</li>
-                </BulletList>
-                <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
+                <CardSection>
+                  <h2 className="title-2">Problem</h2>
+                  <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
+                  <BulletList>
+                    <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
+                    <li>Customers missed time-sensitive opportunities between scheduled calls</li>
+                    <li>Access to savings information depended entirely on sales rep availability</li>
+                  </BulletList>
+                  <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
+                </CardSection>
               </CardContainer>
+            
               
               <CardContainer>
                 <h2 className="title-2">Stakeholder management</h2>

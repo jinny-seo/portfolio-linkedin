@@ -1,22 +1,19 @@
 "use client"
 import { usePathname } from "next/navigation";
-import { BulletList } from "@/components/BulletList";
 import { CardContainer } from "@/components/CardContainer";
-import Image, { StaticImageData} from "next/image";
-import { caseStudyAB } from "@/assets/caseStudyImages";
-import { navImage } from "@/assets/navImages";
+import { BulletList } from "@/components/BulletList";
 import { CaseStudyContainer } from "@/components/CaseStudyContainer";
-import { NavItem } from "@/components/NavItem";
-import { projAssets } from "@/assets/projAssets";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
+import { NavItem } from "@/components/NavItem";
+import Image, { StaticImageData} from "next/image";
+import { navImage } from "@/assets/navImages";
+import { projAssets } from "@/assets/projAssets";
+import { caseStudyAB } from "@/assets/caseStudyImages";
+
 
 
 
 const caseStudyData = {
-  intro:[
-    "I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.",
-    "Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience."
-  ],
   team: [
     "Sole designer (Me)",
     "Director of Product",
@@ -51,15 +48,18 @@ export default function abProject() {
         <CaseStudyContainer>
           <CaseStudyHeader 
             title={currentProject.name}
-            company={currentProject.company} 
-            intro={caseStudyData.intro} 
+            company={currentProject.company}
             date={currentProject.date} 
             duration={currentProject.duration} 
             team={caseStudyData.team} 
             role={caseStudyData.role} 
             heroImage={caseStudyData.heroImage} 
             heroImageDesc={caseStudyData.heroImageDesc} 
-          />
+          >
+            <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
+            <p>Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
+          </CaseStudyHeader>
+
           <CardContainer>
             <h2 className="title-2">Background</h2>
             <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
@@ -70,7 +70,6 @@ export default function abProject() {
             </BulletList>
             <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
           </CardContainer>
-          
 
           <CardContainer>
             <h2 className="title-2">Stakeholder management</h2>

@@ -37,16 +37,12 @@ body {
   font-family: "Albert Sans", sans-serif;
 }
 
-.case-study-desc {
-  max-width: none;
-}
-
 hr {
   margin-bottom: 1rem;
 }
 
 p, ul {
-  max-width: 650px;
+  /* max-width: 650px; */
   line-height: 155%;
   margin-bottom: 1.2rem;
 }

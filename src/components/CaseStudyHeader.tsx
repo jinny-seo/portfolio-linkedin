@@ -5,9 +5,9 @@ import { CardContainer } from "./CardContainer";
 import { BulletList } from "./BulletList";
 
 interface CaseStudyHeaderProps {
+    children: React.ReactNode;
     title: string;
     company: string;
-    intro: string[];
     date?: string;
     duration?: string;
     team?: string[];
@@ -18,13 +18,11 @@ interface CaseStudyHeaderProps {
 
 
 
-export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intro, date, duration, team, role, heroImage, heroImageDesc }) => {
+export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, company, date, duration, team, role, heroImage, heroImageDesc }) => {
     return(
         <div>
-        
             <CardContainer fullWidth={true}>
                 <div className="">
-                    
                     {/* Title & desc */}
                     <div className="flex flex-col">
                         <span className="font-Doto">{company}</span>
@@ -34,7 +32,7 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ title, company, intr
                             <span className="ml-2">({duration})</span>
                         </p>
                         <div className="md:text-lg">
-                            {intro.map((paragraph, index) => (<p key={index} className="text-md pb-2 max-w-none">{paragraph}</p>))}
+                            {children}
                         </div>
                         <hr></hr>
                     </div>

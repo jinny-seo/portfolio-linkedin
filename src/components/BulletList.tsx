@@ -6,6 +6,6 @@ interface BulletListProps {
 
 export const BulletList: FC<BulletListProps> = ({ children }) => {
     return(
-        <ul className="list-disc pl-5 mb-4">{children}</ul> 
+        <ul className="list-disc pl-5 mb-0">{children}</ul> 
     );
 };

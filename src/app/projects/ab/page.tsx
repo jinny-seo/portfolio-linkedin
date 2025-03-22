@@ -3,16 +3,15 @@ import { usePathname } from "next/navigation";
 import { CardContainer } from "@/components/CardContainer";
 import { BulletList } from "@/components/BulletList";
 import { CaseStudyContainer } from "@/components/CaseStudyContainer";
-import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { NavItem } from "@/components/NavItem";
 import Image, { StaticImageData} from "next/image";
-import { navImage } from "@/assets/navImages";
+
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
-import ProjectFrame from "@/components/ProjectFrame";
 
-
-
+import Windows95FrameInner from "@/components/Windows95FrameInner";
+import Windows95FrameOuter from "@/components/Windows95FrameOuter";
+import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 
 const caseStudyData = {
   team: [
@@ -30,7 +29,7 @@ const caseStudyData = {
     "Future roadmapping",
   ],
   heroImage: caseStudyAB.ABhero,
-  heroImageDesc: "AB  project hero image",
+  heroImageDesc: "AB project hero image",
 }
 
 export default function abProject() {
@@ -46,83 +45,93 @@ export default function abProject() {
 
   
     return (
-      <ProjectFrame>
-        <CaseStudyContainer>
-          <CaseStudyHeader 
-            title={currentProject.name}
-            company={currentProject.company}
-            date={currentProject.date} 
-            duration={currentProject.duration} 
-            team={caseStudyData.team} 
-            role={caseStudyData.role} 
-            heroImage={caseStudyData.heroImage} 
-            heroImageDesc={caseStudyData.heroImageDesc} 
-          >
+      <div>
+        <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
+
+          <CaseStudyHeader
+                  title={currentProject.name}
+                  company={currentProject.company} 
+                  date={currentProject.date} 
+                  duration={currentProject.duration} 
+                  team={caseStudyData.team} 
+                  role={caseStudyData.role} 
+                  heroImage={caseStudyData.heroImage} 
+                  heroImageDesc={caseStudyData.heroImageDesc} >
             <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
-            <p>Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
+            <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
           </CaseStudyHeader>
 
-          <CardContainer>
-            <h2 className="title-2">Background</h2>
-            <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
-            <BulletList>
-              <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
-              <li>Customers missed time-sensitive opportunities between scheduled calls</li>
-              <li>Access to savings information depended entirely on sales rep availability</li>
-            </BulletList>
-            <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
-          </CardContainer>
-
-          <CardContainer>
-            <h2 className="title-2">Stakeholder management</h2>
-            <div className="flex flex-col">
-              <div>
-                <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
-              </div>
-              <div>
-                <Image className="lg:max-w-[650px]" src={caseStudyAB.ABinternaldash} alt="Original internal PowerBI dashboard"/>
-                <p className="caption">Original internal PowerBI dashboard contained a table with 23 columns.</p>
-              </div>
-              <div>
-                <Image className="shadow-md lg:max-w-[650px]" src={caseStudyAB.ABinitialdesignfilters} alt="Proposed initial design with filters drawer"/>
-                <p className="caption">The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues.</p>
-              </div> 
-              <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
+          {/* Case study content: START */}
+          <Windows95FrameInner>
+            <div className="bg-white">
+              <CardContainer>
+                <h2 className="title-2">Background</h2>
+                <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
+                <BulletList>
+                  <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
+                  <li>Customers missed time-sensitive opportunities between scheduled calls</li>
+                  <li>Access to savings information depended entirely on sales rep availability</li>
+                </BulletList>
+                <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
+              </CardContainer>
+              
+              <CardContainer>
+                <h2 className="title-2">Stakeholder management</h2>
+                <div className="flex flex-col">
+                  <div>
+                    <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
+                  </div>
+                  <div>
+                    <Image className="lg:max-w-[650px]" src={caseStudyAB.ABinternaldash} alt="Original internal PowerBI dashboard"/>
+                    <p className="caption">Original internal PowerBI dashboard contained a table with 23 columns.</p>
+                  </div>
+                  <div>
+                    <Image className="shadow-md lg:max-w-[650px]" src={caseStudyAB.ABinitialdesignfilters} alt="Proposed initial design with filters drawer"/>
+                    <p className="caption">The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues.</p>
+                  </div> 
+                  <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
+                </div>
+              </CardContainer>
             </div>
-          </CardContainer>
-
-          <CardContainer>
-            <h2 className="title-2">Navigation strategy</h2>
-            <p>When analyzing the PowerBI dashboard, I identified that traditional filters alone would overwhelm users with pharmaceutical jargon. Instead, I advocated for an interactive approach where...</p>
-            <BulletList>
-              <li>Upper tables acted as intuitive visual filters</li>
-              <li>Complex terminology was contextualized within familiar data</li>
-              <li>Selecting accounts/products dynamically filtered the detailed view</li>
-            </BulletList>
-            <p>While the initial MVP scope called for static tables to expedite delivery, I built a business case for these interactions by...</p>
-            <BulletList>
-              <li>Demonstrating how interactive elements would significantly reduce the learning curve</li>
-              <li>Presenting clickable prototypes to illustrate the usability benefits</li>
-              <li>Showing how this approach would encourage exploration of cost-saving opportunities</li>
-            </BulletList>
-            <Image className="lg:max-w-[650px]" src={caseStudyAB.ABgif} alt="Filter action for opps dash"/>
-          </CardContainer>
+          </Windows95FrameInner>
+          <Windows95FrameInner>
+            <h2 className="font-Doto p-4 m-0 text-xl">Solution</h2>
           
-          <CardContainer>
-            <h2 className="title-2">KPI visualization</h2>
-            <p>PRxO contribution metrics are critical for customers of AmerisourceBergen, as reaching certain thresholds impacts available discounts.</p>
-            <p>However, there was a critical disconnect: AmerisourceBergen measured PRxO compliance in <b>percentages for discount qualification</b>, but the source design only displayed <b>absolute dollar amounts.</b></p>
-            <p>My solution was to transform this KPI into a more active decision-making tool by...</p>
-            <BulletList>
-              <li>Redesigning the metrics display to emphasize percentage contribution supported by dollar amounts</li>
-              <li>Creating a prominent KPI showing total PRxO contribution with a companion percentage showing potential increase</li>
-              <li>Connecting these metrics to the interactive filtering system so users could see real-time updates as they explored different product alternatives</li>
-            </BulletList>
-            <p>This approach directly aligned the interface with the actual business decision-making process, allowing users to immediately see how close they were to discount thresholds to identify the most effective product substitutions.</p>
-            <Image className="lg:max-w-[650px] pt-8 pb-12" src={caseStudyAB.ABimprovement2} alt="PRoX KPI visualization"/>
-          </CardContainer>
+          </Windows95FrameInner>
+          <Windows95FrameInner>
+            <div className="bg-white">
+              <CardContainer>
+                <h2 className="title-2">Navigation strategy</h2>
+                <p>When analyzing the PowerBI dashboard, I identified that traditional filters alone would overwhelm users with pharmaceutical jargon. Instead, I advocated for an interactive approach where...</p>
+                <BulletList>
+                  <li>Upper tables acted as intuitive visual filters</li>
+                  <li>Complex terminology was contextualized within familiar data</li>
+                  <li>Selecting accounts/products dynamically filtered the detailed view</li>
+                </BulletList>
+                <p>While the initial MVP scope called for static tables to expedite delivery, I built a business case for these interactions by...</p>
+                <BulletList>
+                  <li>Demonstrating how interactive elements would significantly reduce the learning curve</li>
+                  <li>Presenting clickable prototypes to illustrate the usability benefits</li>
+                  <li>Showing how this approach would encourage exploration of cost-saving opportunities</li>
+                </BulletList>
+                <Image className="lg:max-w-[650px]" src={caseStudyAB.ABgif} alt="Filter action for opps dash"/>
+              </CardContainer>
+              
+              <CardContainer>
+                <h2 className="title-2">KPI visualization</h2>
+                <p>PRxO contribution metrics are critical for customers of AmerisourceBergen, as reaching certain thresholds impacts available discounts.</p>
+                <p>However, there was a critical disconnect: AmerisourceBergen measured PRxO compliance in <b>percentages for discount qualification</b>, but the source design only displayed <b>absolute dollar amounts.</b></p>
+                <p>My solution was to transform this KPI into a more active decision-making tool by...</p>
+                <BulletList>
+                  <li>Redesigning the metrics display to emphasize percentage contribution supported by dollar amounts</li>
+                  <li>Creating a prominent KPI showing total PRxO contribution with a companion percentage showing potential increase</li>
+                  <li>Connecting these metrics to the interactive filtering system so users could see real-time updates as they explored different product alternatives</li>
+                </BulletList>
+                <p>This approach directly aligned the interface with the actual business decision-making process, allowing users to immediately see how close they were to discount thresholds to identify the most effective product substitutions.</p>
+                <Image className="lg:max-w-[650px] pt-8 pb-12" src={caseStudyAB.ABimprovement2} alt="PRoX KPI visualization"/>
+              </CardContainer>
 
-          <CardContainer>
+              <CardContainer>
             <h2 className="title-2">Usability enhancements</h2>
             <p>Finally, I identified and addressed several critical barriers to effective use of the application.</p>
             <h3 className="title-3">Streamlined information architecture</h3>
@@ -142,7 +151,29 @@ export default function abProject() {
             <Image className="lg:max-w-[650px]" src={caseStudyAB.ABimprovement3} alt="Dropdown to switch between product IDs"/>
             <p>My solution introduced a dropdown built directly into the product that seamlessly switches between ID systems without disrupting workflow or losing context.</p>
             
-            </CardContainer>
+          </CardContainer>
+            </div>
+          </Windows95FrameInner>
+          
+          
+          
+          {/* Case study content: END */}
+
+        </Windows95FrameOuter>
+              
+      
+      
+        <CaseStudyContainer>
+
+
+
+          
+
+
+          
+
+
+
 
             {/* Impact */}
             <CardContainer>
@@ -208,8 +239,8 @@ export default function abProject() {
 
 
           </CaseStudyContainer>
-          </ProjectFrame>
-      
+          
+          </div>
      
     );
   }

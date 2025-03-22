@@ -4,7 +4,7 @@ import Windows95Button from './Windows95Button';
 import Image, { StaticImageData} from "next/image";
 import { icon } from "@/assets/icon";
 import ProjectPreviewNav from './ProjectPreviewNav';
-import { ProjectTitleBar } from './ProjectTitleBar';
+import { Windows95TitleBar } from './Windows95TitleBar';
 
 interface ProjectPanelProps {
     children: React.ReactNode;
@@ -25,7 +25,7 @@ const ProjectPanel: React.FC<ProjectPanelProps> = ({children, company, date, cur
             <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
                 <div className="border-slate-300 border-2 rounded-[2px]">
-                    <ProjectTitleBar label={company} date={date}></ProjectTitleBar>
+                    <Windows95TitleBar label={company} date={date}></Windows95TitleBar>
                 </div>
                 <div className="border-slate-300 border-4 bg-red-300/0">
                     <div className='flex flex-col gap-2 mb-3'>

@@ -2,7 +2,7 @@ import React from 'react';
 import Windows95Button from './Windows95Button';
 import { icon } from "@/assets/icon";
 import ProjectPreviewNav from './ProjectPreviewNav';
-import { ProjectTitleBar } from './ProjectTitleBar';
+import { Windows95TitleBar } from './Windows95TitleBar';
 
 interface ProjectFrameProps {
     children: React.ReactNode;
@@ -23,7 +23,7 @@ const ProjectFrame: React.FC<ProjectFrameProps> = ({children, label= "some label
             <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
             <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
                 <div className="border-slate-300 border-2 rounded-[2px]">
-                    <ProjectTitleBar label={label} button></ProjectTitleBar>
+                    
                 </div>
                 <div className="border-slate-300 border-2">
                     <div className="border-slate-100 border-b-2 border-r-2">

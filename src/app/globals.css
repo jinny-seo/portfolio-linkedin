@@ -19,6 +19,13 @@
   font-style: normal; 
 }
 
+@font-face {
+  font-family: "Albert Sans";
+  src: url("/fonts/AlbertSans.ttf") format("truetype");
+  
+  
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,25 +35,13 @@
   --foreground: #171717;
 }
 
+body {
+  font-family: "Albert Sans", sans-serif;
+  
+}
+
 .case-study-desc {
   max-width: none;
-}
-
-.border-emboss-tlr {
-  border-top: ridge 5px rgb(203, 213, 225);
-  border-left: ridge 5px rgb(203, 213, 225);
-  border-right: ridge 5px rgb(203, 213, 225);
-}
-
-.border-emboss {
-  border: ridge 5px rgb(203, 213, 225);
-}
-
-body {
-  font-family: "roc-grotesk", sans-serif;
-  /* font-family: "Tiny5", sans-serif;
-  font-family: "Pixelify Sans", sans-serif; */
-  
 }
 
 hr {
@@ -60,13 +55,12 @@ p, ul {
 }
 
 h1,h2,h3,h4,h5,h6 {
+  font-family: "Doto", serif;
   line-height: 110%;
-  
-  
 }
 
 h1 {
-  font-size:1.8rem;
+  font-size: 1.8rem;
 }
 h2 {
   font-size: 1.4rem; 

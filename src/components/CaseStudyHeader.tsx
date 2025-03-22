@@ -21,7 +21,7 @@ interface CaseStudyHeaderProps {
 export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, company, date, duration, team, role, heroImage, heroImageDesc }) => {
     return(
         <div>
-            
+
             <CardContainer fullWidth={true}>
                 <div className="">
                     {/* Title & desc */}
@@ -77,7 +77,10 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, com
                     </div>
                 </div>
             </CardContainer>
+            <div className="border-b-[6px] border-t-[6px] border-slate-400 mb-8">
             <Image src={heroImage} alt={heroImageDesc} className="mb-12"/>
+            </div>
+            
             
             
             

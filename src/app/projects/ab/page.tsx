@@ -9,6 +9,7 @@ import Image, { StaticImageData} from "next/image";
 import { navImage } from "@/assets/navImages";
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
+import ProjectFrame from "@/components/ProjectFrame";
 
 
 
@@ -45,6 +46,7 @@ export default function abProject() {
 
   
     return (
+      <ProjectFrame>
         <CaseStudyContainer>
           <CaseStudyHeader 
             title={currentProject.name}
@@ -206,7 +208,7 @@ export default function abProject() {
 
 
           </CaseStudyContainer>
-          
+          </ProjectFrame>
       
      
     );

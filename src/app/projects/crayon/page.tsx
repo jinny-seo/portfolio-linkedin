@@ -9,6 +9,7 @@ import Image, { StaticImageData} from "next/image";
 import { navImage } from "@/assets/navImages";
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyCrayon } from "@/assets/caseStudyImages";
+import ProjectFrame from "@/components/ProjectFrame";
 
 const caseStudyData = {
   team: [
@@ -37,6 +38,7 @@ export default function crayonProject() {
   const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
   const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
   return (
+    <ProjectFrame>
     <CaseStudyContainer>
       <CaseStudyHeader 
         title={currentProject.name}
@@ -130,6 +132,7 @@ export default function crayonProject() {
         <p>This rapid adjustment demonstrated the value of focused user observation and our commitment to supporting efficient workflows even after launch.</p> 
       </CardContainer>
     </CaseStudyContainer>
+    </ProjectFrame>
   );
 }
   

@@ -1,5 +1,4 @@
 import React from "react";
-import Windows95Button from "./Windows95Button";
 import { icon } from "@/assets/icon";
 
 interface ProjectTitleBarProps {
@@ -16,7 +15,7 @@ export const ProjectTitleBar: React.FC<ProjectTitleBarProps> = ({ label = "", da
                 {date && <span className="mx-1">·</span>}
                 {date && <span>{date}</span>}
             </div>
-            {button && <Windows95Button icon={icon.maximize} compact={true}/>}
+            
             
         </div>
     );

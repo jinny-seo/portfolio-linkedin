@@ -14,7 +14,7 @@ export default function Windows95Button({ onClick, icon, label, disabled, compac
   return (
     <div onClick={disabled ? undefined : onClick} // Prevent clicks if disabled
     className={`group bg-slate-300 border-slate-500 border-t-[0.5px] border-l-[0.5px] rounded-[2px]
-      hover:bg-slate-400/40  active:bg-slate-400/50 
+      hover:bg-slate-400/40  active:bg-slate-400/40 
       ${compact ? "rounded-[2px]" : "rounded-[2px]"}
       ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
     >

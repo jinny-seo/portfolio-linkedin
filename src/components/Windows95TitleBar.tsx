@@ -9,7 +9,7 @@ interface Windos95TitleBarProps {
 
 export const Windows95TitleBar: React.FC<Windos95TitleBarProps> = ({ label = "", date = "", duration = "" }) => {
     return(
-        <div className="bg-blue-800 mr-[1px] w-full">
+        <div className="bg-blue-800 w-full">
             <div className="font-Doto text-white text-[.94rem] leading-[1.5rem] mx-2 pr-4 truncate w-full">
                 <span>{label}</span>
                 {date && <span className="mx-1">·</span>}

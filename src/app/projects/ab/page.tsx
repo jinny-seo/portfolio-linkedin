@@ -49,6 +49,7 @@ export default function abProject() {
 
     return (      
       <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
+        {/* Header: START */}
         <CaseStudyHeader
             title={currentProject.name}
             company={currentProject.company} 
@@ -58,6 +59,7 @@ export default function abProject() {
           <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
           <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
         </CaseStudyHeader>
+        {/* Header: END */}
 
         <Windows95FrameInner>
           <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>

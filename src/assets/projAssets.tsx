@@ -1,6 +1,7 @@
 import projAB from './project/AB_hero.png';
-import projABAlt from './project/AB_hero-with-nav.png';
-import projCrayon from './project/Crayon_hero.png';
+import projABSecondary from './project/AB_hero-with-nav.png';
+import projCrayonSecondary from './project/Crayon_hero-insights.png';
+import projCrayon from './project/Crayon_hero-dropdown.png';
 import projMimic from './project/Mimic_hero.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
@@ -15,7 +16,7 @@ export const projAssets = [
         description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
         link: "ab",
         image: projAB,
-        imageSecondary: projABAlt,
+        imageSecondary: projABSecondary,
     },
     {
         name: "Redesigning Crayon's Onboarding Experience",
@@ -25,6 +26,8 @@ export const projAssets = [
         description: "A new onboarding and landing experience for a competitive intelligence platform",
         link: "crayon",
         image: projCrayon,
+        imageSecondary: projCrayonSecondary,
+
     },
     {
         name: "Evolving a cybersecurity platform from the ground up",

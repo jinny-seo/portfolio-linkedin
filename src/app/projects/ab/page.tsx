@@ -179,15 +179,15 @@ export default function abProject() {
                   <li>Users were using external tools to work around multiple product identification systems</li>
                 </BulletList>
                 <CardSection smaller sectionTitle="My approach">
+                  <BulletList>
+                    <li>Merged related data to reduced column count to 10 from 23</li>
+                    <li>Clearly separated Accounts, Products, and Opportunities sections and reserved visual indicators to call out savings potential</li>
+                    <li>Implemented a built-in dropdown into the products table to switch between ID systems without disrupting workflow</li>
+                  </BulletList>
                   <CaseStudyImage 
                     src={caseStudyAB.ABimprovement3}
                     alt="Redesigned PRoX KPI visualization"
                   />
-                  <BulletList>
-                    <li>Reduced column count to 10 by merging related data</li>
-                    <li>Clearly separated Accounts, Products, and Opportunities sections and reserved visual indicators to call out savings potential</li>
-                    <li>Implemented a built-in dropdown into the products table to switch between ID systems without disrupting workflow</li>
-                  </BulletList>
                 </CardSection>
               </CardSection>
             </CardContainer>
@@ -204,14 +204,17 @@ export default function abProject() {
                     src={caseStudyAB.ABscore}
                     alt="Redesigned PRoX KPI visualization"
                   />
-              </CardSection>
-              <CardSection sectionTitle="Customer feedback">
-                <p>Customers praised clarity, usability, and business value of the product.</p>
+                {/* <CardSection smaller sectionTitle="Customer feedback"> */}
                 <div className="flex flex-col gap-6">
-                  <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
-                  <p className="quote">This would give me a reason to log onto ABC.</p>
+                  <p>Customers praised clarity, usability, and business value of the product.</p>
+                  <div className="flex flex-col gap-6">
+                    <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
+                    <p className="quote">This would give me a reason to log onto ABC.</p>
+                  </div>
                 </div>
+                {/* </CardSection> */}
               </CardSection>
+
               <CardSection sectionTitle="C-Suite presentation">
               <p>The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
               </CardSection>

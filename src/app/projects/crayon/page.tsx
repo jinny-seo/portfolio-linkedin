@@ -29,7 +29,7 @@ const caseStudyData = {
     "Discovery",
     "Prototyping",
     "Usability testing",
-    "MVP launch",
+    "Feature launch",
   ],
   hero: projAssets[1].imageSecondary,
   heroDesc: "Crayon project hero image",
@@ -209,9 +209,7 @@ export default function crayonProject() {
           </CardContainer>
         </Windows95FrameInner>
         {/* Post-launch: END */}
-    
-    </Windows95FrameOuter>
-    
+    </Windows95FrameOuter>    
   );
 }
   

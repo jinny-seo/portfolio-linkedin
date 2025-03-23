@@ -20,9 +20,9 @@ import { caseStudyAB } from "@/assets/caseStudyImages";
 const caseStudyData = {
   team: [
     "Sole designer (Me)",
+    "Team of 6 developers",
     "Director of Product",
     "Product Owner",
-    "Team of 6 developers",
   ],
   role: [
     "Discovery",

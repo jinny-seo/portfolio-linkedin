@@ -15,23 +15,23 @@ import { CardSection } from "@/components/CardSection";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
-import { caseStudyAB } from "@/assets/caseStudyImages";
+import { caseStudyCrayon } from "@/assets/caseStudyImages";
 
 
 const caseStudyData = {
   team: [
     "Main designer (Me)",
-    "Design lead",
     "Team of 4 developers",
     "Product Manager",
     "Chief Product Officer",
   ],
   role: [
     "Discovery",
+    "Prototyping",
     "Usability testing",
     "MVP launch",
   ],
-  hero: projAssets[0].imageSecondary,
+  hero: projAssets[1].imageSecondary,
   heroDesc: "Crayon project hero image",
 }
 
@@ -48,96 +48,167 @@ export default function crayonProject() {
 
   return (
     <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
-      
-      
-        <CaseStudyHeader 
-          title={currentProject.name}
-          company={currentProject.company} 
-          date={currentProject.date} 
-          duration={currentProject.duration} 
+      {/* * * * * Header: START * * * * */}
+      <CaseStudyHeader 
+        title={currentProject.name}
+        company={currentProject.company} 
+        date={currentProject.date} 
+        duration={currentProject.duration} 
         >
-          <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
-          <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
-        </CaseStudyHeader>
+        <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
+        <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
+      </CaseStudyHeader>
+      {/* Header: END */}
+      {/* * * * * Hero image: START * * * * */}
+      <Windows95FrameInner>
+        <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
+      </Windows95FrameInner>
+      {/* Hero image: END */}
+      {/* * * * * Section - Background: START * * * * */}
+      <CaseStudyTitleDivider title="Background"/>
+      <Windows95FrameInner>  
+        <CardContainer>
+          <div className="grid grid-cols-2 gap-6">
+            <CardSection sectionTitle="Members">
+              <BulletList>
+                {caseStudyData.team.map(
+                  (member, index) => (<li key={index}>{member}</li>)
+                )}
+              </BulletList>
+            </CardSection>
+            <CardSection sectionTitle="My role">
+              <BulletList>
+                {caseStudyData.role.map(
+                  (member, index) => (<li key={index}>{member}</li>)
+                )}
+              </BulletList>
+            </CardSection>
+          </div>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Section - Background: END */}
+
+        {/* * * * * Problem: START * * * * */}
+        <CaseStudyTitleDivider title="Problem"/>
+        <Windows95FrameInner>
+          <CardContainer>
+            <CardSection sectionTitle="Core challenges">
+              <div className="">
+                <p>There were some critical challenges on the Crayon platform, especially around onboarding.</p>
+                <BulletList>
+                  <li><b>Self-Service adoption gap.</b> Users relied heavily on manual onboarding from customer success teams rather than configuring their own monitoring settings</li>
+                  <li><b>Email-dependent workflow.</b> Users found value in daily email alerts but struggled to update them or set up new ones</li>
+                  <li><b>Integration underutilization.</b> The platform's integration capabilities were hard to discover</li>
+                </BulletList>
+                
+              </div>
+              <hr className="mt-4 mb-3"/>
+              <CardSection sectionTitle="System analysis">
+                <p>To understand the root causes of the challenges, I conducted a platform evaluation that combined stakeholder interviews, customer feedback, CSR experiences, and usage data to identify barriers to address and opportunities to enhance.</p>
+                <CardSection smaller sectionTitle="Onboarding obstacles">
+                  <BulletList>
+                    <li>New users landed on empty "My Feed" pages with unclear next steps</li>
+                    <li>The distinction between "My Feed" and "All Insights" created confusion</li>
+                    <li>Saved searches, the core value driver of Crayon, wasn't effectively introduced</li>
+                  </BulletList>
+                </CardSection>
+                <CardSection smaller sectionTitle="Frankensteined features">
+                  <BulletList>
+                    <li>Navigation structure had evolved reactively without strategic planning</li>
+                    <li>Growing numbers of saved searches made the quick links workaround unwieldy</li>
+                    <li>Underutilized features took up valuable navigation space</li>
+                  </BulletList>
+                </CardSection>
+                
+                <CardSection smaller sectionTitle="Navigation inefficiencies">
+                  <BulletList>
+                    <li>Separate pages for the navigation menu items created constant context switching</li>
+                    <li>Critical saved searches were buried in separate pages requiring extra clicks</li>
+                    <li>Navigation included vestigial features, such as duplicate search bars and Team Activity, which analytics showed had minimal usage</li>
+                  </BulletList>
+                </CardSection>
+
+                <CardSection smaller sectionTitle="Integration opportunities">
+                <BulletList>
+                  <li>Setting up and managing email digests required customer success assistance</li>
+                  <li>Integration capabilities existed but weren't optimized for self-service configuration</li>
+                  <li>Needed to better support Crayon's "meet users where they are" strategy by integrating competitive intelligence within the apps users already rely on daily</li>
+                </BulletList>
+                </CardSection>
+
+              </CardSection>
+            </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Problem: END */}
+
+        {/* * * * * Solution: START * * * * */}
+        <CaseStudyTitleDivider title="Solution"/>
+        <Windows95FrameInner>  
+          <CardContainer>
+            <CardSection sectionTitle="Navigation transformation">
+              <BulletList>
+                <li>Streamlined navigation by consolidating saved searches into a dropdown menu, clarifying relationships between key sections while reducing context switching</li>
+                <li>Replaced the makeshift "Quick Links" section with a feature to star frequently used searches that elevated them to the top of the saved searches list</li>
+                <li>Removed underutilized feature like Team Activity based on usage analytics, focusing the interface on high-value features</li>
+                <li>Created prominent KPI cards that doubled as quick filters, surfacing the most frequently used filters from the extensive sidebar options</li>
+              </BulletList>
+            </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+
+        <Windows95FrameInner>
+          <CardContainer>
+            <CardSection sectionTitle="Onboarding enhancements">
+              <BulletList>
+                <li>Transformed the new user experience by replaced the blank "My feed" landing page with relevant industry insights based on user input during onboarding</li>
+                <li>Implemented guided onboarding with Appcues with tooltips that introduced core platform concepts to encourage exploration</li>
+                <li>Streamlined saved searches creation while clarifying their relationship to the daily email updates that the users valued</li>
+              </BulletList>
+            </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+
+        <Windows95FrameInner>
+          <CardContainer>
+            <CardSection sectionTitle="Integration focus">
+              <BulletList>
+                <li>Designed and implemented the Gong integration feature, from setup to notifications, supporting a key business partnership</li>
+                <li>Enhanced integration discoverability through notification badges and making integrations part of onboarding</li>
+                <li>Accelerated competitor selection with a custom dropdown solution, partnering with the design system team to add it to the shared library</li>
+              </BulletList>
+            </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Solution: END */}
+
+        {/* * * * * Results: START * * * * */}
+        <CaseStudyTitleDivider title="Results"/>
+        <Windows95FrameInner>  
+          <CardContainer>
+            <CardSection>
+              <BulletList>
+                <li>Successfully launched with no negative feedback despite changing core navigation patterns</li>
+                <li>Preserved established user workflows while improving discoverability</li>
+                <li>Created foundation for improved self-service onboarding</li>
+              </BulletList>
+            </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Results: END */}
         
-        <CardContainer>
-          <h2 className="title-2">Challenges</h2>
-          <p>There were some critical challenges on the Crayon platform, especially around onboarding.</p>
-          <BulletList>
-            <li><b>Self-Service Adoption Gap.</b> Users relied heavily on manual onboarding from customer success teams rather than configuring their own monitoring settings</li>
-            <li><b>Email-Dependent Workflow.</b> Users found value in daily email alerts but struggled to update them or set up new monitoring parameters</li>
-            <li><b>Integration Underutilization.</b> The platform's integration capabilities weren't being fully leveraged due to navigation barriers</li>
-          </BulletList>
-        </CardContainer>
-
-        <CardContainer>
-          <h2 className="title-2">System analysis</h2>
-          <p>Through stakeholder interviews, feedback from customers and CSRs, usage metrics, and platform analysis, I identified key workflow barriers.</p>
-          <h3 className="title-3">Onboarding obstacles</h3>
-          <BulletList>
-            <li>New users landed on empty "My Feed" pages with unclear next steps</li>
-            <li>The distinction between "My Feed" and "All Insights" created confusion</li>
-            <li>The concept of saved searches—the core value driver—wasn't effectively introduced</li>
-          </BulletList>
-          <h3 className="title-3">Frankensteined features</h3>
-          <BulletList>
-            <li>Navigation structure had evolved reactively without strategic planning</li>
-            <li>Growing numbers of saved searches made the quick links workaround increasingly unwieldy</li>
-            <li>Underutilized features took up valuable navigation space</li>
-          </BulletList>
-          <h3 className="title-3">Navigation inefficiencies</h3>
-          <BulletList>
-            <li>Separate interfaces for saved searches and main navigation created constant context switching</li>
-            <li>Critical saved searches were buried in separate pages requiring extra clicks</li>
-            <li>No clear path for creating and managing monitoring parameters</li>
-          </BulletList>
-          <h3 className="title-3">Integration opportunities</h3>
-          <BulletList>
-            <li>Platform needed to better support Crayon's strategy as an insights engine for other tools</li>
-            <li>Setting up and managing email digests required customer success assistance</li>
-            <li>Integration capabilities existed but weren't optimized for self-service configuration</li>
-          </BulletList>
-        </CardContainer>
-
-        <CardContainer>
-          <h2 className="title-2">Solution</h2>
-          <h3 className="title-3">Navigation architecture</h3>
-          <BulletList>
-            <li>Consolidated separate interfaces into one cohesive system</li>
-            <li>Created clear hierarchy for different insight types</li>
-            <li>Streamlined path to saved search creation and managemen</li>
-          </BulletList>
-          <h3 className="title-3">Self-service Enhancement</h3>
-          <BulletList>
-            <li>Redesigned empty states with clear paths to value creation</li>
-            <li>Improved saved search management interface</li>
-            <li>Developed clearer information architecture for different insight types</li>
-          </BulletList>        
-          <h3 className="title-3">Integration focus</h3>
-          <BulletList>
-            <li>Improved access to integration settings</li>
-            <li>Created clearer connections between insights and action paths</li>
-            <li>Streamlined workflows for sharing insights across tools</li>
-          </BulletList>
-        </CardContainer>
-
-        <CardContainer>
-          <h2 className="title-2">Results</h2>
-          <BulletList>
-            <li>Successfully launched with no negative feedback despite changing core navigation patterns</li>
-            <li>Preserved established user workflows while improving discoverability</li>
-            <li>Created foundation for improved self-service onboarding</li>
-            <li>Reduced customer success team involvement in basic setup</li>
-          </BulletList>
-        </CardContainer>
-
-        <CardContainer>
-          <h2 className="title-2">Post-launch iteration</h2>
-          <p>Based on user behavior observation, we quickly adjusted how saved searches were presented.</p>
-          <p>Initially, the current saved search moved to the top of the list, but we discovered users typically processed their saved searches sequentially. We modified the design to maintain a static order, supporting this methodical workflow pattern.</p>
-          <p>This rapid adjustment demonstrated the value of focused user observation and our commitment to supporting efficient workflows even after launch.</p> 
-        </CardContainer>
-      
+        {/* * * * * Post-launch: START * * * * */}
+        <CaseStudyTitleDivider title="Post-launch iteration"/>
+        <Windows95FrameInner>  
+          <CardContainer>
+            <CardSection>
+              <p>Based on user behavior observation, we quickly adjusted how saved searches were presented.</p>
+              <p>Initially, the current saved search moved to the top of the list, but we discovered users typically processed their saved searches sequentially. We modified the design to maintain a static order, supporting this methodical workflow pattern.</p>
+              <p>This rapid adjustment demonstrated the value of focused user observation and our commitment to supporting efficient workflows even after launch.</p>
+              </CardSection>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Post-launch: END */}
     
     </Windows95FrameOuter>
     

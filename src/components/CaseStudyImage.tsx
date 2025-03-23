@@ -6,10 +6,11 @@ interface CaseStudyImageProps {
     src: string | StaticImageData;
     alt: string;
     caption?: string;
+    spaceBottom?: boolean;
     
 }
 
-export const CaseStudyImage: FC<CaseStudyImageProps> = ({ src, caption, alt = "" }) => {
+export const CaseStudyImage: FC<CaseStudyImageProps> = ({ src, caption, alt = "", spaceBottom = false }) => {
     return(
         <div className="flex flex-col gap-2 pt-4">
             <Image 
@@ -17,7 +18,7 @@ export const CaseStudyImage: FC<CaseStudyImageProps> = ({ src, caption, alt = ""
                 src={src}
                 alt={alt}
             />
-            <p className="caption">{caption}</p>
+            <p className={`caption ${ spaceBottom ? "mb-4" : "mb-0"}`}>{caption}</p>
         </div>
     );
 };

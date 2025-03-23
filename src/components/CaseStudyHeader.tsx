@@ -3,6 +3,7 @@ import Image, { StaticImageData} from "next/image";
 import { CardContainer } from "./CardContainer";
 import { BulletList } from "./BulletList";
 import Windows95FrameInner from "./Windows95FrameInner";
+import { CardSection } from "./CardSection";
 
 interface CaseStudyHeaderProps {
     children: React.ReactNode;
@@ -22,12 +23,14 @@ export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, com
     return(
         <div>
             <Windows95FrameInner>
-            <div className="p-6 border-transparent">
-                <h1 className="title-1 mb-6 ">{title}</h1>
-                <div className="text-[1.08rem]">
-                {children}
-                </div>
-            </div>
+                <CardContainer bgNone>
+                    <CardSection>
+                        <h1 className="title-1 mb-3">{title}</h1>
+                        <div className="flex flex-col text-[1.08rem] gap-3">
+                            {children}
+                        </div>
+                    </CardSection>
+                </CardContainer>
             </Windows95FrameInner>
             
             <Windows95FrameInner>

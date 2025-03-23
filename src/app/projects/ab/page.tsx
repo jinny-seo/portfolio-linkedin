@@ -52,14 +52,15 @@ export default function abProject() {
         <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
 
           <CaseStudyHeader
-                  title={currentProject.name}
-                  company={currentProject.company} 
-                  date={currentProject.date} 
-                  duration={currentProject.duration} 
-                  team={caseStudyData.team} 
-                  role={caseStudyData.role} 
-                  heroImage={caseStudyData.heroImage} 
-                  heroImageDesc={caseStudyData.heroImageDesc} >
+              title={currentProject.name}
+              company={currentProject.company} 
+              date={currentProject.date} 
+              duration={currentProject.duration} 
+              team={caseStudyData.team} 
+              role={caseStudyData.role} 
+              heroImage={caseStudyData.heroImage} 
+              heroImageDesc={caseStudyData.heroImageDesc} 
+            >
             <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
             <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
           </CaseStudyHeader>
@@ -93,7 +94,8 @@ export default function abProject() {
                 <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
               </CardSection>
               <CardSection sectionTitle="Stakeholder management">
-                <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
+                <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
+                <p>This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
                 <CaseStudyImage 
                   src={caseStudyAB.ABinternaldash} 
                   alt="Original PowerBI dashboard for the internal sales team"
@@ -102,17 +104,15 @@ export default function abProject() {
                 <CaseStudyImage 
                   src={caseStudyAB.ABinitialdesignfilters} 
                   alt="Proposed initial design with filters drawer"
-                  caption="The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues"
+                  caption="The proposed initial design I received was a direct port of the internal sales tool, and there was misalignment around feature expectations"
+                  spaceBottom
                 />
-
-                <div className="flex flex-col">
-                  <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
-                </div>
+                <p>Additionally, I identified and resolved misalignment around feature expectations for the MVP, getting all stakeholders on the same page.</p>
               </CardSection>
             </CardContainer>
           </Windows95FrameInner>
 
-          <CaseStudyTitleDivider title="Solution"/>
+          <CaseStudyTitleDivider title="Solution."/>
 
           <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Solution</h2></Windows95FrameInner>
           

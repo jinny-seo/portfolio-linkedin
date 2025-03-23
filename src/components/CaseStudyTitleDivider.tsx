@@ -8,7 +8,7 @@ interface CaseStudyTitleDividerProps {
 export const CaseStudyTitleDivider: FC<CaseStudyTitleDividerProps> = ({ title }) => {
     return(
         <Windows95FrameInner>
-            <h2 className="font-Doto title-2 px-6 py-3">{title}</h2>
+            <h2 className="font-Doto title-3 px-6 py-3">{title}</h2>
         </Windows95FrameInner>
     );
 };

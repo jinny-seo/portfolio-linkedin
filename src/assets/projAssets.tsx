@@ -19,6 +19,15 @@ export const projAssets = [
         imageSecondary: projABSecondary,
     },
     {
+        name: "Launching a cybersecurity platform from the ground up",
+        company: "Mimic",
+        date: "01/2024 — 02/2025",
+        duration: "14 monthes",
+        description: "Translating complex cybersecurity needs while building the design infrastructure from scratch",
+        link: "mimic",
+        image: projMimic,
+    },
+    {
         name: "Redesigning Crayon's Onboarding Experience",
         company: "Crayon",
         date: "02/2022 — 07/2022",
@@ -28,15 +37,6 @@ export const projAssets = [
         image: projCrayon,
         imageSecondary: projCrayonSecondary,
 
-    },
-    {
-        name: "Evolving a cybersecurity platform from the ground up",
-        company: "Mimic",
-        date: "01/2024 — 02/2025",
-        duration: "14 monthes",
-        description: "Translating complex cybersecurity needs while building the design infrastructure from scratch",
-        link: "mimic",
-        image: projMimic,
     },
 ];
 

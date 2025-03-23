@@ -1,4 +1,5 @@
-import projAB from './project/AB_hero-2.png';
+import projAB from './project/AB_hero.png';
+import projABAlt from './project/AB_hero-with-nav.png';
 import projCrayon from './project/Crayon_hero.png';
 import projMimic from './project/Mimic_hero.png';
 import projETC from './project/proj-etc.png';
@@ -14,6 +15,7 @@ export const projAssets = [
         description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
         link: "ab",
         image: projAB,
+        imageSecondary: projABAlt,
     },
     {
         name: "Redesigning Crayon's Onboarding Experience",

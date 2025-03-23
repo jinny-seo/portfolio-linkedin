@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import Windows95FrameInner from "./Windows95FrameInner";
+import { CardContainer } from "./CardContainer";
+import { CardSection } from "./CardSection";
 
 interface CaseStudyTitleDividerProps {
     title: string;
@@ -8,7 +10,9 @@ interface CaseStudyTitleDividerProps {
 export const CaseStudyTitleDivider: FC<CaseStudyTitleDividerProps> = ({ title }) => {
     return(
         <Windows95FrameInner>
-            <h2 className="font-Doto title-3 px-6 py-2">{title}</h2>
+            <div className="flex flex-col">
+                <h2 className="font-Doto title-3 py-[0.22rem] mx-auto">{title}</h2>
+            </div>
         </Windows95FrameInner>
     );
 };

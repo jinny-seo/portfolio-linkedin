@@ -1,13 +1,11 @@
 "use client"
 import { usePathname } from "next/navigation";
+import Image, { StaticImageData} from "next/image";
+
 import { CardContainer } from "@/components/CardContainer";
 import { BulletList } from "@/components/BulletList";
 import { CaseStudyContainer } from "@/components/CaseStudyContainer";
 import { NavItem } from "@/components/NavItem";
-import Image, { StaticImageData} from "next/image";
-
-import { projAssets } from "@/assets/projAssets";
-import { caseStudyAB } from "@/assets/caseStudyImages";
 
 import Windows95FrameInner from "@/components/Windows95FrameInner";
 import Windows95FrameOuter from "@/components/Windows95FrameOuter";
@@ -15,6 +13,9 @@ import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
 import { CardSection } from "@/components/CardSection";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
+
+import { projAssets } from "@/assets/projAssets";
+import { caseStudyAB } from "@/assets/caseStudyImages";
 
 const caseStudyData = {
   team: [
@@ -31,8 +32,8 @@ const caseStudyData = {
     "MVP launch",
     "Future roadmapping",
   ],
-  heroImage: caseStudyAB.ABhero,
-  heroImageDesc: "AB project hero image",
+  hero: projAssets[0].imageSecondary,
+  heroDesc: "AB project hero image",
 }
 
 export default function abProject() {
@@ -48,28 +49,26 @@ export default function abProject() {
 
     return (      
       <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
-
         <CaseStudyHeader
             title={currentProject.name}
             company={currentProject.company} 
             date={currentProject.date} 
             duration={currentProject.duration} 
-            team={caseStudyData.team} 
-            role={caseStudyData.role} 
-            heroImage={caseStudyData.heroImage} 
-            heroImageDesc={caseStudyData.heroImageDesc} 
           >
           <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
           <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
         </CaseStudyHeader>
 
+        <Windows95FrameInner>
+          <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
+        </Windows95FrameInner>
+
         {/* Section - Background: START */}
         <CaseStudyTitleDivider title="Background"/>
-
         <Windows95FrameInner>  
           <CardContainer>
             <div className="grid grid-cols-2 gap-6">
-              <CardSection sectionTitle="Team">
+              <CardSection sectionTitle="Members">
                 <BulletList>
                   {caseStudyData.team.map(
                     (member, index) => (<li key={index}>{member}</li>)
@@ -84,7 +83,15 @@ export default function abProject() {
                 </BulletList>
               </CardSection>
             </div>
-            <CardSection sectionTitle="Problem">
+            </CardContainer>
+          </Windows95FrameInner>
+          {/* Section - Background: END */}
+
+        {/* Section - Background: START */}
+        <CaseStudyTitleDivider title="Problem"/>
+        <Windows95FrameInner>  
+          <CardContainer>
+            <CardSection>
               <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
               <BulletList>
                 <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>

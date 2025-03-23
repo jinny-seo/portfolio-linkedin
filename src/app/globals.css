@@ -37,6 +37,15 @@ body {
   font-family: "Albert Sans", sans-serif;
 }
 
+
+.caption {
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 140%;
+  color: rgba(0,0,0, .6);
+}
+
+
 hr {
   margin-bottom: 1rem;
 }
@@ -46,7 +55,7 @@ p, ul {
 }
 
 li {
-  margin-bottom: .2rem;
+  line-height: 180%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,22 +86,20 @@ h1, h2, h3, h4, h5, h6 {
 /* Medium screens (md) - min-width: 768px */
 @media (min-width: 768px) {
   .title-1 {
-    font-size: 2rem; 
+    /* font-size: 2rem;  */
   }
   .title-2 {
-    font-size: 1.5rem; 
-    margin-bottom: 1rem;
+    /* font-size: 1.5rem;  */
   }
 }
 
 /* Large screens (lg) - min-width: 1024px */
 @media (min-width: 1024px) {
   .title-1 {
-    font-size: 2.22rem; 
+    /* font-size: 2.22rem;  */
   }
   .title-2 {
-    font-size: 1.6rem; 
-    margin-bottom: 1.1rem;
+    /* font-size: 1.6rem;  */
   }
   .title-3 {
   }
@@ -101,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Extra Large screens (xl) - min-width: 1280px */
 @media (min-width: 1280px) {
   .title-1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
   }
   
 }

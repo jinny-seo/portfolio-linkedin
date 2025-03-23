@@ -14,6 +14,7 @@ import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
 import { CardSection } from "@/components/CardSection";
+import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 const caseStudyData = {
   team: [
@@ -64,61 +65,54 @@ export default function abProject() {
           </CaseStudyHeader>
   
           <CaseStudyTitleDivider title="Background"/>
-          
           <Windows95FrameInner>  
-              <CardContainer>
-                <div className="grid grid-cols-2 gap-6">
-                  <CardSection>
-                    <h3 className="title-2">Team</h3>
-                    <BulletList>
-                      {caseStudyData.team.map(
-                        (member, index) => (<li key={index}>{member}</li>)
-                      )}
-                    </BulletList>
-                  </CardSection>
-
-                  <CardSection>
-                  <h3 className="title-2">My role</h3>
-                    <BulletList>
-                      {caseStudyData.role.map(
-                        (member, index) => (<li key={index}>{member}</li>)
-                      )}
-                    </BulletList>
-                  </CardSection>
-                </div>
-
-                <CardSection>
-                  <h2 className="title-2">Problem</h2>
-                  <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
+            <CardContainer>
+              <div className="grid grid-cols-2 gap-6">
+                <CardSection sectionTitle="Team">
                   <BulletList>
-                    <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
-                    <li>Customers missed time-sensitive opportunities between scheduled calls</li>
-                    <li>Access to savings information depended entirely on sales rep availability</li>
+                    {caseStudyData.team.map(
+                      (member, index) => (<li key={index}>{member}</li>)
+                    )}
                   </BulletList>
-                  <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
                 </CardSection>
-              </CardContainer>
-            
-              
-              <CardContainer>
-                <h2 className="title-2">Stakeholder management</h2>
+                <CardSection sectionTitle="My role">
+                  <BulletList>
+                    {caseStudyData.role.map(
+                      (member, index) => (<li key={index}>{member}</li>)
+                    )}
+                  </BulletList>
+                </CardSection>
+              </div>
+              <CardSection sectionTitle="Problem">
+                <p>Pharmacy managers could only access cost-saving alternatives through sales rep phone calls, creating three key problems:</p>
+                <BulletList>
+                  <li>Sales reps spent valuable time explaining savings rather than building strategic relationships</li>
+                  <li>Customers missed time-sensitive opportunities between scheduled calls</li>
+                  <li>Access to savings information depended entirely on sales rep availability</li>
+                </BulletList>
+                <p>Our vision was to transform this internal PowerBI dashboard into a self-service external tool where customers could independently discover savings opportunities.</p>
+              </CardSection>
+              <CardSection sectionTitle="Stakeholder management">
+                <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
+                <CaseStudyImage 
+                  src={caseStudyAB.ABinternaldash} 
+                  alt="Original PowerBI dashboard for the internal sales team"
+                  caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
+                />
+                <CaseStudyImage 
+                  src={caseStudyAB.ABinitialdesignfilters} 
+                  alt="Proposed initial design with filters drawer"
+                  caption="The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues"
+                />
+
                 <div className="flex flex-col">
-                  <div>
-                    <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite deadline pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
-                  </div>
-                  <div>
-                    <Image className="lg:max-w-[650px]" src={caseStudyAB.ABinternaldash} alt="Original internal PowerBI dashboard"/>
-                    <p className="caption">Original internal PowerBI dashboard contained a table with 23 columns.</p>
-                  </div>
-                  <div>
-                    <Image className="shadow-md lg:max-w-[650px]" src={caseStudyAB.ABinitialdesignfilters} alt="Proposed initial design with filters drawer"/>
-                    <p className="caption">The proposed initial design I received was a direct port of the internal sales tool and had a host of usability issues.</p>
-                  </div> 
                   <p>Additionally, I identified that there was misalignment around feature expectations. I resolved misunderstandings around MVP requirements, getting all stakeholders on the same page. This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
                 </div>
-              </CardContainer>
-            
+              </CardSection>
+            </CardContainer>
           </Windows95FrameInner>
+
+          <CaseStudyTitleDivider title="Solution"/>
 
           <Windows95FrameInner><h2 className="font-Doto p-4 m-0 text-xl">Solution</h2></Windows95FrameInner>
           
@@ -188,17 +182,6 @@ export default function abProject() {
       
       
         <CaseStudyContainer>
-
-
-
-          
-
-
-          
-
-
-
-
             {/* Impact */}
             <CardContainer>
               <h2 className="title-2">Impact</h2>

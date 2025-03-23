@@ -25,14 +25,7 @@ export default {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
-        ".caption": {
-          marginTop: "0.75rem",
-          marginBottom: "1.5rem",
-          fontSize: "0.9rem",
-          lineHeight: "140%",
-          fontStyle: "italic",
-          color: "rgba(0,0,0, .6)", // Optional: Default text color (gray-700)
-        },
+
         ".quote": {
           marginTop: "1.5rem",
           marginBottom: "1.5rem",

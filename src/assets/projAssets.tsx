@@ -11,7 +11,7 @@ export const projAssets = [
         company: "AmerisourceBergen",
         date: "03/2021 - 12/2021",
         duration: "10 mo",
-        description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives to products",
+        description: "Launching an MVP for a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
         link: "ab",
         image: projAB,
     },

@@ -57,7 +57,7 @@ export default function Home() {
                 const nextProjLink =
                   index < projAssets.length - 1 ? `#project-${projAssets[index + 1].link}` : null;
                 return (
-                  <div key={project.name} id={`project-${project.link}`} className="py-6">
+                  <div key={project.name} id={`project-${project.link}`} className="py-4">
                     <ProjectItem
                       name={project.name}
                       company={project.company}

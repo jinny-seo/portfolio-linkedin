@@ -37,6 +37,13 @@ body {
   font-family: "Albert Sans", sans-serif;
 }
 
+.quote {
+  padding-left: 1.75rem;
+  border-left: 4px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(0,0,0, .6);
+}
 
 .caption {
   font-size: 0.95rem;
@@ -55,7 +62,8 @@ p, ul {
 }
 
 li {
-  line-height: 180%;
+  line-height: 150%;
+  margin-bottom: 0.3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -74,13 +82,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .title-3 {
   font-family: "Doto", serif;
-  font-size: 1.16rem; 
+  font-size: 1.125rem; 
+  
 }
 
 .title-4 {
   /* font-family: "Albert Sans", sans-serif; */
   font-weight: 600;
-  font-size: 1.05rem; 
+  font-size: 1.1rem; 
+  color: rgba(0,0,0,0.65);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 0.75px;
 }
 
 /* Medium screens (md) - min-width: 768px */

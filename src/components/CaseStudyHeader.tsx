@@ -17,13 +17,11 @@ interface CaseStudyHeaderProps {
     heroImageDesc: string;
 }
 
-
-
 export const CaseStudyHeader: FC<CaseStudyHeaderProps> = ({ children, title, company, date, duration, team, role, heroImage, heroImageDesc }) => {
     return(
         <div>
             <Windows95FrameInner>
-                <CardContainer bgNone>
+                <CardContainer fullWidth bgNone>
                     <CardSection>
                         <h1 className="title-1 mb-3">{title}</h1>
                         <div className="flex flex-col text-[1.08rem] gap-3">

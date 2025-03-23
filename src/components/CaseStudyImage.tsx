@@ -12,7 +12,7 @@ interface CaseStudyImageProps {
 
 export const CaseStudyImage: FC<CaseStudyImageProps> = ({ src, caption, alt = "", spaceBottom = false }) => {
     return(
-        <div className="flex flex-col gap-2 pt-4">
+        <div className="flex flex-col gap-2 pt-2">
             <Image 
                 className="shadow-sm border-slate-300/60 border"
                 src={src}

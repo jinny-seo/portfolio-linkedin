@@ -31,7 +31,7 @@ const caseStudyData = {
     "Usability testing",
     "Feature launch",
   ],
-  hero: projAssets[1].imageSecondary,
+  hero: projAssets[2].imageSecondary,
   heroDesc: "Crayon project hero image",
 }
 
@@ -48,6 +48,8 @@ export default function crayonProject() {
 
   return (
     <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
+      
+      
       {/* * * * * Header: START * * * * */}
       <CaseStudyHeader 
         title={currentProject.name}

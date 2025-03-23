@@ -1,8 +1,9 @@
 import projAB from './project/AB_hero.png';
 import projABSecondary from './project/AB_hero-with-nav.png';
-import projCrayonSecondary from './project/Crayon_hero-insights.png';
 import projCrayon from './project/Crayon_hero-dropdown.png';
+import projCrayonSecondary from './project/Crayon_hero-insights.png';
 import projMimic from './project/Mimic_hero.png';
+import projMimicSecondary from './project/Mimic_hero-node-degraded.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
 import projOM from './project/proj-om.png';
@@ -19,13 +20,14 @@ export const projAssets = [
         imageSecondary: projABSecondary,
     },
     {
-        name: "Launching a cybersecurity platform from the ground up",
+        name: "Building a cybersecurity platform from the ground up",
         company: "Mimic",
         date: "01/2024 — 02/2025",
         duration: "14 monthes",
-        description: "Translating complex cybersecurity needs while building the design infrastructure from scratch",
+        description: "Launching and evolving a cybersecurity platform that secured $50M in funding",
         link: "mimic",
         image: projMimic,
+        imageSecondary: projMimicSecondary,
     },
     {
         name: "Redesigning Crayon's Onboarding Experience",

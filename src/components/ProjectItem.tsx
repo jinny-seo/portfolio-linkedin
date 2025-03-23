@@ -5,6 +5,9 @@ import Image, { StaticImageData} from "next/image";
 import ProjectFrame from "./ProjectFrame";
 import ProjectPanel from "./ProjectPanel";
 import Windows95Button from "./Windows95Button";
+import Windows95FrameOuter from "./Windows95FrameOuter";
+import ProjectPreviewNav from "./ProjectPreviewNav";
+import Windows95FrameInner from "./Windows95FrameInner";
 
 interface ProjectItemProps {
     name: string;
@@ -13,30 +16,58 @@ interface ProjectItemProps {
     date: string;
     link: string;
     image: string | StaticImageData;
-    prevprojLink: string | null;
+    prevProjLink: string | null;
     nextProjLink: string | null;
 }
 
-export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevprojLink, nextProjLink}) => {
+export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevProjLink, nextProjLink}) => {
     return(
-        <div className="relative md:mr-[72px] lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]  bg-yellow-500/50">
-             
-                {/* Project image */}
-                <ProjectFrame label={name} description={description} currProjLink={link} prevProjLink={prevprojLink} nextProjLink={nextProjLink}>
-                    <a href={link}>
-                        <Image src={image} alt={name} className=""/>
-                    </a>
-                </ProjectFrame>
-            
-            
-            {/* Project description */}
-            <div className="hidden md:block md:absolute md:top-1/2 md:-right-[72px] md:w-[380px] lg:-right-[56px] xl:-right-[168px] lg:w-[400px] xl:w-[480px] ">
-                <ProjectPanel company={company} date={date} currProjLink={link} prevProjLink={prevprojLink} nextProjLink={nextProjLink}>
-                    <div className="grid">
-                        <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>
-                    </div>
-                </ProjectPanel>
+        <div className="md:relative md:mr-[72px] lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]">
+            <Windows95FrameOuter label={name}> 
+                <Windows95FrameInner>
+                    <Image src={image} alt="test" className=""/>
+                </Windows95FrameInner>
+                {/* Show description and nav buttons when screen size is small: START */}
+                <div className='flex flex-col mx-1 mb-4 mt-1 md:hidden'>
+                    <span className='p-4 pb-5'>test description</span>
+                    <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
+                </div>
+                {/* Show description and nav buttons when screen size is small: END */}
+            </Windows95FrameOuter>
+            <div className="hidden md:block">
+                <div className="absolute top-1/2 -right-[72px] w-[380px] lg:-right-[56px] xl:-right-[168px] lg:w-[400px] xl:w-[480px]">
+                    <Windows95FrameOuter label={company} date={date}>
+                        <div className="pb-4">
+                            <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>
+                            <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
+                        </div>
+                    </Windows95FrameOuter>
+                </div>
             </div>
+            
+            {/* <div className="relative md:mr-[72px] lg:mr-[350px] xl:mr-[500px] 2xl:mr-[600px] lg:max-w-[1024px]"> */}
+                
+                {/* <Windows95FrameOuter label={name}>
+                    <Windows95FrameInner>
+                        <Image src={image} alt={name} className=""/>
+                    </Windows95FrameInner>
+                    <div className='flex flex-col mx-1 mb-4 mt-1 md:hidden'>
+                        <span className='p-4 pb-5'>{description}</span>
+                        <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
+                    </div>
+                </Windows95FrameOuter> */}
+                
+                
+                {/* Project description */}
+                {/* <div className="hidden md:block md:absolute md:top-1/2 md:-right-[72px] md:w-[380px] lg:-right-[56px] xl:-right-[168px] lg:w-[400px] xl:w-[480px] ">
+                    <Windows95FrameOuter label={company} date={date}>
+                        <div className="pb-4">
+                            <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>
+                            <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
+                        </div>
+                    </Windows95FrameOuter>
+                </div> */}
+            {/* </div> */}
         </div>
         
     )

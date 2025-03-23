@@ -90,10 +90,11 @@ h1, h2, h3, h4, h5, h6 {
   /* font-family: "Albert Sans", sans-serif; */
   font-weight: 600;
   font-size: 1.1rem; 
-  color: rgba(0,0,0,0.65);
+  color: rgba(0,0,0,0.88);
+  /* text-transform: uppercase;
   text-decoration: underline;
   text-underline-offset: 4px;
-  text-decoration-thickness: 0.75px;
+  text-decoration-thickness: 0.75px; */
 }
 
 /* Medium screens (md) - min-width: 768px */

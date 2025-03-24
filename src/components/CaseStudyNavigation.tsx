@@ -11,15 +11,19 @@ import Windows95FrameInner from "./Windows95FrameInner";
 interface CaseStudyNavigationProps {
     date?: string;
     duration?: string;
+    currProjLink: string;
+    linkPrev: string;
+    linkNext: string;
 }
 
-export default function CaseStudyNavigation({ date, duration }: CaseStudyNavigationProps) {
+export default function CaseStudyNavigation({ date, duration, currProjLink, linkPrev, linkNext }: CaseStudyNavigationProps) {
 
     return (
-        <div className="flex gap-[0.25rem] my-[0.2rem]">
+        <nav className="flex gap-[0.25rem] my-[0.2rem]">
 
             <div className="py-[1.5px]">
-                <CaseStudyNavButton label="Work" image={navImage.arrowCurve} imageHover={navImage.arrowCurveHover} link=""/>
+                <CaseStudyNavButton label="Work" image={navImage.arrowCurve} imageHover={navImage.arrowCurveHover} link={`/#project-${currProjLink}`}
+                />
             </div>
             
             <div className={`flex flex-col flex-1 `}>
@@ -35,11 +39,12 @@ export default function CaseStudyNavigation({ date, duration }: CaseStudyNavigat
                 </div>
             </div>
             <div className="py-[1.5px]">
-                <CaseStudyNavButton label="Next" image={navImage.arrowLeft} imageHover={navImage.arrowLeftHover} link=""/>
+                <CaseStudyNavButton label="Prev" image={navImage.arrowLeft} imageHover={navImage.arrowLeftHover} link={linkPrev}/>
             </div>
             <div className="py-[1.5px]">
-                <CaseStudyNavButton label="Prev" image={navImage.arrowRight} imageHover={navImage.arrowRightHover} link=""/>
+                <CaseStudyNavButton label="Next" image={navImage.arrowRight} imageHover={navImage.arrowRightHover} link={linkNext}/>
+                
             </div>
-        </div>
+        </nav>
     );
 };

@@ -2,7 +2,7 @@ import { Windows95TitleBar } from "./Windows95TitleBar";
 
 interface Windows95FrameOuterProps {
     children: React.ReactNode;
-    label: string;
+    label?: string;
     date?: string;
     duration?: string;
   }

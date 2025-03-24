@@ -16,6 +16,8 @@ import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyCrayon } from "@/assets/caseStudyImages";
+import { Windows95TitleBar } from "@/components/Windows95TitleBar";
+import CaseStudyNavigation from "@/components/CaseStudyNavigation";
 
 
 const caseStudyData = {
@@ -40,32 +42,35 @@ export default function crayonProject() {
   const currentPath = pathname.replace("/projects/", "");
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
-  const currentProject = projAssets[currentIndex];
 
+  const currentProject = projAssets[currentIndex];
   const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
   const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
 
 
   return (
-    <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
-      
-      
-      {/* * * * * Header: START * * * * */}
-      <CaseStudyHeader 
-        title={currentProject.name}
-        company={currentProject.company} 
-        date={currentProject.date} 
-        duration={currentProject.duration} 
-        >
-        <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
-        <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
+    <div> 
+      <CaseStudyHeader title={currentProject.name} company={currentProject.company} date={currentProject.date} duration={currentProject.duration} 
+      projectNumber="3" currProjLink={currentProject.link} linkPrev={prevProject.link} linkNext={nextProject.link}>
+      <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
+      <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
       </CaseStudyHeader>
-      {/* Header: END */}
+      
+      {/* * * * * Intro: START * * * * */}
+      <CardContainer fullWidth bgNone>
+        <CardSection>
+          <h1 className="title-1">{currentProject.name}</h1>
+
+        </CardSection>
+      </CardContainer>
+      {/* Intro: END */}
+      
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>
         <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
       </Windows95FrameInner>
       {/* Hero image: END */}
+      
       {/* * * * * Section - Background: START * * * * */}
       <CaseStudyTitleDivider title="Background"/>
       <Windows95FrameInner>  
@@ -211,7 +216,8 @@ export default function crayonProject() {
           </CardContainer>
         </Windows95FrameInner>
         {/* Post-launch: END */}
-    </Windows95FrameOuter>    
+    
+    </div>    
   );
 }
   

@@ -46,13 +46,9 @@ export default function crayonProject() {
   const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
   const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
   return (
-    <Windows95FrameOuter label={currentProject.company} date={currentProject.date} duration={currentProject.duration}>
-      {/* * * * * Header: START * * * * */}
-      <CaseStudyHeader 
-      title={currentProject.name}
-      company={currentProject.company} 
-      date={currentProject.date} 
-      duration={currentProject.duration}>
+    <div>
+      <CaseStudyHeader title={currentProject.name} company={currentProject.company} date={currentProject.date} duration={currentProject.duration} 
+      projectNumber="2" currProjLink={currentProject.link} linkPrev={prevProject.link} linkNext={nextProject.link}>
         <p>As one of the two founding designers at Mimic, I shipped the technically-driven MVP platform and evolved it into a user-centered solution, while setting up the design system and brand expression from scratch.</p>
         <div className="quote my-3">
           <p className="mb-2">This is the best looking MVP I've ever seen from a startup.</p>
@@ -60,7 +56,7 @@ export default function crayonProject() {
         </div>
         <p>The strength of our product and design helped Mimic secure $50 million in funding from Google Ventures a year after I joined.</p>
       </CaseStudyHeader>
-      {/* Header: END */}
+      
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>
         <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
@@ -209,7 +205,8 @@ export default function crayonProject() {
       </Windows95FrameInner>
       {/* Impact: END */}
 
-    </Windows95FrameOuter>
+    
+    </div>
   );
 }
 

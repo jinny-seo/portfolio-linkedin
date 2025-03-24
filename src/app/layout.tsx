@@ -1,5 +1,7 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
+import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 
 
 export const metadata: Metadata = {
@@ -17,6 +19,7 @@ export default function RootLayout({
       <body className={`antialiased bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-purple-200 m-4 md:m-6 lg:m-8 xl:m-16 2xl:m-24`}>
         
         {children}
+        
       </body>
     </html>
   );

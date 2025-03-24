@@ -2,20 +2,15 @@
 import { usePathname } from "next/navigation";
 import Image, { StaticImageData} from "next/image";
 
-import { CardContainer } from "@/components/CardContainer";
-import { BulletList } from "@/components/BulletList";
-import { CaseStudyContainer } from "@/components/CaseStudyContainer";
-import { NavItem } from "@/components/NavItem";
-
 import Windows95FrameInner from "@/components/Windows95FrameInner";
-import Windows95FrameOuter from "@/components/Windows95FrameOuter";
-import { CaseStudyHeader } from "@/components/CaseStudyHeader";
-import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
+import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
+import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
+import { BulletList } from "@/components/BulletList";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
-import { caseStudyCrayon } from "@/assets/caseStudyImages";
+import { caseStudyMimic } from "@/assets/caseStudyImages";
 
 const caseStudyData = {
   team: [
@@ -42,20 +37,18 @@ export default function crayonProject() {
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
   const currentProject = projAssets[currentIndex];
-
-  const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
-  const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
   return (
     <div>
-      <CaseStudyHeader title={currentProject.name} company={currentProject.company} date={currentProject.date} duration={currentProject.duration} 
-      projectNumber="2" currProjLink={currentProject.link} linkPrev={prevProject.link} linkNext={nextProject.link}>
-        <p>As one of the two founding designers at Mimic, I shipped the technically-driven MVP platform and evolved it into a user-centered solution, while setting up the design system and brand expression from scratch.</p>
-        <div className="quote my-3">
-          <p className="mb-2">This is the best looking MVP I've ever seen from a startup.</p>
-          <span className="text-[1.1rem] not-italic">— REI, Design partner</span>
-        </div>
-        <p>The strength of our product and design helped Mimic secure $50 million in funding from Google Ventures a year after I joined.</p>
-      </CaseStudyHeader>
+      <CardContainer bgNone fullWidth>
+        <CardSection>
+          <p>As one of the two founding designers at Mimic, I shipped the technically-driven MVP platform and evolved it into a user-centered solution, while setting up the design system and brand expression from scratch.</p>
+          <div className="quote my-3">
+            <p className="mb-2">This is the best looking MVP I've ever seen from a startup.</p>
+            <span className="text-[1.1rem] not-italic">— REI, Design partner</span>
+          </div>
+          <p>The strength of our product and design helped Mimic secure $50 million in funding from Google Ventures a year after I joined.</p>
+        </CardSection>
+      </CardContainer>
       
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>

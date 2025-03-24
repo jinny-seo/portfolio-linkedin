@@ -2,22 +2,16 @@
 import { usePathname } from "next/navigation";
 import Image, { StaticImageData} from "next/image";
 
-import { CardContainer } from "@/components/CardContainer";
-import { BulletList } from "@/components/BulletList";
-import { CaseStudyContainer } from "@/components/CaseStudyContainer";
-import { NavItem } from "@/components/NavItem";
-
 import Windows95FrameInner from "@/components/Windows95FrameInner";
-import Windows95FrameOuter from "@/components/Windows95FrameOuter";
-import { CaseStudyHeader } from "@/components/CaseStudyHeader";
 import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
+import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
+import { BulletList } from "@/components/BulletList";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyCrayon } from "@/assets/caseStudyImages";
-import { Windows95TitleBar } from "@/components/Windows95TitleBar";
-import CaseStudyNavigation from "@/components/CaseStudyNavigation";
+
 
 
 const caseStudyData = {
@@ -50,20 +44,12 @@ export default function crayonProject() {
 
   return (
     <div> 
-      <CaseStudyHeader title={currentProject.name} company={currentProject.company} date={currentProject.date} duration={currentProject.duration} 
-      projectNumber="3" currProjLink={currentProject.link} linkPrev={prevProject.link} linkNext={nextProject.link}>
-      <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
-      <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
-      </CaseStudyHeader>
-      
-      {/* * * * * Intro: START * * * * */}
-      <CardContainer fullWidth bgNone>
+      <CardContainer bgNone fullWidth>
         <CardSection>
-          <h1 className="title-1">{currentProject.name}</h1>
-
+          <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
+          <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
         </CardSection>
       </CardContainer>
-      {/* Intro: END */}
       
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>

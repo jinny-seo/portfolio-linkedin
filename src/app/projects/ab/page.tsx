@@ -2,17 +2,12 @@
 import { usePathname } from "next/navigation";
 import Image, { StaticImageData} from "next/image";
 
-import { CardContainer } from "@/components/CardContainer";
-import { BulletList } from "@/components/BulletList";
-import { CaseStudyContainer } from "@/components/CaseStudyContainer";
-import { NavItem } from "@/components/NavItem";
-
 import Windows95FrameInner from "@/components/Windows95FrameInner";
-import Windows95FrameOuter from "@/components/Windows95FrameOuter";
-import { CaseStudyHeader } from "@/components/CaseStudyHeader";
-import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
+import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
+import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
+import { BulletList } from "@/components/BulletList";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
@@ -49,11 +44,12 @@ export default function abProject() {
 
   return (      
     <div>
-      <CaseStudyHeader title={currentProject.name} company={currentProject.company} date={currentProject.date} duration={currentProject.duration} 
-      projectNumber="1" currProjLink={currentProject.link} linkPrev={prevProject.link} linkNext={nextProject.link}>
-        <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
-        <p className="mb-0">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
-      </CaseStudyHeader>
+      <CardContainer bgNone fullWidth>
+        <CardSection>
+          <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
+          <p>Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
+        </CardSection>
+      </CardContainer>
       
       {/* Hero image: START */}
       <Windows95FrameInner>

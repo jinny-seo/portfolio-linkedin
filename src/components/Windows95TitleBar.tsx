@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { icon } from "@/assets/icon";
 
 interface Windos95TitleBarProps {
@@ -8,6 +8,7 @@ interface Windos95TitleBarProps {
 }
 
 export const Windows95TitleBar: React.FC<Windos95TitleBarProps> = ({ label = "", date = "", duration = "" }) => {
+
     return(
         <div className="bg-blue-800 w-full">
             <div className="font-Doto text-white text-[.94rem] leading-[1.5rem] mx-2 pr-4 truncate w-full">

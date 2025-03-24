@@ -22,6 +22,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
     return(
         <div className="md:relative md:mr-[72px] lg:mr-[350px] xl:mr-[400px] lg:max-w-[1200px]">
             <Windows95FrameOuter label={name}>
+                
                 <a href={link}>
                     <Windows95FrameInner>
                         <Image src={image} alt="test" className=""/>

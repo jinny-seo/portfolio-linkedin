@@ -10,6 +10,8 @@ import arrowLeft from './nav/arrow-left.svg';
 import arrowLeftHover from './nav/arrow-left-hover.svg';
 import arrowRight from './nav/arrow-right.svg';
 import arrowRightHover from './nav/arrow-right-hover.svg';
+import arrowCurve from './nav/arrow-curve.svg';
+import arrowCurveHover from './nav/arrow-curve-hover.svg';
 
 export const navImage = {
     computer,
@@ -24,4 +26,6 @@ export const navImage = {
     arrowLeftHover,
     arrowRight,
     arrowRightHover,
+    arrowCurve,
+    arrowCurveHover
 };

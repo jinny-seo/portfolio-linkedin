@@ -37,6 +37,118 @@ body {
   font-family: "Albert Sans", sans-serif;
 }
 
+/* ---------------------------- */
+/* -------- Container --------- */
+/* ---------------------------- */
+
+.px-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-container-hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+/* md */
+@media (min-width: 768px) {
+  .py-container-hero {
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .py-container-hero {
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .py-container-hero {
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .py-container-hero {
+  }
+}
+
+/* ---------------------------- */
+/* --------- Hero BG ---------- */
+/* ---------------------------- */
+.bg-hero-grid {
+  background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.08) .1em, transparent .1em), 
+      linear-gradient(90deg, rgba(0, 0, 0, 0.08) .1em, transparent .1em);
+  background-size: 2em 2em;
+}
+.bg-hero-gradient {
+  background: linear-gradient(rgba(233, 213, 255, 0.0) 20%, rgba(233, 213, 255, 1.0) 80%);
+}
+
+/* ---------------------------- */
+/* -------- Hero elems -------- */
+/* ---------------------------- */
+
+.title-hero {
+  font-family: "Doto", serif;
+  font-size: 2.2rem; 
+  line-height: 2.5rem;
+}
+.subtitle-hero {
+  font-family: "Doto", serif;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.p-hero {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .p-hero {
+  }
+  .title-hero {
+  }
+  .subtitle-hero {
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .p-hero {
+  }
+  .title-hero {
+  }
+  .subtitle-hero {
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .p-hero {
+  }
+  .title-hero {
+  }
+  .subtitle-hero {
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .p-hero {
+  }
+  .title-hero {
+  }
+  .subtitle-hero {
+  }
+}
+
+/* ---------------------------- */
+/* -------- Case study -------- */
+/* ---------------------------- */
 .quote {
   padding-left: 1.75rem;
   border-left: 4px solid rgba(0, 0, 0, 0.2);
@@ -52,12 +164,6 @@ body {
   color: rgba(0,0,0, .6);
 }
 
-.animate-marquee {
-
-  
-  animation: marquee 10s linear infinite;
-}
-
 /* ---------------------------- */
 /* -------- HTML elems -------- */
 /* ---------------------------- */
@@ -67,7 +173,7 @@ b {
 }
 
 hr {
-  /* margin-bottom: 1rem; */
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 p, ul {
@@ -86,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 110%;
 }
 
+
 .title-1 {
   font-family: "Doto", serif;
   font-size: 1.8rem;
@@ -102,14 +209,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-4 {
-  /* font-family: "Albert Sans", sans-serif; */
   font-weight: 600;
   font-size: 1.1rem; 
   color: rgba(0,0,0,0.88);
-  /* text-transform: uppercase;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 0.75px; */
 }
 
 .title-4 {
@@ -137,6 +239,19 @@ h1, h2, h3, h4, h5, h6 {
     /* font-size: 1.6rem;  */
   }
   .title-3 {
+  }
+
+  .p-hero {
+    font-size: 1.4rem;
+    line-height: 170%;
+  }
+
+  .title-hero {
+    font-size: 3.3rem;
+  }
+
+  .subtitle-hero {
+    font-family: "Doto", serif;
   }
 }
 

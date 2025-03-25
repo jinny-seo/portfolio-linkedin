@@ -107,6 +107,12 @@ body {
   background: linear-gradient(rgba(233, 213, 255, 0.0) 20%, rgba(233, 213, 255, 1.0) 80%);
 }
 
+.bg-notebook {
+  background-image: 
+      linear-gradient(rgba(53, 180, 245, 0.2) .1em, transparent .1em);
+  background-size: 1.8em 1.8em;
+}
+
 /* ---------------------------- */
 /* -------- Hero elems -------- */
 /* ---------------------------- */

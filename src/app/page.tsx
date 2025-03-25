@@ -68,7 +68,78 @@ export default function Home() {
 
         {/* Resume: START */}
         <div id="resume" className="py-container">
-          <SectionTitle title="Resume"/>
+          
+          <div className="bg-white border border-slate-500/10 max-w-[1024px] md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem]">
+            <div className="flex">
+              <div className="border-r border-red-400/50">
+              <div className="w-[7rem]" />
+              </div>
+              <div className="flex w-full pt-16 px-2">
+                <h2 className="flex-1 font-Doto leading-[70%] text-[1.8rem] md:text-[2rem] lg:text-[2.2rem]">Resume</h2>
+              </div>
+              <div className="p-4">
+                <span className="font-Doto text-sky-600">Download</span>
+              </div>
+
+            </div>
+            <div className="flex">
+              <div className="bg-notebook border-r border-red-400/50">
+                <div className="w-[7rem]"/>
+              </div>
+              <div className="w-full bg-notebook">
+
+                <div className="mt-[2.34rem] mr-[2rem] md:mr-[3rem] lg:mr-[4rem] mb-[3rem]">
+
+                  <div className="mt-[1.8rem]">
+                    <div className="px-2">
+                      <p className="font-Doto leading-[1.8rem]">Mimic, Senior Product Designer</p>
+                      <p className="font-Doto leading-[1.8rem]">Dec 2023 – Feb 2025</p>
+                      <ul className="mt-[1.8rem] mb-0">
+                        <li className="mb-0 leading-[1.8rem]">- One of two fouding designers at a cybersecurity startup, from its $27M seed to $70M+ in funding</li>
+                        <li className="mb-0 leading-[1.8rem]">- MVP platform delivery from initial concept to deployment, securing U.S. government and Fortune 500 clients like REI</li>
+                        <li className="mb-0 leading-[1.8rem]">- Established company’s first design system and visual language</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-[1.8rem] mr-[3rem]">
+                    <div className="px-2">
+                      <p className="font-Doto leading-[1.8rem]">Crayon, Senior UX Designer</p>
+                      <p className="font-Doto leading-[1.8rem]">Aug 2018 – Dec 2021</p>
+                      <ul className="mt-[1.8rem] mb-0">
+                        <li className="mb-0 leading-[1.8rem]">- Led onboarding experience redesign, collaborating across engineering, product, and leadership teams to deliver roadmap initiatives</li>
+                        <li className="mb-0 leading-[1.8rem]">- Spearheaded first third-party integration experience</li>
+                        <li className="mb-0 leading-[1.8rem]">- Collaborated with development to create the company’s first component library</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-[1.8rem] mr-[3rem]">
+                    <div className="px-2">
+                      <p className="font-Doto leading-[1.8rem]">projekt202, Experience Designer</p>
+                      <p className="font-Doto leading-[1.8rem]">Aug 2018 – Dec 2021</p>
+                      <ul className="mt-[1.8rem] mb-0">
+                        <li className="mb-0 leading-[1.8rem]">- B2B enterprise consulting engagements for 8 companies, delivering complex systems while building and evolving various design systems</li>
+                        <li className="mb-0 leading-[1.8rem]">- Established company-wide audit process for accessibility consulting engagements, leading to internal education initiatives and client implementation</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-[1.8rem] mr-[3rem]">
+                    <div className="px-2">
+                      <p className="font-Doto leading-[1.8rem]">projekt202, Experience Designer</p>
+                      <p className="font-Doto leading-[1.8rem]">Aug 2018 – Dec 2021</p>
+                      <ul className="mt-[1.8rem] mb-0">
+                        <li className="mb-0 leading-[1.8rem]">- Pioneered company’s thought leadership on emerging technologies through research and rapid prototyping</li>
+                        <li className="mb-0 leading-[1.8rem]">- Published industry-leading chatbot design guidelines (100k+ views, 2.5k+ likes), establishing thought leadership in conversational UI as one of the first guidelines for chatbots</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* Resume: END */}
         

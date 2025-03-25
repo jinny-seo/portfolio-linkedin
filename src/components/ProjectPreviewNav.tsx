@@ -11,7 +11,7 @@ interface ProjectPreviewNavProps {
 
 const ProjectPreviewNav: React.FC<ProjectPreviewNavProps> = ({ currProjLink, prevProjLink, nextProjLink }) => {
     return (
-        <div className='flex mx-3 flex-row gap-2'>
+        <div className='flex flex-row gap-2'>
         <a className='w-full' href={currProjLink}><Windows95Button label="View" /></a>
         <div className="flex flex-row gap-[0.1rem]">
             {prevProjLink ? (

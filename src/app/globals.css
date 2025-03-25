@@ -52,24 +52,34 @@ body {
 }
 /* md */
 @media (min-width: 768px) {
+  .px-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .py-container-hero {
   }
 }
 
 /* lg */
 @media (min-width: 1024px) {
+  .px-container {
+  }
   .py-container-hero {
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
+  .px-container {
+  }
   .py-container-hero {
   }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
+  .px-container {
+  }
   .py-container-hero {
   }
 }

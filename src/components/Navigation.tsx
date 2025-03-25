@@ -33,7 +33,7 @@ export const navItemAsset = [
 export const Navigation = () => {
     const activeSection = activeNavItem(["work", "resume", "contact"]);
     return(
-        <nav className="w-fit rounded-[5px] bg-purple-200/50">
+        <nav className="">
             <ul className="flex list-none gap-1 p-1">
             {navItemAsset.map(
                 (item) => (

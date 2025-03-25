@@ -20,7 +20,7 @@ export default function Home() {
       <div className={`${isNavVisible ? "-translate-y-[10%]" : "translate-y-[120%]"} transition-transform duration-300 
       fixed flex justify-center bottom-0 left-0 right-0 z-10
       lg:translate-y-0 lg:justify-end md:m-4`}>
-        <div className="bg-purple-200/20 backdrop-blur-lg rounded-lg">
+        <div className="bg-purple-200/20 backdrop-blur-lg rounded-lg border-purple-400 border-none">
           <Navigation/>
         </div>
       </div>

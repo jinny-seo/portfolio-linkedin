@@ -20,26 +20,27 @@ interface ProjectItemProps {
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevProjLink, nextProjLink}) => {
     return(
-        <div className="md:relative md:mr-[72px] lg:mr-[350px] xl:mr-[400px] lg:max-w-[1200px]">
+        <div className="md:relative md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem] lg:max-w-[1024px]">
             <Windows95FrameOuter label={name}>
-                
                 <a href={link}>
                     <Windows95FrameInner>
                         <Image src={image} alt="test" className=""/>
                     </Windows95FrameInner>
                 </a>
                 {/* Show description and nav buttons when screen size is small: START */}
-                <div className='flex flex-col gap-1 mx-1 mb-4 mt-1 md:hidden'>
-                    <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>
+                <div className='md:hidden flex flex-col gap-4 mx-3 mt-4 mb-3'>
+                    <p className="">{description}</p>
                     <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
                 </div>
                 {/* Show description and nav buttons when screen size is small: END */}
             </Windows95FrameOuter>
             <div className="hidden md:block">
-                <div className="absolute top-1/2 -right-[72px] lg:-right-[56px] xl:-right-[132px] w-[400px] xl:w-[480px]">
+                <div className="absolute bottom-[12%] 
+                -right-[5rem] lg:-right-[3.5rem] xl:-right-[5rem] 
+                w-[26rem] xl:w-[28rem]">
                     <Windows95FrameOuter label={company} date={date}>
-                        <div className="flex flex-col gap-1 pb-4">
-                            <p className=" px-[0.85rem] py-[0.6rem] max-w-none mb-0">{description}</p>
+                        <div className="flex flex-col gap-4 mx-3 mt-4 mb-3">
+                            <p className="">{description}</p>
                             <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />
                         </div>
                     </Windows95FrameOuter>

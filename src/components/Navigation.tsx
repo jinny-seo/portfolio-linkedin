@@ -34,7 +34,7 @@ export const Navigation = () => {
     const activeSection = activeNavItem(["work", "resume", "contact"]);
     return(
         <nav className="">
-            <ul className="flex list-none gap-1 p-1">
+            <ul className="flex list-none gap-1 ">
             {navItemAsset.map(
                 (item) => (
                 <li key={item.label}>

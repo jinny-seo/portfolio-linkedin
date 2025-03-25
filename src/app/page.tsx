@@ -11,6 +11,7 @@ import Windows95FrameInner from "@/components/Windows95FrameInner";
 import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 import ProjectPreviewNav from "@/components/ProjectPreviewNav";
 import { HeroSection } from "@/sections/HeroSection";
+import { SectionTitle } from "@/sections/SectionTitle";
 
 export default function Home() {
   const isNavVisible = activeScroll();
@@ -37,22 +38,17 @@ export default function Home() {
       {/* Hero: END */}
 
       <div className="flex flex-col p-container">
-        {/* Work */}
+        {/* Work: START */}
         <div id="work" className="py-container">
-          <div className="flex flex-col gap-[2rem]">
-            <div className="flex flex-col gap-[1rem]">
-              <h2 className="title-homepage-section">Work</h2>
-              <p className="subtitle-hero">. . .</p>
-            </div>
-            
-            {projAssets.map(
-              (project, index) => {
+          <div className="flex flex-col">
+            <SectionTitle title="Work"/>
+            {projAssets.map( (project, index) => {
                 const prevProjLink =
                   index > 0 ? `#project-${projAssets[index - 1].link}` : null;
                 const nextProjLink =
                   index < projAssets.length - 1 ? `#project-${projAssets[index + 1].link}` : null;
                 return (
-                  <div key={project.name} id={`project-${project.link}`} >
+                  <div key={project.name} id={`project-${project.link}`} className="pt-[1rem] md:pt-[2rem] pb-[2rem] md:pb-[4rem] ">
                     <ProjectItem
                       name={project.name}
                       company={project.company}
@@ -65,20 +61,23 @@ export default function Home() {
                     />
                   </div>
                 );
-              }
-            )}
+            })}
           </div>
         </div>
+        {/* Work: END */}
 
-        {/* Resume */}
-        <div id="resume" className="h-[1000px] bg-black/40">
-          <h2>Resume</h2>
+        {/* Resume: START */}
+        <div id="resume" className="py-container">
+          <SectionTitle title="Resume"/>
         </div>
-
-        {/* Contact */}
-        <div id="contact" className="h-[1000px] bg-black/60">
-          <h2>Contact</h2>
+        {/* Resume: END */}
+        
+        {/* Contact: START */}
+        <div id="contact" className="py-container">
+          <SectionTitle title="Contact"/>
         </div>
+        {/* Contact: END */}
+      
       </div>
       
     </main>

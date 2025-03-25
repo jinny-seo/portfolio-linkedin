@@ -11,6 +11,7 @@ import { BulletList } from "@/components/BulletList";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
+import CaseStudyNav from "@/components/CaseStudyNav";
 
 const caseStudyData = {
   team: [
@@ -44,6 +45,7 @@ export default function abProject() {
 
   return (      
     <div>
+      {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
           <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>

@@ -41,46 +41,56 @@ body {
 /* -------- Container --------- */
 /* ---------------------------- */
 
-.px-container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.p-container {
+  padding: 1.5rem;
 }
 
-.py-container-hero {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.py-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
+
 /* md */
 @media (min-width: 768px) {
-  .px-container {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  .p-container {
+    padding: 3rem;
   }
-  .py-container-hero {
+  .py-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-  .px-container {
+  .p-container {
+    padding: 4rem;
   }
-  .py-container-hero {
+  .py-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
-  .px-container {
+  .p-container {
+    padding: 5rem;
   }
-  .py-container-hero {
+  .py-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
-  .px-container {
+  .p-container {
+    padding: 6rem;
   }
-  .py-container-hero {
+  .py-container {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -121,6 +131,13 @@ body {
   margin-top:1rem
 }
 
+.title-homepage-section {
+  font-family: "Doto", serif;
+  font-size: 2.1rem;
+  line-height: 1.5rem;
+  
+}
+
 /* md */
 @media (min-width: 768px) {
   .title-hero {
@@ -146,26 +163,6 @@ body {
   .p-hero {
     font-size: 1.3rem;
     line-height: 2.5rem;
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .title-hero {
-  }
-  .subtitle-hero {
-  }
-  .p-hero {
-  }
-}
-
-/* 2xl */
-@media (min-width: 1536px) {
-  .title-hero {
-  }
-  .subtitle-hero {
-  }
-  .p-hero {
   }
 }
 

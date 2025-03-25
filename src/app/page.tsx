@@ -36,12 +36,15 @@ export default function Home() {
       </div>
       {/* Hero: END */}
 
-      <div className="flex flex-col px-container gap-20">
-
+      <div className="flex flex-col p-container">
         {/* Work */}
-        <div id="work" className="">
-          <div className="flex flex-col gap-2">
-            <h2 className="title-1">Work</h2>
+        <div id="work" className="py-container">
+          <div className="flex flex-col gap-[2rem]">
+            <div className="flex flex-col gap-[1rem]">
+              <h2 className="title-homepage-section">Work</h2>
+              <p className="subtitle-hero">. . .</p>
+            </div>
+            
             {projAssets.map(
               (project, index) => {
                 const prevProjLink =
@@ -49,7 +52,7 @@ export default function Home() {
                 const nextProjLink =
                   index < projAssets.length - 1 ? `#project-${projAssets[index + 1].link}` : null;
                 return (
-                  <div key={project.name} id={`project-${project.link}`} className="py-4">
+                  <div key={project.name} id={`project-${project.link}`} >
                     <ProjectItem
                       name={project.name}
                       company={project.company}

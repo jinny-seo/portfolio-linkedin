@@ -11,6 +11,7 @@ import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyMimic } from "@/assets/caseStudyImages";
+import CaseStudyNav from "@/components/CaseStudyNav";
 
 const caseStudyData = {
   team: [
@@ -39,6 +40,7 @@ export default function crayonProject() {
   const currentProject = projAssets[currentIndex];
   return (
     <div>
+      {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
           <p>As one of the two founding designers at Mimic, I shipped the technically-driven MVP platform and evolved it into a user-centered solution, while setting up the design system and brand expression from scratch.</p>

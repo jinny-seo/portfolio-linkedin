@@ -11,6 +11,7 @@ import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyCrayon } from "@/assets/caseStudyImages";
+import CaseStudyNav from "@/components/CaseStudyNav";
 
 
 
@@ -37,13 +38,10 @@ export default function crayonProject() {
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
 
-  const currentProject = projAssets[currentIndex];
-  const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
-  const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
-
 
   return (
     <div> 
+      {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
           <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>

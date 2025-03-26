@@ -143,11 +143,11 @@ body {
 }
 .divider-hero-spacing {
   padding-top: 0.4rem;
+  padding-bottom: 0.8rem;
 }
 .p-hero {
   font-size: 1.1rem;
   line-height: 2rem;
-  margin-top:1rem
 }
 
 
@@ -160,6 +160,10 @@ body {
   .subtitle-hero {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+  .divider-hero-spacing {
+    padding-top: 0.6rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -176,6 +180,10 @@ body {
   .p-hero {
     font-size: 1.3rem;
     line-height: 2.5rem;
+  }
+  .divider-hero-spacing {
+    padding-top: 0.8rem;
+    padding-bottom: 1.2rem;
   }
 }
 

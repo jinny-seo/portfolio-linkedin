@@ -7,6 +7,11 @@ import calendar from './icon/calendar.svg';
 import clock from './icon/clock.svg';
 import download from './icon/download.svg';
 import expand from './icon/expand.svg';
+import linkedin from './icon/linkedin.svg';
+import instagram from './icon/instagram.svg';
+import medium from './icon/medium.svg';
+import mail from './icon/mail.svg';
+import behance from './icon/behance.svg';
 
 export const icon = {
     triangleUp,
@@ -18,4 +23,9 @@ export const icon = {
     clock,
     download,
     expand,
+    instagram,
+    linkedin,
+    medium,
+    mail,
+    behance,
 };

@@ -33,7 +33,7 @@ export const navItemAsset = [
 export const Navigation = () => {
     const activeSection = activeNavItem(["work", "resume", "contact"]);
     return(
-        <nav className="mx-2">
+        <nav className="mx-2 mt-2 mb-1">
             <ul className="flex list-none gap-1 ">
             {navItemAsset.map(
                 (item) => (

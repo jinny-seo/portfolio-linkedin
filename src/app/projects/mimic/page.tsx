@@ -145,7 +145,7 @@ useEffect(() => {
       <Windows95FrameInner>
         <CardContainer>
           <CardGap>
-            <CardSection sectionTitle="Post-Launch initiative">
+            <CardSection sectionTitle="Post-launch initiative">
               <p>While the MVP successfully demonstrated our technical capabilities, internal user feedback quickly revealed opportunities for improvement.</p>
               <p>To address this gap,  I initiated a deeper research process to understand our users.</p>
               <BulletList>
@@ -155,25 +155,63 @@ useEffect(() => {
               </BulletList>
             </CardSection>
             <CardSection sectionTitle="Research insights">
-              <p>This research revealed that we were serving two fundamentally different user types with distinct needs and workflows.</p>
-              <div className="grid gap-3 md:grid-cols-2">
-                <CardSection smaller sectionTitle="Manage (IT Operations)">
-                  <BulletList>
-                    <li>Primary Role: Deploy and maintain security agents</li>
-                    <li>Key concerns: Connectivity status, credential management, configurations, operational health</li>
-                    <li>Critical for our near-term growth—getting our agents deployed</li>
-                  </BulletList>
-                </CardSection>
-                <CardSection smaller sectionTitle="Monitor (Security Analysts)">
-                  <BulletList>
-                    <li>Primary responsibility: Investigating security events and incidents</li>
-                    <li>Key concerns: Timeline of events, severity assessment, threat detection</li>
-                    <li>Future focus: This persona would become increasingly important as our platform matured</li>
-                  </BulletList>
-                </CardSection>
-              </div>
-              <p>While we needed to eventually serve both personas, we determined that focusing on the "Manage" persona would address our immediate growth challenge—getting our security agents deployed across customer systems.</p>
+              
+                <p>This research revealed that we were serving two fundamentally different user types with distinct needs and workflows.</p>
+              
+                <div className="overflow-x-auto my-4">
+                  <table className="min-w-full border border-slate-400 text-left text-sm table-fixed">
+                    <thead className="bg-slate-200 text-slate-800">
+                      <tr>
+                        <th className="w-[25%] p-3 border-b border-slate-400"></th>
+                        <th className="w-[37.5%] p-3 border-b border-slate-400">Manage<br/>(IT Operations)</th>
+                        <th className="w-[37.5%] p-3 border-b border-slate-400">Monitor<br/>(Security Analysts)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white text-slate-700">
+                      <tr>
+                        <td className="p-3 border-b border-slate-300 font-semibold text-slate-600">
+                          Primary role
+                        </td>
+                        <td className="p-3 border-b border-slate-300">
+                          Deploy and maintain security agents
+                        </td>
+                        <td className="p-3 border-b border-slate-300">
+                          Investigating security events and incidents
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 border-b border-slate-300 font-semibold text-slate-600">
+                          Key concerns
+                        </td>
+                        <td className="p-3 border-b border-slate-300">
+                          Connectivity status, credential management, configurations, operational health
+                        </td>
+                        <td className="p-3 border-b border-slate-300">
+                          Timeline of events, severity assessment, threat detection
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 font-semibold text-slate-600">
+                          Focus
+                        </td>
+                        <td className="p-3">
+                          Critical for our near-term growth—getting our agents deployed
+                        </td>
+                        <td className="p-3">
+                          This persona would become increasingly important as our platform matured
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p>While we needed to eventually serve both personas, we determined that focusing on the "Manage" persona would address our immediate growth challenge—getting our security agents deployed across customer systems.</p>
+              
             </CardSection>
+            
+
+
+
           </CardGap>
         </CardContainer>
       </Windows95FrameInner>

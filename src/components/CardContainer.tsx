@@ -16,7 +16,7 @@ export const CardContainer: FC<CardContainerProps> = ({ children, fullWidth = fa
             ${removeSpaceTop ? "pt-0 pb-6 md:pt-0 md:pb-10" : "py-6 md:py-10" }`}
         > */}
             <div className={`mx-auto flex flex-col 
-                ${fullWidth ? "w-full p-6 pb-8" : "p-6 md:p-12 lg:p-16 max-w-[650px]"}
+                ${fullWidth ? "w-full p-6 pb-8" : "px-6 pt-8 pb-10 md:p-12 lg:p-16 max-w-[650px]"}
             `}>
                 {children}
             </div>

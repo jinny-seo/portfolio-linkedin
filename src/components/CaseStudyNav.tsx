@@ -62,7 +62,7 @@ const CaseStudyNav = () => {
                 </div>
 
                 {/* Date & duration metadata: START */}
-                <div className={`flex flex-col flex-1 `}>
+                <div className={`flex flex-col flex-1 text-sm leading-[160%] md:text-[1rem]`}>
                     <div className={`flex-1`}>
                     <Windows95FrameInner>
                             <div className="flex gap-[0.6rem] px-[0.4rem]">

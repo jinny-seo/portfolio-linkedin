@@ -13,6 +13,8 @@ import { projAssets } from "@/assets/projAssets";
 import { caseStudyMimic } from "@/assets/caseStudyImages";
 import CaseStudyNav from "@/components/CaseStudyNav";
 import { CardGap } from "@/components/CardGap";
+import { useState, useEffect } from "react";
+import { icon } from "@/assets/icon";
 
 const caseStudyData = {
   team: [
@@ -39,6 +41,38 @@ export default function crayonProject() {
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
   const currentProject = projAssets[currentIndex];
+  const [openImage, setOpenImage] = useState<string | null>(null);
+
+// Scroll lock
+useEffect(() => {
+  if (openImage) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [openImage]);
+
+// ESC key handler
+useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setOpenImage(null);
+    }
+  };
+
+  if (openImage) {
+    window.addEventListener('keydown', handleKeyDown);
+  }
+
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+  };
+}, [openImage]);
+
+
   return (
     <div>
       {/* <CaseStudyNav/> */}
@@ -57,8 +91,23 @@ export default function crayonProject() {
       
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>
-        <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
+        <div className="relative group w-fit cursor-zoom-in" 
+        onClick={() => setOpenImage(caseStudyData.hero.src)}>
+          <Image
+            src={caseStudyData.hero as StaticImageData}
+            alt={caseStudyData.heroDesc || "Hero image"}
+            className="transition duration-300 ease-in-out group-hover:brightness-[0.36]"
+          />
+          {/* Hover Overlay */}
+          <div className="absolute items-center justify-center inset-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <Image src={icon.expand} alt="Expand" width={36} height={36}/>
+              <p className="font-Doto text-xl text-white">Expand</p>
+            </div>
+          </div>
+        </div>
       </Windows95FrameInner>
+
       {/* Hero image: END */}
 
       {/* * * * * Section - Background: START * * * * */}
@@ -210,6 +259,30 @@ export default function crayonProject() {
         </CardContainer>
       </Windows95FrameInner>
       {/* Impact: END */}
+
+      {/* Full screen image overlay */}
+      {openImage && (
+  <div
+    className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]"
+    onClick={() => setOpenImage(null)}
+  >
+    <button
+      className="absolute top-0 right-4 md:top-4 md:right-8 font-Doto text-white hover:text-gray-400 text-[2.5rem] p-1 z-50"
+      onClick={(e) => {
+        e.stopPropagation();
+        setOpenImage(null);
+      }}
+    >
+      ×
+    </button>
+    <img
+      src={openImage}
+      alt="Full-size"
+      className="max-h-screen w-auto max-w-[93%] md:max-w-[90%] object-contain"
+      onClick={(e) => e.stopPropagation()}
+    />
+  </div>
+)}
 
     
     </div>

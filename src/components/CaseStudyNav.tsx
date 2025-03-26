@@ -40,6 +40,10 @@ const CaseStudyNav = () => {
     // Generate the "All Works" link with an anchor to the current project
     const allWorksLink = `/#project-${currentPath}`;
 
+    //Extract dates
+    const fullDate = projAssets[currentIndex].date;
+    const yearOnly = fullDate.match(/\d{4}/)?.[0]
+
     return (
         <div>
             <Windows95TitleBar>
@@ -49,20 +53,25 @@ const CaseStudyNav = () => {
                 <span>{projAssets[currentIndex].company}</span>
                 </div>
             </Windows95TitleBar>
+
             <nav className="flex gap-[0.25rem] my-[0.2rem]">
                 {/* All works button */}
                 <div className="py-[1.5px]">
                     <CaseStudyNavButton label="Work" image={navImage.arrowCurve} imageHover={navImage.arrowCurveHover} link={allWorksLink}
                     />
                 </div>
-                {/* Date & duration metadata */}
+
+                {/* Date & duration metadata: START */}
                 <div className={`flex flex-col flex-1 `}>
                     <div className={`flex-1`}>
                     <Windows95FrameInner>
                             <div className="flex gap-[0.6rem] px-[0.4rem]">
                                 <Image src={icon.calendar} alt="" width={15} className={``}/>
                                 <span className={`flex-1 font-Doto`}>
-                                    {projAssets[currentIndex].date}
+                                    {/* Full date for md+ screens */}
+                                    <span className="hidden md:inline">{fullDate}</span>
+                                    {/* Year-only for small screens */}
+                                    <span className="inline md:hidden">{yearOnly}</span>
                                 </span>
                             </div>
                         </Windows95FrameInner>
@@ -71,13 +80,23 @@ const CaseStudyNav = () => {
                         <Windows95FrameInner>
                             <div className="flex gap-[0.6rem] px-[0.4rem]">
                                 <Image src={icon.clock} alt="" width={15} className={``}/>
-                                <span className={`flex-1 font-Doto`}>
-                                    {projAssets[currentIndex].duration}
-                                </span>
+                                <span className="flex-1 font-Doto">
+                                    {/* Full duration: X months */}
+                                    <span className="hidden md:inline">
+                                        {projAssets[currentIndex].duration}
+                                    </span>
+                                    {/* Abbreviated version for sm screens: X mo */}
+                                    <span className="inline md:hidden truncate">
+                                        {projAssets[currentIndex].duration.replace('months', 'mo')}
+                                    </span>
+                                    </span>
                             </div>
                         </Windows95FrameInner>
                     </div>
                 </div>
+                {/* Date & duration metadata: END */}
+
+
                 {/* Prev & Next buttons */}
                 <div className="py-[1.5px]">
                     <CaseStudyNavButton label="Prev" image={navImage.arrowLeft} imageHover={navImage.arrowLeftHover} link={prevProject.link}/>
@@ -86,11 +105,6 @@ const CaseStudyNav = () => {
                     <CaseStudyNavButton label="Next" image={navImage.arrowRight} imageHover={navImage.arrowRightHover} link={nextProject.link}/>
                 </div>
             </nav>
-                  <CardContainer bgNone fullWidth removeSpaceBottom>
-                    <CardSection>
-            <h1 className="title-1">{projAssets[currentIndex].name}</h1>
-            </CardSection>
-            </CardContainer>
             
         </div>
     );

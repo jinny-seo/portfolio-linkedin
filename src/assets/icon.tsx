@@ -5,6 +5,7 @@ import triangleDownDisabled from './icon/triangle-down-disabled.svg';
 import maximize from './icon/maximize.svg';
 import calendar from './icon/calendar.svg';
 import clock from './icon/clock.svg';
+import download from './icon/download.svg';
 
 export const icon = {
     triangleUp,
@@ -14,4 +15,5 @@ export const icon = {
     maximize,
     calendar,
     clock,
+    download,
 };

@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth ">
       <body className={`antialiased bg-purple-200 `}>
-        {/* <div className={`bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-purple-200 `}>
+          {/* <div className={`bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-purple-200 `}>
+            {children}
+          </div> */}
           {children}
-        </div> */}
-        {children}
       </body>
     </html>
   );

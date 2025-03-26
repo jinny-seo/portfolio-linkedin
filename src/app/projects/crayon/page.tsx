@@ -12,6 +12,7 @@ import { CaseStudyImage } from "@/components/CaseStudyImage";
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyCrayon } from "@/assets/caseStudyImages";
 import CaseStudyNav from "@/components/CaseStudyNav";
+import { CardGap } from "@/components/CardGap";
 
 
 
@@ -37,6 +38,7 @@ export default function crayonProject() {
   const currentPath = pathname.replace("/projects/", "");
 
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
+  const currentProject = projAssets[currentIndex];
 
 
   return (
@@ -44,8 +46,9 @@ export default function crayonProject() {
       {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
-          <p>Crayon's competitive intelligence platform helps businesses monitor competitor activities and make strategic decisions. After six years of organic growth, the platform had become fragmented and inefficient.</p>
-          <p>What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
+          <h1 className="title-1">{currentProject.name}</h1>
+          <p className="text-lg">{currentProject.description}</p>
+          <p className="text-lg">What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
         </CardSection>
       </CardContainer>
       
@@ -83,52 +86,51 @@ export default function crayonProject() {
         <CaseStudyTitleDivider title="Problem"/>
         <Windows95FrameInner>
           <CardContainer>
-            <CardSection sectionTitle="Core challenges">
-              <div className="">
-                <p>There were some critical challenges on the Crayon platform, especially around onboarding.</p>
+            <CardGap>
+              <CardSection sectionTitle="Core challenges">
                 <BulletList>
                   <li><b>Self-Service adoption gap.</b> Users relied heavily on manual onboarding from customer success teams rather than configuring their own monitoring settings</li>
                   <li><b>Email-dependent workflow.</b> Users found value in daily email alerts but struggled to update them or set up new ones</li>
                   <li><b>Integration underutilization.</b> The platform's integration capabilities were hard to discover</li>
                 </BulletList>
-                
-              </div>
-              <hr className="mt-4 mb-3"/>
-              <CardSection sectionTitle="System analysis">
-                <p>To understand the root causes of the challenges, I conducted a platform evaluation that combined stakeholder interviews, customer feedback, CSR experiences, and usage data to identify barriers to address and opportunities to enhance.</p>
-                <CardSection smaller sectionTitle="Onboarding obstacles">
-                  <BulletList>
-                    <li>New users landed on empty "My Feed" pages with unclear next steps</li>
-                    <li>The distinction between "My Feed" and "All Insights" created confusion</li>
-                    <li>Saved searches, the core value driver of Crayon, wasn't effectively introduced</li>
-                  </BulletList>
-                </CardSection>
-                <CardSection smaller sectionTitle="Frankensteined features">
-                  <BulletList>
-                    <li>Navigation structure had evolved reactively without strategic planning</li>
-                    <li>Growing numbers of saved searches made the quick links workaround unwieldy</li>
-                    <li>Underutilized features took up valuable navigation space</li>
-                  </BulletList>
                 </CardSection>
                 
-                <CardSection smaller sectionTitle="Navigation inefficiencies">
+                <CardSection sectionTitle="System analysis">
+                  <p>To understand the root causes of the challenges, I conducted a platform evaluation that combined stakeholder interviews, customer feedback, CSR experiences, and usage data to identify barriers to address and opportunities to enhance.</p>
+                  <CardSection smaller sectionTitle="Onboarding obstacles">
+                    <BulletList>
+                      <li>New users landed on empty "My Feed" pages with unclear next steps</li>
+                      <li>The distinction between "My Feed" and "All Insights" created confusion</li>
+                      <li>Saved searches, the core value driver of Crayon, wasn't effectively introduced</li>
+                    </BulletList>
+                  </CardSection>
+                  <CardSection smaller sectionTitle="Frankensteined features">
+                    <BulletList>
+                      <li>Navigation structure had evolved reactively without strategic planning</li>
+                      <li>Growing numbers of saved searches made the quick links workaround unwieldy</li>
+                      <li>Underutilized features took up valuable navigation space</li>
+                    </BulletList>
+                  </CardSection>
+                  
+                  <CardSection smaller sectionTitle="Navigation inefficiencies">
+                    <BulletList>
+                      <li>Separate pages for the navigation menu items created constant context switching</li>
+                      <li>Critical saved searches were buried in separate pages requiring extra clicks</li>
+                      <li>Navigation included vestigial features, such as duplicate search bars and Team Activity, which analytics showed had minimal usage</li>
+                    </BulletList>
+                  </CardSection>
+
+                  <CardSection smaller sectionTitle="Integration opportunities">
                   <BulletList>
-                    <li>Separate pages for the navigation menu items created constant context switching</li>
-                    <li>Critical saved searches were buried in separate pages requiring extra clicks</li>
-                    <li>Navigation included vestigial features, such as duplicate search bars and Team Activity, which analytics showed had minimal usage</li>
+                    <li>Setting up and managing email digests required customer success assistance</li>
+                    <li>Integration capabilities existed but weren't optimized for self-service configuration</li>
+                    <li>Needed to better support Crayon's "meet users where they are" strategy by integrating competitive intelligence within the apps users already rely on daily</li>
                   </BulletList>
-                </CardSection>
+                  </CardSection>
 
-                <CardSection smaller sectionTitle="Integration opportunities">
-                <BulletList>
-                  <li>Setting up and managing email digests required customer success assistance</li>
-                  <li>Integration capabilities existed but weren't optimized for self-service configuration</li>
-                  <li>Needed to better support Crayon's "meet users where they are" strategy by integrating competitive intelligence within the apps users already rely on daily</li>
-                </BulletList>
-                </CardSection>
-
-              </CardSection>
-            </CardSection>
+                </CardSection>              
+                </CardGap>
+            
           </CardContainer>
         </Windows95FrameInner>
         {/* Problem: END */}

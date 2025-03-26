@@ -1,4 +1,7 @@
 @import url("https://use.typekit.net/eqi1vja.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: "Tiny5";
@@ -24,10 +27,6 @@
   src: url("/fonts/AlbertSans.ttf") format("truetype");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -35,6 +34,20 @@
 
 body {
   font-family: "Albert Sans", sans-serif;
+  transition-property: opacity, background-color, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+/* ---------------------------- */
+/* ------- Transitions -------- */
+/* ---------------------------- */
+
+.page-transition {
+  opacity: 0;
+  background: rgb(233, 213, 255);
+  transform: translateY(40px);
+  /* filter: blur(10px); */
 }
 
 /* ---------------------------- */
@@ -209,7 +222,7 @@ li {
 /* --------- TITLES ----------- */
 /* ---------------------------- */
 h1, h2, h3, h4, h5, h6 {
-  line-height: 110%;
+  line-height: 120%;
 }
 
 
@@ -243,17 +256,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Medium screens (md) - min-width: 768px */
 @media (min-width: 768px) {
   .title-1 {
-    /* font-size: 2rem;  */
-  }
-  .title-2 {
-    /* font-size: 1.5rem;  */
+    font-size: 2rem; 
   }
 }
 
 /* Large screens (lg) - min-width: 1024px */
 @media (min-width: 1024px) {
   .title-1 {
-    /* font-size: 2.22rem;  */
+    font-size: 2.2rem; 
   }
   .title-2 {
     /* font-size: 1.6rem;  */

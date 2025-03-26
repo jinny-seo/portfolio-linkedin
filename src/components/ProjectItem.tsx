@@ -6,6 +6,7 @@ import Windows95Button from "./Windows95Button";
 import Windows95FrameOuter from "./Windows95FrameOuter";
 import ProjectPreviewNav from "./ProjectPreviewNav";
 import Windows95FrameInner from "./Windows95FrameInner";
+import { TransitionLink } from "@/utils/TransitionLink";
 
 interface ProjectItemProps {
     name: string;
@@ -21,12 +22,13 @@ interface ProjectItemProps {
 export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevProjLink, nextProjLink}) => {
     return(
         <div className="md:relative md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem] lg:max-w-[1024px]">
+            
             <Windows95FrameOuter label={name}>
-                <a href={link}>
+                <TransitionLink href={link}>
                     <Windows95FrameInner>
                         <Image src={image} alt="test" className=""/>
                     </Windows95FrameInner>
-                </a>
+                    </TransitionLink>
                 {/* Show description and nav buttons when screen size is small: START */}
                 <div className='md:hidden flex flex-col gap-4 mx-3 mt-4 mb-3'>
                     <p className="">{description}</p>
@@ -34,6 +36,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
                 </div>
                 {/* Show description and nav buttons when screen size is small: END */}
             </Windows95FrameOuter>
+            
             <div className="hidden md:block">
                 <div className="absolute bottom-[12%] 
                 -right-[5rem] lg:-right-[3.5rem] xl:-right-[5rem] 

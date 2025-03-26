@@ -12,6 +12,7 @@ import { BulletList } from "@/components/BulletList";
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
 import CaseStudyNav from "@/components/CaseStudyNav";
+import { CardGap } from "@/components/CardGap";
 
 const caseStudyData = {
   team: [
@@ -40,16 +41,17 @@ export default function abProject() {
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
   
   const currentProject = projAssets[currentIndex];
-  const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
-  const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
+  // const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
+  // const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
 
   return (      
     <div>
       {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
-          <p>I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
-          <p>Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
+          <h1 className="title-1">{currentProject.name}</h1>
+          <p className="text-lg">I led the transformation of AmerisourceBergen's internal pricing tool into a customer-facing platform, helping pharmacy managers identify cost-saving opportunities.</p>
+          <p className="text-lg">Despite push to directly copy the internal PowerBI dashboard due to deadline pressures, I advocated for a deeper redesign and delivered a solution that balanced complex pricing data with intuitive user experience.</p>
         </CardSection>
       </CardContainer>
       
@@ -105,24 +107,26 @@ export default function abProject() {
 
         <Windows95FrameInner>
           <CardContainer>
-            <CardSection sectionTitle="Stakeholder management">
-              <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
-              <p>This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
-              <CaseStudyImage 
-                src={caseStudyAB.ABinternaldash} 
-                alt="Original PowerBI dashboard for the internal sales team"
-                caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
-              />
-            </CardSection>
-            <CardSection sectionTitle="Requirements discovery">
-              <p>Additionally, I discovered and resolved misalignment around feature expectations for the MVP, getting all stakeholders on the same page.</p>
-              <CaseStudyImage 
-                src={caseStudyAB.ABinitialdesignfilters} 
-                alt="Proposed initial design with filters drawer"
-                caption="The proposed initial design I received was a direct port of the internal sales tool, and there was misalignment around feature expectations"
-                spaceBottom
-              />
-            </CardSection>
+            <CardGap>
+              <CardSection sectionTitle="Stakeholder management">
+                <p>Initially, leadership pushed to port our internal PowerBI dashboard directly to customers to meet tight deadlines. Despite pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
+                <p>This strategic pivot informed our navigation design, prioritizing user understanding and engagement.</p>
+                <CaseStudyImage 
+                  src={caseStudyAB.ABinternaldash} 
+                  alt="Original PowerBI dashboard for the internal sales team"
+                  caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
+                />
+              </CardSection>
+              <CardSection sectionTitle="Requirements discovery">
+                <p>Additionally, I discovered and resolved misalignment around feature expectations for the MVP, getting all stakeholders on the same page.</p>
+                <CaseStudyImage 
+                  src={caseStudyAB.ABinitialdesignfilters} 
+                  alt="Proposed initial design with filters drawer"
+                  caption="The proposed initial design I received was a direct port of the internal sales tool, and there was misalignment around feature expectations"
+                  spaceBottom
+                />
+              </CardSection>
+            </CardGap>
           </CardContainer>
         </Windows95FrameInner>
         {/* Section - Challenge: END */}
@@ -131,27 +135,31 @@ export default function abProject() {
         <CaseStudyTitleDivider title="Solution"/>
         <Windows95FrameInner>
           <CardContainer>
-            <CardSection sectionTitle="Navigation strategy">
-              <p>When analyzing the PowerBI dashboard, I identified that traditional filters alone would overwhelm users with pharmaceutical jargon.</p>
-              <CardSection smaller sectionTitle="My approach">
-                <p>Instead, I advocated for an interactive approach where...</p>
+            
+                <CardSection sectionTitle="Navigation strategy">
+                  
+                  <p>When analyzing the PowerBI dashboard, I identified that traditional filters alone would overwhelm users with pharmaceutical jargon.</p>
+                  <CardSection smaller sectionTitle="My approach">
+                  <p>Instead, I advocated for an interactive approach where...</p>
+                  <BulletList>
+                    <li>Upper tables acted as intuitive visual filters</li>
+                    <li>Complex terminology was contextualized within familiar data</li>
+                    <li>Selecting accounts/products dynamically filtered the detailed view</li>
+                  </BulletList>
+                </CardSection>
+                <CaseStudyImage 
+                  src={caseStudyAB.ABgif} 
+                  alt="Gif showing the navigation strategy for the redesigned Opportunities Dashboard"
+                />
+                <p>While the initial MVP scope called for static tables to expedite delivery, I built a business case for these interactions by...</p>
                 <BulletList>
-                  <li>Upper tables acted as intuitive visual filters</li>
-                  <li>Complex terminology was contextualized within familiar data</li>
-                  <li>Selecting accounts/products dynamically filtered the detailed view</li>
+                  <li>Demonstrating how interactive elements would significantly reduce the learning curve</li>
+                  <li>Presenting clickable prototypes to illustrate the usability benefits</li>
+                  <li>Showing how this approach would encourage exploration of cost-saving opportunities</li>
                 </BulletList>
+              
               </CardSection>
-              <CaseStudyImage 
-                src={caseStudyAB.ABgif} 
-                alt="Gif showing the navigation strategy for the redesigned Opportunities Dashboard"
-              />
-              <p>While the initial MVP scope called for static tables to expedite delivery, I built a business case for these interactions by...</p>
-              <BulletList>
-                <li>Demonstrating how interactive elements would significantly reduce the learning curve</li>
-                <li>Presenting clickable prototypes to illustrate the usability benefits</li>
-                <li>Showing how this approach would encourage exploration of cost-saving opportunities</li>
-              </BulletList>
-            </CardSection>
+            
           </CardContainer>
         </Windows95FrameInner>
         
@@ -201,26 +209,27 @@ export default function abProject() {
         <CaseStudyTitleDivider title="Impact"/>
         <Windows95FrameInner>
           <CardContainer>
-            <CardSection sectionTitle="Usability testing">
-              <p>We tested the initial prototype of the Opportunities Dashboard with <b>10 customers</b> and achieved <b>8.2 rating</b>, the highest out of the three tools tested.</p>
-              <CaseStudyImage 
-                  src={caseStudyAB.ABscore}
-                  alt="Redesigned PRoX KPI visualization"
-                />
-              {/* <CardSection smaller sectionTitle="Customer feedback"> */}
-              <div className="flex flex-col gap-6">
-                <p>Customers praised clarity, usability, and business value of the product.</p>
+            <CardGap>
+              <CardSection sectionTitle="Usability testing">
+                <p>We tested the initial prototype of the Opportunities Dashboard with <b>10 customers</b> and achieved <b>8.2 rating</b>, the highest out of the three tools tested.</p>
+                <CaseStudyImage 
+                    src={caseStudyAB.ABscore}
+                    alt="Redesigned PRoX KPI visualization"
+                  />
                 <div className="flex flex-col gap-6">
-                  <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
-                  <p className="quote">This would give me a reason to log onto ABC.</p>
+                  <p>Customers praised clarity, usability, and business value of the product.</p>
+                  <div className="flex flex-col gap-6">
+                    <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
+                    <p className="quote">This would give me a reason to log onto ABC.</p>
+                  </div>
                 </div>
-              </div>
-              {/* </CardSection> */}
-            </CardSection>
+                {/* </CardSection> */}
+              </CardSection>
 
-            <CardSection sectionTitle="C-Suite presentation">
-            <p>The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
-            </CardSection>
+              <CardSection sectionTitle="C-Suite presentation">
+              <p>The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who enthusiastically approved the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
+              </CardSection>
+            </CardGap>
           </CardContainer>
         </Windows95FrameInner>
         {/* Section - Impact: END */}

@@ -7,6 +7,7 @@ import Windows95FrameOuter from "./Windows95FrameOuter";
 import ProjectPreviewNav from "./ProjectPreviewNav";
 import Windows95FrameInner from "./Windows95FrameInner";
 import { TransitionLink } from "@/utils/TransitionLink";
+import { Windows95TitleBar } from "./Windows95TitleBar";
 
 interface ProjectItemProps {
     name: string;
@@ -25,6 +26,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
             
             <Windows95FrameOuter label={name}>
                 <TransitionLink href={link}>
+                    <Windows95TitleBar label={name}></Windows95TitleBar>
                     <Windows95FrameInner>
                         <Image src={image} alt="test" className=""/>
                     </Windows95FrameInner>
@@ -42,6 +44,13 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
                 -right-[5rem] lg:-right-[3.5rem] xl:-right-[5rem] 
                 w-[26rem] xl:w-[28rem]">
                     <Windows95FrameOuter label={company} date={date}>
+                        <Windows95TitleBar>
+                            <p>
+                                <span>{company}</span>
+                                <span className="mx-1">·</span>
+                                <span>{date}</span>
+                            </p>
+                        </Windows95TitleBar>
                         <div className="flex flex-col gap-4 mx-3 mt-4 mb-3">
                             <p className="">{description}</p>
                             <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} />

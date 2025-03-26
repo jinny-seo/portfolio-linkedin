@@ -16,7 +16,7 @@ export default function Windows95FrameOuter({ children,label="", date, duration 
           <div className="border-slate-400 border-b-2 border-r-2 rounded-[2px]">
           <div className="border-slate-100 border-t-2 border-l-2 rounded-[2px]">
               <div className="border-slate-300 border-2 rounded-[2px] mt-[1px] ml-[1.5px] mr-[2.5px]">
-                  <Windows95TitleBar label={label} date={date} duration={duration}></Windows95TitleBar>
+                  
                   {children}
               </div>
           </div>

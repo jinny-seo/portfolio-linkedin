@@ -23,17 +23,17 @@ export const navItemAsset = [
       image: navImage.note,
       imageHover: navImage.noteHover,
   },
-  {
-      label: "contact",
-      image: navImage.mail,
-      imageHover: navImage.mailHover,
-  },
+//   {
+//       label: "contact",
+//       image: navImage.mail,
+//       imageHover: navImage.mailHover,
+//   },
 ]
 
 export const Navigation = () => {
     const activeSection = activeNavItem(["work", "resume", "contact"]);
     return(
-        <nav className="">
+        <nav className="mx-2">
             <ul className="flex list-none gap-1 ">
             {navItemAsset.map(
                 (item) => (

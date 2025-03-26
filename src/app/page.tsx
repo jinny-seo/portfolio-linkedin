@@ -71,7 +71,7 @@ export default function Home() {
         {/* Resume: START */}
         <div id="resume" className="py-container">
           
-          <div className="bg-white border border-slate-500/10 max-w-[1024px] md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem]">
+          <div className="bg-white border border-slate-500/10 max-w-[1024px] md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem] max-w-[800px]">
             <div className="flex">
               <div className="border-r border-red-400/50">
                 <div className="w-[7rem]" />
@@ -81,8 +81,8 @@ export default function Home() {
                 <a href="/seo-resume.pdf" target="_blank" rel="noopener noreferrer" 
                 className="font-Doto text-blue-800 hover:underline ">
                   <div className="flex items-center gap-2 px-6">
-                  <Image src={icon.download} alt="" width={16} height={16}/>
-                  <p>Download PDF</p>    
+                  <Image src={icon.download} alt="" width={13.5} height={13.5}/>
+                  <p className="mt-[0.1rem]">Download PDF</p>    
                   </div>
                 </a>
               </div>
@@ -90,13 +90,13 @@ export default function Home() {
 
               
             </div>
-            <div className="flex">
+            <div className="flex ">
               <div className="bg-notebook border-r border-red-400/50">
                 <div className="w-[7rem]"/>
               </div>
-              <div className="w-full bg-notebook">
+              <div className="w-full  bg-notebook">
 
-                <div className="mt-[2.34rem] mr-[2rem] md:mr-[3rem] lg:mr-[4rem] mb-[3rem]">
+                <div className="mt-[2.34rem] mr-[2rem] md:mr-[3rem] lg:mr-[4rem] md:mb-[4rem] lg:mb-[4.5rem] max-w-[650px]">
 
                   <div className="mt-[1.8rem]">
                     <div className="px-2">

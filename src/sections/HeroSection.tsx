@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { icon } from "@/assets/icon";
+import { HeroSocialIcons } from "./HeroSocialIcons";
 
 export const HeroSection = () => {
     return (
@@ -17,19 +18,15 @@ export const HeroSection = () => {
                                     I'm a problem-solving creative with a strong visual foundation and a focus on delivering impactful MVPs. 
                                     From B2B SaaS platforms to design systems built from the ground up, I turn complexity into clarity and ship what matters.
                                 </p>
-                                <div className="flex gap-12 mt-11 mb-12 lg:hidden">
+                                {/* For smaller breakpoints */}
+                                <div className="flex flex-col md:flex-row gap-12 mt-11 mb-12 lg:hidden">
                                     <div className="flex flex-col gap-1">
                                         <p className="font-Doto p-hero">Contact me</p>
                                         <p className="p-hero">ogum536@gmail.com</p>
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <p className="font-Doto p-hero">Socials</p>
-                                        <ul className="flex gap-4">
-                                            <li><Image src={icon.medium} alt="Medium" width={26} /></li>
-                                            <li><Image src={icon.linkedin} alt="LinkedIn" width={26} /></li>
-                                            <li><Image src={icon.instagram} alt="Instagram" width={26} /></li>
-                                            <li><Image src={icon.behance} alt="Behance" width={26} /></li>
-                                        </ul>
+                                        <HeroSocialIcons/>
                                     </div>
                                 </div>
                             </div>
@@ -47,12 +44,7 @@ export const HeroSection = () => {
 
                             <div className="flex flex-col gap-2">
                                 <p className="font-Doto">Socials</p>
-                                <ul className="flex gap-6">
-                                    <li><Image src={icon.medium} alt="Medium" width={32} /></li>
-                                    <li><Image src={icon.linkedin} alt="LinkedIn" width={32} /></li>
-                                    <li><Image src={icon.instagram} alt="Instagram" width={32} /></li>
-                                    <li><Image src={icon.behance} alt="Behance" width={32} /></li>
-                                </ul>
+                                <HeroSocialIcons/>
                             </div>
                         </div>
                   

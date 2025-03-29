@@ -3,7 +3,7 @@ import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 
 
 import CaseStudyNav from "@/components/CaseStudyNav";
-
+import CaseStudyNavBottom from "@/components/CaseStudyNavBottom";
 
 export default function ProjectsLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,6 +14,7 @@ export default function ProjectsLayout({ children }: { children: React.ReactNode
         <main className="flex flex-col ">
           <CaseStudyNav/>
           {children}
+          <CaseStudyNavBottom/>
         </main>
       </Windows95FrameOuter>
       </div>

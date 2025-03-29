@@ -33,9 +33,7 @@ export const HeroSection = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="flex gap-[0.5rem] font-Doto my-8">
-                                <span>Hand-coded with 🩷 by Jinny (c) 2025</span>
-                            </p>
+
                         </div>
                     </div>
 

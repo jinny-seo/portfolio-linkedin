@@ -57,10 +57,19 @@ body {
 .p-container {
   padding: 1.5rem;
 }
-
+.px-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .py-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.pt-container {
+  padding-top: 1.5rem;
+}
+.pb-container {
+  padding-bottom: 1.5rem;
 }
 
 /* md */
@@ -68,8 +77,18 @@ body {
   .p-container {
     padding: 3rem;
   }
+  .px-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .py-container {
     padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .pt-container {
+    padding-top: 3rem;
+  }
+  .pb-container {
     padding-bottom: 3rem;
   }
 }
@@ -79,8 +98,18 @@ body {
   .p-container {
     padding: 4rem;
   }
+  .px-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
   .py-container {
     padding-top: 4rem;
+    padding-bottom: 4rem;
+    }
+  .pt-container {
+    padding-top: 4rem;
+  }
+  .pb-container {
     padding-bottom: 4rem;
   }
 }
@@ -90,8 +119,18 @@ body {
   .p-container {
     padding: 5rem;
   }
+  .px-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
   .py-container {
     padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .pt-container {
+    padding-top: 5rem;
+  }
+  .pb-container {
     padding-bottom: 5rem;
   }
 }
@@ -101,9 +140,19 @@ body {
   .p-container {
     padding: 6rem;
   }
+  .px-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
   .py-container {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .pt-container {
+    padding-top: 6rem;
+  }
+  .pb-container {
+    padding-bottom: 6rem;
   }
 }
 

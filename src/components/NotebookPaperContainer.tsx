@@ -4,7 +4,7 @@ interface NotebookPaperContainerProps {
     notebookPaperBg?: boolean;
   }
 
-export default function NotebookPaperContainer({ children, leftMarginWidth = 'w-[5rem]', notebookPaperBg = true, }: NotebookPaperContainerProps) {
+export default function NotebookPaperContainer({ children, leftMarginWidth = 'w-[64px] md:w-[88px] lg:w-[96px]', notebookPaperBg = true, }: NotebookPaperContainerProps) {
     const bgClass = notebookPaperBg ? 'bg-notebook' : '';
 
     return (

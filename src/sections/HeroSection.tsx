@@ -23,10 +23,10 @@ export const HeroSection = () => {
                                 </p>
                                 {/* For smaller breakpoints */}
                                 <div className="flex flex-col md:flex-row gap-6 mt-11 mb-12 lg:hidden">
-                                    <div className="flex-1">
+                                    <div className="max-w-[50%] min-w-[50%]">
                                         <ContactMeSection/>
                                     </div>
-                                    <div className="flex-1">
+                                    <div className="max-w-[50%] min-w-[50%]">
                                         <InTheWildSection/>
                                     </div>
                                 </div>

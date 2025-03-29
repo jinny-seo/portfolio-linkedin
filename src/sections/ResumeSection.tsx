@@ -10,12 +10,12 @@ export const ResumeSection = () => {
             <div className="bg-white shadow-lg lg:mr-[16rem] xl:mr-[18rem] lg:max-w-[800px]">
                 <NotebookPaperContainer notebookPaperBg={false}>
                     <div className="flex mt-[4.5rem]">
-                        <h2 className="flex-1 font-Doto leading-[70%] text-[1.8rem] md:text-[2rem] lg:text-[2.2rem]">Resume</h2>
+                        <h2 className="flex-1 font-Doto -mb-[0.4rem] text-[1.8rem] lg:text-[2rem]">Resume</h2>
                         <a 
                             href="/seo-resume.pdf" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="flex items-center gap-2 font-Doto text-blue-800 hover:underline "
+                            className="flex items-center gap-2 -mb-[0.84rem] font-Doto text-blue-800 hover:underline "
                         >
                         {/* <div className="flex items-center gap-2 px-6"> */}
                             <Image src={icon.download} alt="" width={13.5} height={13.5}/>

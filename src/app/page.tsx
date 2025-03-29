@@ -66,8 +66,7 @@ export default function Home() {
         {/* Resume: START */}
         <ResumeSection/>
         {/* Resume: END */}
-        <footer className="p-[1.5rem] md:p-[3rem] lg:p-[4rem] xl:px-[5rem] 2xl:px-[6rem]">
-            <div className="pb-[7rem] lg:pb-[0rem]">
+            <footer className="py-[7rem] lg:pt-[4rem] lg:pb-[0rem]">
               <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">
                 <p className="font-Doto text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">. . .</p>
                 <div className="flex flex-col gap-[0.5rem] font-Doto text-center lg:text-left">
@@ -95,8 +94,7 @@ export default function Home() {
                   <p className="my-6">Jinny Seo (c) 2025</p>
                 </div>
               </div>
-            </div>
-          </footer>
+            </footer>
       </div>     
     </main>
   );

@@ -64,7 +64,9 @@ export default function Home() {
         {/* Work: END */}
 
         {/* Resume: START */}
-        <ResumeSection/>
+        <section id="resume" className="hidden md:block">
+          <ResumeSection/>
+        </section>
         {/* Resume: END */}
             <footer className="py-[7rem] lg:pt-[4rem] lg:pb-[0rem]">
               <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">

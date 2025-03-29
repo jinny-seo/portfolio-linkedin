@@ -6,7 +6,7 @@ import ResumeExperience from "./ResumeExperience";
 
 export const ResumeSection = () => {
     return (
-        <div id="resume" className="">
+        <div>
             <div className="bg-white shadow-lg lg:mr-[16rem] xl:mr-[18rem] lg:max-w-[800px]">
                 <NotebookPaperContainer notebookPaperBg={false}>
                     <div className="flex mt-[4.5rem]">

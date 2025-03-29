@@ -23,8 +23,12 @@ export const HeroSection = () => {
                                 </p>
                                 {/* For smaller breakpoints */}
                                 <div className="flex flex-col md:flex-row gap-6 mt-11 mb-12 lg:hidden">
-                                    <ContactMeSection/>
-                                    <InTheWildSection/>
+                                    <div className="flex-1">
+                                        <ContactMeSection/>
+                                    </div>
+                                    <div className="flex-1">
+                                        <InTheWildSection/>
+                                    </div>
                                 </div>
                             </div>
 
@@ -33,7 +37,7 @@ export const HeroSection = () => {
 
                     {/* For larger breakpoints */}
                   
-                    <div className="hidden lg:flex flex-col justify-center gap-12 pl-12 xl:pl-16 border-l border-slate-500 bg-red-500/0 p-hero">
+                    <div className="hidden lg:flex flex-col justify-center gap-12 pl-12 xl:pl-16 border-l border-slate-500 bg-red-500/0 p-hero max-w-[40%] min-w-[40%]">
                         <ContactMeSection/>
                         <InTheWildSection/>
                     </div>

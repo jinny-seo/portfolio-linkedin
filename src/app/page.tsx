@@ -64,7 +64,7 @@ export default function Home() {
         {/* Work: END */}
 
         {/* Resume: START */}
-        <section id="resume" className="hidden md:block">
+        <section id="resume" className="hidden md:block py-container">
           <ResumeSection/>
         </section>
         {/* Resume: END */}

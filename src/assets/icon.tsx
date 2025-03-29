@@ -12,6 +12,8 @@ import instagram from './icon/instagram.svg';
 import medium from './icon/medium.svg';
 import mail from './icon/mail.svg';
 import behance from './icon/behance.svg';
+import outbound from './icon/outbound.svg';
+import link from './icon/link.svg';
 
 export const icon = {
     triangleUp,
@@ -28,4 +30,6 @@ export const icon = {
     medium,
     mail,
     behance,
+    outbound,
+    link,
 };

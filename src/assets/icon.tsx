@@ -14,6 +14,7 @@ import mail from './icon/mail.svg';
 import behance from './icon/behance.svg';
 import outbound from './icon/outbound.svg';
 import link from './icon/link.svg';
+import code from './icon/code.svg';
 
 export const icon = {
     triangleUp,
@@ -32,4 +33,5 @@ export const icon = {
     behance,
     outbound,
     link,
+    code,
 };

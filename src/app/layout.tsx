@@ -26,8 +26,28 @@ export default function RootLayout({
               <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">
                 <p className="font-Doto text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">. . .</p>
                 <div className="flex flex-col gap-[0.5rem] font-Doto text-center lg:text-left">
-                  <p>Hand-coded with 🩷 with React, NextJS, and Tailwind</p>
-                  <p>Jinny Seo (c) 2025</p>
+                  {/* For smaller breakpoints */}
+                  <div className="block lg:hidden">
+                    <p>Hand-coded with 🩷 with React, NextJS, and Tailwind</p>
+                    <a href="https://github.com/jinny-seo/design-portfolio-2025" 
+                      target="_blank" rel="noopener noreferrer" 
+                      className="text-blue-800 underline underline-offset-2 hover:no-underline"
+                    >
+                      View on Github
+                    </a>
+                  </div>
+                  {/* For larger breakpoints */}
+                  <div className="hidden lg:block ">
+                      <span>Hand-coded with 🩷 with React, NextJS, and Tailwind</span>
+                      <a href="https://github.com/jinny-seo/design-portfolio-2025" 
+                          target="_blank" rel="noopener noreferrer" 
+                          className="text-blue-800 underline underline-offset-2 hover:no-underline mx-2 px-2"
+                        >
+                          View on Github
+                        </a>
+                  </div>
+
+                  <p className="my-6">Jinny Seo (c) 2025</p>
                 </div>
               </div>
             </div>

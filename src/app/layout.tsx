@@ -21,7 +21,7 @@ export default function RootLayout({
             {children}
           </div> */}
           {children}
-          <footer className="p-[1.5rem] md:p-[3rem] lg:p-[4rem] xl:p-[5rem] 2xl:p-[6rem]">
+          <footer className="p-[1.5rem] md:p-[3rem] lg:p-[4rem] xl:px-[5rem] 2xl:px-[6rem]">
             <div className="pb-[7rem] lg:pb-[0rem]">
               <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">
                 <p className="font-Doto text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">. . .</p>

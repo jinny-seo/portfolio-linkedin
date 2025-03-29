@@ -23,10 +23,10 @@ const socials: SocialIcon[] = [
     tooltip: "Art",
   },
   {
-    name: "Code Sandbox",
-    image: icon.codesandbox,
-    href: "https://codesandbox.io/u/jinny-seo",
-    tooltip: "Code",
+    name: "Instagram",
+    image: icon.instagram,
+    href: "https://www.instagram.com/jinnyse0",
+    tooltip: "Life",
   },
 ];
 

@@ -22,7 +22,7 @@ interface ProjectItemProps {
 
 export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, description, date, link, image, prevProjLink, nextProjLink}) => {
     return(
-        <div className="md:relative md:mr-[5rem] lg:mr-[22rem] xl:mr-[24rem] lg:max-w-[1024px]">
+        <div className="md:relative md:mr-[5rem] lg:mr-[16rem] xl:mr-[18rem] lg:max-w-[1024px]">
             
             <Windows95FrameOuter label={name}>
                 <TransitionLink href={link}>

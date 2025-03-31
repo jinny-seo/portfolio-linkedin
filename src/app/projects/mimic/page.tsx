@@ -158,52 +158,78 @@ useEffect(() => {
               
                 <p>This research revealed that we were serving two fundamentally different user types with distinct needs and workflows.</p>
               
-                <div className="overflow-x-auto my-4">
-                  <table className="min-w-full border border-slate-400 text-left text-sm table-fixed">
-                    <thead className="bg-slate-200 text-slate-800">
+                {/* <div className="overflow-x-auto my-4"> */}
+                  <table className="min-w-full bg-white border border-slate-400/50 text-left text-sm table-fixed shadow-sm">
+
+                    <thead className="bg-slate-300 text-slate-800">                      
                       <tr>
-                        <th className="w-[25%] p-3 border-b border-slate-400"></th>
-                        <th className="w-[37.5%] p-3 border-b border-slate-400">Manage<br/>(IT Operations)</th>
-                        <th className="w-[37.5%] p-3 border-b border-slate-400">Monitor<br/>(Security Analysts)</th>
+                        <th className="hidden md:table-cell w-[25%] p-2 border-slate-400"></th>
+                        <th className="w-[37.5%] p-2 border-slate-400">Manage<br/>(IT Operations)</th>
+                        <th className="w-[37.5%] p-2 border-slate-400">Monitor<br/>(Security Analysts)</th>
                       </tr>
                     </thead>
+                    
                     <tbody className="bg-white text-slate-700">
-                      <tr>
-                        <td className="p-3 border-b border-slate-300 font-semibold text-slate-600">
+                      
+                      <tr className="table-row md:hidden">
+                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
                           Primary role
                         </td>
-                        <td className="p-3 border-b border-slate-300">
+                      </tr>
+
+                      <tr>
+                        <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
+                          Primary role
+                        </td>
+                        <td className="p-2 border-b border-slate-300">
                           Deploy and maintain security agents
                         </td>
-                        <td className="p-3 border-b border-slate-300">
+                        <td className="p-2 border-b border-slate-300">
                           Investigating security events and incidents
                         </td>
                       </tr>
-                      <tr>
-                        <td className="p-3 border-b border-slate-300 font-semibold text-slate-600">
+
+
+                      <tr className="table-row md:hidden">
+                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
                           Key concerns
                         </td>
-                        <td className="p-3 border-b border-slate-300">
+                      </tr>
+
+                      <tr>
+                        <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
+                          Key concerns
+                        </td>
+                        <td className="p-2 border-b border-slate-300">
                           Connectivity status, credential management, configurations, operational health
                         </td>
-                        <td className="p-3 border-b border-slate-300">
+                        <td className="p-2 border-b border-slate-300">
                           Timeline of events, severity assessment, threat detection
                         </td>
                       </tr>
+
+
+                      <tr className="table-row md:hidden">
+                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
+                          Urgency
+                        </td> 
+                      </tr>
+
                       <tr>
-                        <td className="p-3 font-semibold text-slate-600">
-                          Focus
+                        <td className="hidden md:table-cell p-2 font-semibold text-slate-600">
+                          Urgency
                         </td>
-                        <td className="p-3">
-                          Critical for our near-term growth—getting our agents deployed
+                        <td className="p-2">
+                          Critical for our near-term growth: Getting security agents deployed
                         </td>
-                        <td className="p-3">
+                        <td className="p-2">
                           This persona would become increasingly important as our platform matured
                         </td>
                       </tr>
+
                     </tbody>
                   </table>
-                </div>
+                {/* </div> */}
 
                 <p>While we needed to eventually serve both personas, we determined that focusing on the "Manage" persona would address our immediate growth challenge—getting our security agents deployed across customer systems.</p>
               

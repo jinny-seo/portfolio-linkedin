@@ -25,7 +25,7 @@ const caseStudyData = {
     "Chief Product Officer",
   ],
   role: [
-    "Research & Strategy",
+    "Research & strategy",
     "Usability testing",
     "UI evolution",
     "Design system development",
@@ -132,8 +132,9 @@ useEffect(() => {
               </CardSection>
             </div>
             <CardSection sectionTitle="Initial MVP delivery">
-              <p>To secure their first customers and investors, Mimic needed to quickly ship an MVP that allows customers to monitor and manage security agents (nodes) across their systems. </p>
-              <p>With limited time for upfront user research, we built the first iteration of the platform based primarily on technical requirements while establishing the foundations of the Mimic design system.</p>
+              <p>When I joined Mimic as one of the two founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b></p>
+              <p>With limited time and no upfront access to users, we built the first version of the platform based primarily on technical requirements.</p>
+              <p>The initial MVP was well-received and demonstrated our technical capabilities, but <b>it lacked something foundational: Proper user research.</b></p>
             </CardSection>
           </CardGap>
         </CardContainer>
@@ -146,98 +147,83 @@ useEffect(() => {
         <CardContainer>
           <CardGap>
             <CardSection sectionTitle="Post-launch initiative">
-              <p>While the MVP successfully demonstrated our technical capabilities, internal user feedback quickly revealed opportunities for improvement.</p>
-              <p>To address this gap,  I initiated a deeper research process to understand our users.</p>
+              <p>To address this gap, I intitiated the following.</p>
               <BulletList>
-                <li>Led a card sorting study to understand how users conceptualized node information</li>
-                <li>Conducted supplementary research through cybersecurity communities (including Reddit's cybersecurity subreddit)</li>
-                <li>Interviewed IT operations users who would be interacting with our platform</li>
+                <li>Card sorting study to understand how users conceptualized node information</li>
+                <li>Supplementary research through following conversations in cybersecurity communities</li>
+                <li>Interviews with internal IT operations users who would be interacting with our platform</li>
               </BulletList>
             </CardSection>
             <CardSection sectionTitle="Research insights">
-              
-                <p>This research revealed that we were serving two fundamentally different user types with distinct needs and workflows.</p>
-              
-                {/* <div className="overflow-x-auto my-4"> */}
-                  <table className="min-w-full bg-white border border-slate-400/50 text-left text-sm table-fixed shadow-sm">
+              <p>The deeper user research uncovered a critical insight: <b>We weren’t designing for one user, but two fundamentally different ones.</b></p>
+              {/* Table start */}
+              <table className="min-w-full bg-white border border-slate-400/50 text-left text-sm table-fixed shadow-sm">
+                <thead className="bg-slate-300 text-slate-800">                      
+                  <tr>
+                    <th className="hidden md:table-cell w-[25%] p-2 border-slate-400"></th>
+                    <th className="w-[37.5%] p-2 border-slate-400">Manage<br/>(IT Operations)</th>
+                    <th className="w-[37.5%] p-2 border-slate-400">Monitor<br/>(Security Analysts)</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white text-slate-700">
+                  <tr className="table-row md:hidden">
+                    <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
+                      Primary role
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
+                      Primary role
+                    </td>
+                    <td className="p-2 border-b border-slate-300">
+                      Deploy and maintain security agents
+                    </td>
+                    <td className="p-2 border-b border-slate-300">
+                      Investigating security events and incidents
+                    </td>
+                  </tr>
+                  <tr className="table-row md:hidden">
+                    <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
+                      Key concerns
+                    </td>
+                  </tr>
 
-                    <thead className="bg-slate-300 text-slate-800">                      
-                      <tr>
-                        <th className="hidden md:table-cell w-[25%] p-2 border-slate-400"></th>
-                        <th className="w-[37.5%] p-2 border-slate-400">Manage<br/>(IT Operations)</th>
-                        <th className="w-[37.5%] p-2 border-slate-400">Monitor<br/>(Security Analysts)</th>
-                      </tr>
-                    </thead>
-                    
-                    <tbody className="bg-white text-slate-700">
-                      
-                      <tr className="table-row md:hidden">
-                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
-                          Primary role
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
-                          Primary role
-                        </td>
-                        <td className="p-2 border-b border-slate-300">
-                          Deploy and maintain security agents
-                        </td>
-                        <td className="p-2 border-b border-slate-300">
-                          Investigating security events and incidents
-                        </td>
-                      </tr>
-
-
-                      <tr className="table-row md:hidden">
-                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
-                          Key concerns
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
-                          Key concerns
-                        </td>
-                        <td className="p-2 border-b border-slate-300">
-                          Connectivity status, credential management, configurations, operational health
-                        </td>
-                        <td className="p-2 border-b border-slate-300">
-                          Timeline of events, severity assessment, threat detection
-                        </td>
-                      </tr>
+                  <tr>
+                    <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
+                      Key concerns
+                    </td>
+                    <td className="p-2 border-b border-slate-300">
+                      Connectivity status, credential management, configurations, operational health
+                    </td>
+                    <td className="p-2 border-b border-slate-300">
+                      Timeline of events, severity assessment, threat detection
+                    </td>
+                  </tr>
 
 
-                      <tr className="table-row md:hidden">
-                        <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
-                          Urgency
-                        </td> 
-                      </tr>
+                  <tr className="table-row md:hidden">
+                    <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
+                      Urgency
+                    </td> 
+                  </tr>
 
-                      <tr>
-                        <td className="hidden md:table-cell p-2 font-semibold text-slate-600">
-                          Urgency
-                        </td>
-                        <td className="p-2">
-                          Critical for our near-term growth: Getting security agents deployed
-                        </td>
-                        <td className="p-2">
-                          This persona would become increasingly important as our platform matured
-                        </td>
-                      </tr>
+                  <tr>
+                    <td className="hidden md:table-cell p-2 font-semibold text-slate-600">
+                      Urgency
+                    </td>
+                    <td className="p-2">
+                      Critical for our near-term growth: Getting security agents deployed
+                    </td>
+                    <td className="p-2">
+                      This persona would become increasingly important as our platform matured
+                    </td>
+                  </tr>
 
-                    </tbody>
-                  </table>
-                {/* </div> */}
-
-                <p>While we needed to eventually serve both personas, we determined that focusing on the "Manage" persona would address our immediate growth challenge—getting our security agents deployed across customer systems.</p>
-              
+                </tbody>
+              </table>
+              {/* Table end */}
+              <p>While we needed to eventually serve both personas, we prioritized the “Manage” persona to drive what mattered most at the time: <b>Getting nodes deployed across customer systems.</b></p>
             </CardSection>
-            
-
-
-
           </CardGap>
         </CardContainer>
       </Windows95FrameInner>
@@ -249,21 +235,44 @@ useEffect(() => {
         <CardContainer>
           <CardGap>
             <CardSection sectionTitle="Information architecture update">
-              <p>The research findings informed our information architecture strategy for the nodes navigation.</p>
-              <p>We evolved the menu structure to include two distinct sections that reflected our persona split: "Manage" for IT operations focused on deployment and configuration, and "Monitor" for security professionals tracking threats.</p>
-              <p>This clear separation allowed each user type to efficiently access the tools and information most relevant to their specific workflows while maintaining a cohesive platform experience.</p>
-            </CardSection>
-            <CardSection sectionTitle="Node details redesign">
-              <p>With our refreshed information architecture in place, we prioritized redesigning the node details page as our first major UX enhancement.</p>
-              <p>The node details page is a critical touchpoint for IT operations teams during customer onboarding and daily management tasks.</p>
-              <p>Ensuring clear communication of the connectivity status and its related information was essential to improving the installation and deployment experience.</p>
-              <BulletList>
-                <li>Separated connectivity status from operational state, showing detailed connectivity information only when nodes weren't optimally connected</li>
-                <li>Added warning states for upcoming credential expiration</li>
-                <li>Provided timestamp context for all state changes</li>
-              </BulletList>
+              <p>The insight informed our information architecture strategy for the Nodes navigation.</p>
+              <p>We restructured the platform’s information architecture to reflect the two personas, separating the node navigation into <b>Manage</b> and <b>Monitor</b> sections.</p>
+              <p>This separation streamlined access to features based on each persona’s workflow</p>
             </CardSection>
           </CardGap>
+        </CardContainer>
+      </Windows95FrameInner>
+
+      <Windows95FrameInner>
+        <CardContainer>
+          <CardSection sectionTitle="Node details redesign">
+            <p>With our refreshed information architecture in, I prioritized redesigning the Node Details page, a key touchpoint for IT professionals during installation, deployment, and troubleshooting.</p>
+            <CardSection smaller sectionTitle="Updates">
+              <BulletList>
+                <li>Separated connectivity from the node operational state to reduce confusion</li>
+                <li>Surfaced connectivity details only when there was an active or impending problem</li>
+                <li>Categorized node events to allow filtering for relevant details during troubleshooting</li>
+              </BulletList>
+            </CardSection>
+          </CardSection>
+        </CardContainer>
+      </Windows95FrameInner>
+
+      <Windows95FrameInner>
+        <CardContainer>
+        <CardSection sectionTitle="Configuration experience">
+              <p>A crucial milestone in our roadmap for the IT operations persona was improving the node configuration process. However, early discussions stalled as the team debated feature priorities without a shared understanding of the user experience.</p>
+              <p>To break this deadlock, I designed a comprehensive "Ferrari" version of the configuration feature to align our vision, then deliberately scaled back to a focused "skateboard" MVP that started with a single-node configuration.</p>
+              <p>This flow started from the node (as opposed to from the configuration file), based on the assumption that IT operations users would have a list of installed nodes they needed to configure.</p>
+              <CardSection sectionTitle="Uncovering the third persona" smaller>
+                <p>However, user testing revealed that we had failed to account for a third crucial persona hidden in plain sight: <b>Internal configuration engineers</b> who needed to rapidly iterate on node configurations.</p>
+                <p>These were our actual, immediate users were internal teams repeatedly deploying test nodes and tweaking configurations. Their workflow leaned more heavily on starting from the configuration file itself.</p>
+              </CardSection>
+              <CardSection sectionTitle="Leveraging flexible design" smaller>
+                <p>Fortunately, I had designed the configuration wizard to be flexible, allowing it to work from both entry points. The flexiblility also allowed the workflow to easily estend to support bulk configurations</p>
+                <p>By delivering a solution that worked for both customer deployment and internal testing scenarios, we not only ensured the effectiveness of our security platform but also enabled our product team to rapidly iterate on configuration files before deployment to customers, accelerating our overall development cycle.</p>
+              </CardSection>
+            </CardSection>
         </CardContainer>
       </Windows95FrameInner>
       {/* Solution: END */}
@@ -273,13 +282,14 @@ useEffect(() => {
       <Windows95FrameInner>  
         <CardContainer>
           <CardGap>
-            <CardSection sectionTitle="Design system establishment">
-              <p>In parallel to my core product design responsibilities, I also developed a design system that standardized our interface elements while allowing for expansion to prepare for future growth.</p>
+            <p>Alongside my product work, I also built out Mimic’s <b>design language</b>, ensuring visual consistency, scalability, and accessibility—from components to pitch decks to the marketing site.</p>
+          <CardSection sectionTitle="Design system establishment">
+              
               <CardSection smaller sectionTitle="Component library">
                 <BulletList>
                   <li>Established foundational components with primitive, semantic, and component tokens</li>
                   <li>Created a cohesive set of UI elements based on brand guidelines</li>
-                  <li>Built light/dark mode switching capabilities</li>
+                  <li>Set up tokens for light and dark mode capabilities</li>
                 </BulletList>
               </CardSection>
               <CardSection smaller sectionTitle="Information architecture framework">
@@ -291,7 +301,6 @@ useEffect(() => {
               </CardSection>
             </CardSection>
             <CardSection sectionTitle="Brand experience">
-              <p>Additionally, I extended our visual style to internal and external touchpoints to create a unified brand experience beyond the product interface.</p>
               <CardSection smaller sectionTitle="Communication materials">
                 <BulletList>
                   <li>Developed unified visual language across various channels and mediums</li>
@@ -318,7 +327,7 @@ useEffect(() => {
         <CardContainer>
           <CardSection>
             <p>Google Ventures invested in Mimic amid strong competition from numerous investors, validating our tactical design approach to balance quick wins and long-term vision.</p>
-            <p>My strategic product work created immediate value while establishing foundations that could grow with the team, helping Mimic succeed beyond initial funding.</p>
+            <p>What started as a technically-driven MVP evolved into a user-centered platform supported by scalable design foundations—positioning Mimic for long-term success.</p>
           </CardSection>
         </CardContainer>
       </Windows95FrameInner>

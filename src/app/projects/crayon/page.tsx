@@ -191,7 +191,7 @@ export default function crayonProject() {
                 <li>Successfully launched with no negative feedback despite changing core navigation patterns</li>
                 <li>Preserved established user workflows while improving discoverability</li>
                 <li>Created foundation for improved self-service onboarding</li>
-                <li>Improved understanding of daily</li>
+                <li>Improved understanding of daily email alerts</li>
               </BulletList>
             </CardSection>
           </CardContainer>

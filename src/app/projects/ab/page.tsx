@@ -1,4 +1,5 @@
 "use client"
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image, { StaticImageData} from "next/image";
 
@@ -6,13 +7,15 @@ import Windows95FrameInner from "@/components/Windows95FrameInner";
 import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
 import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
-import { CaseStudyImage } from "@/components/CaseStudyImage";
 import { BulletList } from "@/components/BulletList";
+import { CaseStudyImage } from "@/components/CaseStudyImage";
+
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyAB } from "@/assets/caseStudyImages";
-import CaseStudyNav from "@/components/CaseStudyNav";
+// import CaseStudyNav from "@/components/CaseStudyNav";
 import { CardGap } from "@/components/CardGap";
+import { icon } from "@/assets/icon";
 
 const caseStudyData = {
   team: [
@@ -41,8 +44,7 @@ export default function abProject() {
   const currentIndex = projAssets.findIndex(project => project.link === currentPath);
   
   const currentProject = projAssets[currentIndex];
-  // const prevProject = projAssets[(currentIndex - 1 + projAssets.length) % projAssets.length];
-  // const nextProject = projAssets[(currentIndex + 1) % projAssets.length];
+  const [openImage, setOpenImage] = useState<string | null>(null);
 
   return (      
     <div>
@@ -55,9 +57,23 @@ export default function abProject() {
         </CardSection>
       </CardContainer>
       
-      {/* Hero image: START */}
+      {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>
-        <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
+        <div className="relative group w-fit cursor-zoom-in" 
+        onClick={() => setOpenImage(currentProject.image.src)}>
+          <Image
+            src={currentProject.image as StaticImageData}
+            alt={"Mimic case study hero image"}
+            className="transition duration-300 ease-in-out group-hover:brightness-[0.36]"
+          />
+          {/* Hover Overlay */}
+          <div className="absolute items-center justify-center inset-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex flex-col items-center justify-center space-y-2">
+              <Image src={icon.expand} alt="Expand" width={36} height={36}/>
+              <p className="font-Doto text-xl text-white">Expand</p>
+            </div>
+          </div>
+        </div>
       </Windows95FrameInner>
       {/* Hero image: END */}
 
@@ -282,6 +298,30 @@ export default function abProject() {
           </CardContainer>
         </Windows95FrameInner>
         {/* Section - Future roadmapping: END */}          
+      {/* Full screen image overlay: START */}
+      {openImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]"
+          onClick={() => setOpenImage(null)}
+        >
+          <button
+            className="absolute top-0 right-4 md:top-4 md:right-8 font-Doto text-white hover:text-gray-400 text-[2.5rem] p-1 z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenImage(null);
+            }}
+          >
+            ×
+          </button>
+          <img
+            src={openImage}
+            alt="Full-size"
+            className="max-h-screen w-auto max-w-[93%] md:max-w-[90%] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+      {/* Full screen image overlay: END */}
 
     
     </div>

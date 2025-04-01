@@ -1,4 +1,5 @@
 "use client"
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image, { StaticImageData} from "next/image";
 
@@ -11,10 +12,10 @@ import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 import { projAssets } from "@/assets/projAssets";
 import { caseStudyMimic } from "@/assets/caseStudyImages";
-import CaseStudyNav from "@/components/CaseStudyNav";
+// import CaseStudyNav from "@/components/CaseStudyNav";
 import { CardGap } from "@/components/CardGap";
-import { useState, useEffect } from "react";
 import { icon } from "@/assets/icon";
+
 
 const caseStudyData = {
   team: [
@@ -90,10 +91,10 @@ useEffect(() => {
       {/* * * * * Hero image: START * * * * */}
       <Windows95FrameInner>
         <div className="relative group w-fit cursor-zoom-in" 
-        onClick={() => setOpenImage(caseStudyData.hero.src)}>
+        onClick={() => setOpenImage(currentProject.image.src)}>
           <Image
-            src={caseStudyData.hero as StaticImageData}
-            alt={caseStudyData.heroDesc || "Hero image"}
+            src={currentProject.image as StaticImageData}
+            alt={"Mimic case study hero image"}
             className="transition duration-300 ease-in-out group-hover:brightness-[0.36]"
           />
           {/* Hover Overlay */}
@@ -277,7 +278,7 @@ useEffect(() => {
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/-X2zizt1Kts?si=9Zf5GW3_jhgMpNTI"
             title="YouTube video player"
-            frameBorder="0"
+            // frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -336,16 +337,20 @@ useEffect(() => {
                   <li>Enabled non-designers to create on-brand materials</li>
                 </BulletList>
               </CardSection>
-              <CardSection smaller sectionTitle="Marketing website">
+              <CardSection smaller sectionTitle="Public presence">
                 <BulletList>
-                  <li>Implemented WCAG 2.1 AA compliance standards to protect the company from accessibility lawsuits</li>
-                  <li>Established guidelines for future accessibility compliance</li>
-                  <li>Created the hero image for the landing page</li>
+                  <li><b>Implemented WCAG compliance standards</b> to protect the company from accessibility lawsuits</li>
+                  <li>Established <b>uidelines for future accessibility compliance</b></li>
+                  <li><b>Hand-crafted the hero section</b> for the landing page of the marketing website</li>
                 </BulletList>
+                <p>Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline font-Doto">Mimic marketing website</a> and tab through — I worked with the devs to ensure keyboard operability, among other accessibility features.</p>
+                
               </CardSection>
             </CardSection>
           </CardGap>
+         
         </CardContainer>
+      <Image src={caseStudyMimic.MimicMarketing as StaticImageData} alt="Initial MVP version of Node Details"/>
       </Windows95FrameInner>
       {/* Additional contributions: END */}
 
@@ -361,29 +366,30 @@ useEffect(() => {
       </Windows95FrameInner>
       {/* Impact: END */}
 
-      {/* Full screen image overlay */}
+      {/* Full screen image overlay: START */}
       {openImage && (
-  <div
-    className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]"
-    onClick={() => setOpenImage(null)}
-  >
-    <button
-      className="absolute top-0 right-4 md:top-4 md:right-8 font-Doto text-white hover:text-gray-400 text-[2.5rem] p-1 z-50"
-      onClick={(e) => {
-        e.stopPropagation();
-        setOpenImage(null);
-      }}
-    >
-      ×
-    </button>
-    <img
-      src={openImage}
-      alt="Full-size"
-      className="max-h-screen w-auto max-w-[93%] md:max-w-[90%] object-contain"
-      onClick={(e) => e.stopPropagation()}
-    />
-  </div>
-)}
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999]"
+          onClick={() => setOpenImage(null)}
+        >
+          <button
+            className="absolute top-0 right-4 md:top-4 md:right-8 font-Doto text-white hover:text-gray-400 text-[2.5rem] p-1 z-50"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenImage(null);
+            }}
+          >
+            ×
+          </button>
+          <img
+            src={openImage}
+            alt="Full-size"
+            className="max-h-screen w-auto max-w-[93%] md:max-w-[90%] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+      {/* Full screen image overlay: END */}
 
     
     </div>

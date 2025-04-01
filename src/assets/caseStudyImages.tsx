@@ -21,6 +21,7 @@ import MimicNewNodesDetails1 from './project/Mimic_new-node-details-1.png';
 import MimicNewNodesDetails2 from './project/Mimic_new-node-details-2.png';
 import MimicNewNodesDetails3 from './project/Mimic_new-node-details-3.png';
 import MimicDS from './project/Mimic_ds.png';
+import MimicMarketing from './project/Mimic_marketing.png';
 
 
 
@@ -54,4 +55,5 @@ export const caseStudyMimic = {
     MimicNewNodesDetails2,
     MimicNewNodesDetails3,
     MimicDS,
+    MimicMarketing,
 };

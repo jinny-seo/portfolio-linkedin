@@ -75,7 +75,6 @@ useEffect(() => {
 
   return (
     <div>
-      {/* <CaseStudyNav/> */}
       <CardContainer bgNone fullWidth>
         <CardSection>
           <h1 className="title-1">{currentProject.name}</h1>
@@ -85,7 +84,6 @@ useEffect(() => {
             <p className="mb-2">This is the best looking MVP I've ever seen from a startup.</p>
             <span className="text-[1.1rem] not-italic">— REI, Design partner</span>
           </div>
-          
         </CardSection>
       </CardContainer>
       
@@ -107,7 +105,6 @@ useEffect(() => {
           </div>
         </div>
       </Windows95FrameInner>
-
       {/* Hero image: END */}
 
       {/* * * * * Section - Background: START * * * * */}
@@ -134,6 +131,7 @@ useEffect(() => {
             <CardSection sectionTitle="Initial MVP delivery">
               <p>When I joined Mimic as one of the two founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b></p>
               <p>With limited time and no upfront access to users, we built the first version of the platform based primarily on technical requirements.</p>
+              <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
               <p>The initial MVP was well-received and demonstrated our technical capabilities, but <b>it lacked something foundational: Proper user research.</b></p>
             </CardSection>
           </CardGap>
@@ -147,18 +145,18 @@ useEffect(() => {
         <CardContainer>
           <CardGap>
             <CardSection sectionTitle="Post-launch initiative">
-              <p>To address this gap, I intitiated the following.</p>
+              <p>To address the lack of user research, I intitiated the following.</p>
               <BulletList>
-                <li>Card sorting study to understand how users conceptualized node information</li>
-                <li>Supplementary research through following conversations in cybersecurity communities</li>
-                <li>Interviews with internal IT operations users who would be interacting with our platform</li>
+                <li><b>Card sorting study</b> to understand how users conceptualized node information</li>
+                <li><b>Interviews with internal users</b> who would be interacting with our platform</li>
+                <li>Supplementary research through following <b>conversations in online cybersecurity communities</b></li>
               </BulletList>
             </CardSection>
             <CardSection sectionTitle="Research insights">
               <p>The deeper user research uncovered a critical insight: <b>We weren’t designing for one user, but two fundamentally different ones.</b></p>
               {/* Table start */}
               <table className="min-w-full bg-white border border-slate-400/50 text-left text-sm table-fixed shadow-sm">
-                <thead className="bg-slate-300 text-slate-800">                      
+                <thead className="bg-slate-300 md:bg-slate-200 text-slate-800">                      
                   <tr>
                     <th className="hidden md:table-cell w-[25%] p-2 border-slate-400"></th>
                     <th className="w-[37.5%] p-2 border-slate-400">Manage<br/>(IT Operations)</th>
@@ -236,11 +234,12 @@ useEffect(() => {
           <CardGap>
             <CardSection sectionTitle="Information architecture update">
               <p>The insight informed our information architecture strategy for the Nodes navigation.</p>
-              <p>We restructured the platform’s information architecture to reflect the two personas, separating the node navigation into <b>Manage</b> and <b>Monitor</b> sections.</p>
-              <p>This separation streamlined access to features based on each persona’s workflow</p>
+              <p>We restructured the platform’s information architecture to reflect the two personas, separating the node navigation into <b>Manage</b> and <b>Monitor</b> sections. This separation streamlined access to features based on each persona’s workflow.</p>
+              
             </CardSection>
           </CardGap>
         </CardContainer>
+        <Image src={caseStudyMimic.MimicNewNodesOverview as StaticImageData} alt="Initial MVP version of Node Details"/>
       </Windows95FrameInner>
 
       <Windows95FrameInner>
@@ -256,26 +255,50 @@ useEffect(() => {
             </CardSection>
           </CardSection>
         </CardContainer>
+        <Image src={caseStudyMimic.MimicNewNodesDetails1 as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <div className="hidden bg-white lg:grid lg:grid-cols-2 lg:p-4 lg:gap-4">
+          <Image src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} alt="Initial MVP version of Node Details"/>
+          <Image src={caseStudyMimic.MimicNewNodesDetails3 as StaticImageData} alt="Initial MVP version of Node Details"/>
+        </div>
+
+        
       </Windows95FrameInner>
 
       <Windows95FrameInner>
         <CardContainer>
-        <CardSection sectionTitle="Configuration experience">
-              <p>A crucial milestone in our roadmap for the IT operations persona was improving the node configuration process. However, early discussions stalled as the team debated feature priorities without a shared understanding of the user experience.</p>
-              <p>To break this deadlock, I designed a comprehensive "Ferrari" version of the configuration feature to align our vision, then deliberately scaled back to a focused "skateboard" MVP that started with a single-node configuration.</p>
-              <p>This flow started from the node (as opposed to from the configuration file), based on the assumption that IT operations users would have a list of installed nodes they needed to configure.</p>
-              <CardSection sectionTitle="Uncovering the third persona" smaller>
-                <p>However, user testing revealed that we had failed to account for a third crucial persona hidden in plain sight: <b>Internal configuration engineers</b> who needed to rapidly iterate on node configurations.</p>
-                <p>These were our actual, immediate users were internal teams repeatedly deploying test nodes and tweaking configurations. Their workflow leaned more heavily on starting from the configuration file itself.</p>
-              </CardSection>
-              <CardSection sectionTitle="Leveraging flexible design" smaller>
-                <p>Fortunately, I had designed the configuration wizard to be flexible, allowing it to work from both entry points. The flexiblility also allowed the workflow to easily estend to support bulk configurations</p>
-                <p>By delivering a solution that worked for both customer deployment and internal testing scenarios, we not only ensured the effectiveness of our security platform but also enabled our product team to rapidly iterate on configuration files before deployment to customers, accelerating our overall development cycle.</p>
-              </CardSection>
+          <CardSection sectionTitle="Configuration experience">
+            <p>A crucial milestone in our roadmap for the IT operations persona was improving the node configuration process. However, early discussions stalled as the team debated feature priorities without a shared understanding of the user experience.</p>
+            <p>To break this deadlock, I designed a comprehensive "Ferrari" version of the configuration feature to align our vision, then deliberately scaled back to a focused "skateboard" MVP that started with a single-node configuration.</p>
+            <p>This flow started from the node (as opposed to from the configuration file), based on the assumption that IT operations users would have a list of installed nodes they needed to configure.</p>
+          </CardSection>
+        </CardContainer>
+        <div className="relative w-full pb-[56.25%] h-0">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/-X2zizt1Kts?si=9Zf5GW3_jhgMpNTI"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <CardContainer>
+          <CardSection>
+            <CardSection sectionTitle="Uncovering the third persona" smaller>
+              <p>However, user testing revealed that we had failed to account for a third crucial persona hidden in plain sight: <b>Internal configuration engineers</b> who needed to rapidly iterate on node configurations.</p>
+              <p>These were our actual, immediate users were internal teams repeatedly deploying test nodes and tweaking configurations. Their workflow leaned more heavily on starting from the configuration file itself.</p>
             </CardSection>
+            <CardSection sectionTitle="Leveraging flexible design" smaller>
+              <p>Fortunately, I had designed the configuration wizard to be flexible, allowing it to work from both entry points. The flexiblility also allowed the workflow to easily estend to support bulk configurations</p>
+              <p>By delivering a solution that worked for both customer deployment and internal testing scenarios, we not only ensured the effectiveness of our security platform but also enabled our product team to rapidly iterate on configuration files before deployment to customers, accelerating our overall development cycle.</p>
+            </CardSection>
+          </CardSection>
         </CardContainer>
       </Windows95FrameInner>
       {/* Solution: END */}
+
+      
 
       {/* * * * * Additional contributions: START * * * * */}
       <CaseStudyTitleDivider title="Additional contributions"/>
@@ -300,6 +323,11 @@ useEffect(() => {
                 </BulletList>
               </CardSection>
             </CardSection>
+            </CardGap>
+            </CardContainer>
+            <Image src={caseStudyMimic.MimicDS as StaticImageData} alt="Initial MVP version of Node Details"/>
+            <CardContainer>
+            <CardGap>
             <CardSection sectionTitle="Brand experience">
               <CardSection smaller sectionTitle="Communication materials">
                 <BulletList>

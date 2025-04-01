@@ -15,6 +15,17 @@ import CrayonNewAppcues from './project/Crayon-new_appcues.png';
 import CrayonNewGong1 from './project/Crayon-new_gong-1.png';
 import CrayonNewGong2 from './project/Crayon-new_gong-2.png';
 
+import MimicOld from './project/Mimic_old.png';
+import MimicNewNodesOverview from './project/Mimic_new-nodes-overview.png';
+import MimicNewNodesDetails1 from './project/Mimic_new-node-details-1.png';
+import MimicNewNodesDetails2 from './project/Mimic_new-node-details-2.png';
+import MimicNewNodesDetails3 from './project/Mimic_new-node-details-3.png';
+import MimicDS from './project/Mimic_ds.png';
+
+
+
+
+
 export const caseStudyAB = {
     ABinternaldash,
     ABinitialdesign,
@@ -37,4 +48,10 @@ export const caseStudyCrayon = {
 };
 
 export const caseStudyMimic = {
+    MimicOld,
+    MimicNewNodesOverview,
+    MimicNewNodesDetails1,
+    MimicNewNodesDetails2,
+    MimicNewNodesDetails3,
+    MimicDS,
 };

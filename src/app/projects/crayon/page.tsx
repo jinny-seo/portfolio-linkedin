@@ -62,7 +62,7 @@ export default function crayonProject() {
       <CaseStudyTitleDivider title="Background"/>
       <Windows95FrameInner>  
         <CardContainer>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CardSection sectionTitle="Members">
               <BulletList>
                 {caseStudyData.team.map(

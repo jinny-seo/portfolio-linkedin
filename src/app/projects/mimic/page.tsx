@@ -44,34 +44,34 @@ export default function crayonProject() {
   const currentProject = projAssets[currentIndex];
   const [openImage, setOpenImage] = useState<string | null>(null);
 
-// Scroll lock
-useEffect(() => {
-  if (openImage) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
-  return () => {
-    document.body.style.overflow = '';
-  };
-}, [openImage]);
-
-// ESC key handler
-useEffect(() => {
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      setOpenImage(null);
+  // Scroll lock
+  useEffect(() => {
+    if (openImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
     }
-  };
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [openImage]);
 
-  if (openImage) {
-    window.addEventListener('keydown', handleKeyDown);
-  }
+  // ESC key handler
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpenImage(null);
+      }
+    };
 
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown);
-  };
-}, [openImage]);
+    if (openImage) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [openImage]);
 
 
   return (
@@ -340,7 +340,7 @@ useEffect(() => {
               <CardSection smaller sectionTitle="Public presence">
                 <BulletList>
                   <li><b>Implemented WCAG compliance standards</b> to protect the company from accessibility lawsuits</li>
-                  <li>Established <b>uidelines for future accessibility compliance</b></li>
+                  <li>Established <b>guidelines for future accessibility compliance</b></li>
                   <li><b>Hand-crafted the hero section</b> for the landing page of the marketing website</li>
                 </BulletList>
                 <p>Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline font-Doto">Mimic marketing website</a> and tab through — I worked with the devs to ensure keyboard operability, among other accessibility features.</p>

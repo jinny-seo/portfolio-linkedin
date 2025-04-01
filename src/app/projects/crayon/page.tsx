@@ -79,7 +79,6 @@ export default function crayonProject() {
       <CardContainer bgNone fullWidth>
         <CardSection>
           <h1 className="title-1">{currentProject.name}</h1>
-          <p className="text-lg">{currentProject.description}</p>
           <p className="text-lg">What began as a navigation redesign evolved into a comprehensive onboarding reimagination — reducing support requirements while empowering users to self-service their competitive intelligence ecosystem.</p>
         </CardSection>
       </CardContainer>
@@ -100,11 +99,6 @@ export default function crayonProject() {
             </div>
           </div>
         </div>
-      </Windows95FrameInner>
-      {/* Hero image: END */}
-      {/* * * * * Hero image: START * * * * */}
-      <Windows95FrameInner>
-        <Image src={caseStudyData.hero as StaticImageData} alt={caseStudyData.heroDesc || "Hero image"}/>
       </Windows95FrameInner>
       {/* Hero image: END */}
       

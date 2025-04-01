@@ -71,12 +71,14 @@ export const ResumeSection = () => {
                                 "Published industry-leading chatbot design guidelines (100k+ views, 2.5k+ likes), establishing thought leadership in conversational UI as one of the first guidelines for chatbots"
                             ]}
                             />
+
+                            <span className="font-Doto text-[1.45rem] leading-[1.8rem]">Education</span>
                             <ResumeExperience 
                             company="Dartmouth College"
                             startDate="2012"
                             endDate="2016"
                             items={[
-                                "B.A. in Studio art", 
+                                "B.A. in Studio Art", 
                                 "Minors in Computer Science and Digital Art"
                             ]}
                             />

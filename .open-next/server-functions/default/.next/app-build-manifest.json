@@ -39,15 +39,8 @@
       "static/chunks/517-8aaedec103ed1e12.js",
       "static/chunks/main-app-abcaebcdfea90f9a.js",
       "static/chunks/738-f9503e4ae3d5ed9d.js",
-      "static/chunks/app/projects/ab/page-d9b824f09a886f11.js"
-    ],
-    "/projects/mimic/page": [
-      "static/chunks/webpack-9edee2920554d0a5.js",
-      "static/chunks/4bd1b696-e92d6e4d8289d973.js",
-      "static/chunks/517-8aaedec103ed1e12.js",
-      "static/chunks/main-app-abcaebcdfea90f9a.js",
-      "static/chunks/738-f9503e4ae3d5ed9d.js",
-      "static/chunks/app/projects/mimic/page-84bb2d192d5fb3f2.js"
+      "static/chunks/528-25dfe61e2d62940a.js",
+      "static/chunks/app/projects/ab/page-11347d369a285dcd.js"
     ],
     "/projects/crayon/page": [
       "static/chunks/webpack-9edee2920554d0a5.js",
@@ -55,7 +48,17 @@
       "static/chunks/517-8aaedec103ed1e12.js",
       "static/chunks/main-app-abcaebcdfea90f9a.js",
       "static/chunks/738-f9503e4ae3d5ed9d.js",
-      "static/chunks/app/projects/crayon/page-d9ffa308469b2b1d.js"
+      "static/chunks/528-25dfe61e2d62940a.js",
+      "static/chunks/app/projects/crayon/page-67f6bee1fd01f1c4.js"
+    ],
+    "/projects/mimic/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-e92d6e4d8289d973.js",
+      "static/chunks/517-8aaedec103ed1e12.js",
+      "static/chunks/main-app-abcaebcdfea90f9a.js",
+      "static/chunks/738-f9503e4ae3d5ed9d.js",
+      "static/chunks/528-25dfe61e2d62940a.js",
+      "static/chunks/app/projects/mimic/page-d3168ec18efcf794.js"
     ]
   }
 }

@@ -30,7 +30,7 @@ export const projAssets = [
         imageSecondary: projABSecondary,
     },
     {
-        name: "Redesigning Crayon's Onboarding Experience",
+        name: "Redesigning Crayon's onboarding experience",
         company: "Crayon",
         date: "02/2022 — 07/2022",
         duration: "6 months",

@@ -103,6 +103,7 @@ export default function crayonProject() {
                       <li>The distinction between "My Feed" and "All Insights" created confusion</li>
                       <li>Saved searches, the core value driver of Crayon, wasn't effectively introduced</li>
                     </BulletList>
+                    <Image src={caseStudyCrayon.CrayonOldMyFeed} alt="Crayon old my feed" />
                   </CardSection>
                   <CardSection smaller sectionTitle="Frankensteined features">
                     <BulletList>
@@ -110,6 +111,7 @@ export default function crayonProject() {
                       <li>Growing numbers of saved searches made the quick links workaround unwieldy</li>
                       <li>Underutilized features took up valuable navigation space</li>
                     </BulletList>
+                    <Image src={caseStudyCrayon.CrayonOldTeamActivity} alt="Crayon old team activity" />
                   </CardSection>
                   
                   <CardSection smaller sectionTitle="Navigation inefficiencies">
@@ -118,6 +120,8 @@ export default function crayonProject() {
                       <li>Critical saved searches were buried in separate pages requiring extra clicks</li>
                       <li>Navigation included vestigial features, such as duplicate search bars and Team Activity, which analytics showed had minimal usage</li>
                     </BulletList>
+                    <Image src={caseStudyCrayon.CrayonOldSavedSearches} alt="Crayon old saved searches" />
+                    
                   </CardSection>
 
                   <CardSection smaller sectionTitle="Integration opportunities">
@@ -148,6 +152,7 @@ export default function crayonProject() {
               </BulletList>
             </CardSection>
           </CardContainer>
+          <Image src={caseStudyCrayon.CrayonNewInsights} alt="Crayon new insights" />
         </Windows95FrameInner>
 
         <Windows95FrameInner>
@@ -160,6 +165,7 @@ export default function crayonProject() {
               </BulletList>
             </CardSection>
           </CardContainer>
+          <Image src={caseStudyCrayon.CrayonNewAppcues} alt="Crayon new dropdown" />
         </Windows95FrameInner>
 
         <Windows95FrameInner>
@@ -172,6 +178,7 @@ export default function crayonProject() {
               </BulletList>
             </CardSection>
           </CardContainer>
+          <Image src={caseStudyCrayon.CrayonNewGong2} alt="Crayon new gong" />
         </Windows95FrameInner>
         {/* Solution: END */}
 
@@ -184,6 +191,7 @@ export default function crayonProject() {
                 <li>Successfully launched with no negative feedback despite changing core navigation patterns</li>
                 <li>Preserved established user workflows while improving discoverability</li>
                 <li>Created foundation for improved self-service onboarding</li>
+                <li>Improved understanding of daily</li>
               </BulletList>
             </CardSection>
           </CardContainer>

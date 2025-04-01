@@ -316,7 +316,7 @@ useEffect(() => {
       <CaseStudyTitleDivider title="Impact"/>
       <Windows95FrameInner>  
         <CardContainer>
-          <CardSection sectionTitle="Information architecture update">
+          <CardSection>
             <p>Google Ventures invested in Mimic amid strong competition from numerous investors, validating our tactical design approach to balance quick wins and long-term vision.</p>
             <p>My strategic product work created immediate value while establishing foundations that could grow with the team, helping Mimic succeed beyond initial funding.</p>
           </CardSection>

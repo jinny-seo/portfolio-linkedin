@@ -10,16 +10,6 @@ import projOM from './project/proj-om.png';
 
 export const projAssets = [
     {
-        name: "Transforming a pharmaceutical cost-savings platform",
-        company: "AmerisourceBergen",
-        date: "03/2021 - 12/2021",
-        duration: "10 months",
-        description: "Launching a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
-        link: "ab",
-        image: projAB,
-        imageSecondary: projABSecondary,
-    },
-    {
         name: "Building a cybersecurity platform from the ground up",
         company: "Mimic",
         date: "01/2024 — 02/2025",
@@ -28,6 +18,16 @@ export const projAssets = [
         link: "mimic",
         image: projMimic,
         imageSecondary: projMimicSecondary,
+    },
+    {
+        name: "Transforming a pharmaceutical cost-savings platform",
+        company: "AmerisourceBergen",
+        date: "03/2021 - 12/2021",
+        duration: "10 months",
+        description: "Launching a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
+        link: "ab",
+        image: projAB,
+        imageSecondary: projABSecondary,
     },
     {
         name: "Redesigning Crayon's Onboarding Experience",

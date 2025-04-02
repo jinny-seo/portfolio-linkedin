@@ -128,18 +128,18 @@ export default function abProject() {
                 <p>Leadership strongly pushed for a direct port of the internal dashboard to meet tight deadlines.</p>
                 <p>Despite pressure, I advocated for a <b>foundational redesign focused on clarity and exploration</b> by making a case for user adoption.</p>
               </CardSection>
-              <CardGap>
-                <CardSection sectionTitle="Building alignment" smaller>
-                  <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
+              
+              <CardSection sectionTitle="Building alignment" smaller>
+                <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
+                <div className="py-4">
+                  <CaseStudyImage spaceBottom src={caseStudyAB.ABinitialdesignfilters}
+                    alt="Proposed initial design with filters drawer"
+                    caption="The initial proposed design I was given was a direct port of the internal sales tool, and there were misaligned expectations around features"
+                  />
+                </div>
+              </CardSection>
 
-                </CardSection>
-                <CaseStudyImage
-                 src={caseStudyAB.ABinitialdesignfilters}
-                 alt="Proposed initial design with filters drawer"
-                 caption="The initial proposed design I was given was a direct port of the internal sales tool, and there were misaligned expectations around features"
-                 spaceBottom
-               />
-              </CardGap>
+              
               <CardSection smaller sectionTitle="The redesign">
                 <BulletList>
                   <li>Replaced overwhelming filters with <b>interactive tables to guide users</b> through the data</li>
@@ -184,6 +184,7 @@ export default function abProject() {
               </CardSection>
             </CardGap>
           </CardContainer>
+          <Image src={caseStudyAB.ABfindings} alt="Slide from the C-suite presentation"/>
         </Windows95FrameInner>
         {/* Section - Impact: END */}
 
@@ -194,10 +195,12 @@ export default function abProject() {
             <CardGap>
               <CardSection sectionTitle="Future roadmapping">
                 <p>To ensure a smooth handoff, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive enhancement roadmap. <b>I prioritized features based on urgency and implementation complexity</b> to guide resource allocation.</p>
+                <div className="py-4">
+                  <CaseStudyImage src={caseStudyAB.ABbacklog} alt="Enhancement roadmap"/>
+                </div>
               </CardSection>
               <CardSection sectionTitle="MVP launch">
                 <p>I led this project for just over a year, successfully launching a working MVP by the end-of-year deadline.</p>
-                
                 <p><b>What began as a copy request evolved into a customer-focused product that was not only easier to use but gave AmerisourceBergen users a reason to log on.</b></p>
               </CardSection>
             </CardGap>

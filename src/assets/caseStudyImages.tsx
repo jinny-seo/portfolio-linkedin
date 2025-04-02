@@ -5,6 +5,8 @@ import ABscore from './project/AB_score.png';
 import ABgif from './project/AB_video.gif';
 import ABimprovement2 from './project/AB_improvement-2.png';
 import ABimprovement3 from './project/AB_improvement-3.png';
+import ABfindings from './project/AB_findings.png';
+import ABbacklog from './project/AB_backlog.png';
 
 import CrayonOldMyFeed from './project/Crayon-old_my-feed.png';
 import CrayonOldSavedSearches from './project/Crayon-old_saved-searches.png';
@@ -35,6 +37,8 @@ export const caseStudyAB = {
     ABimprovement2,
     ABimprovement3,
     ABgif,
+    ABfindings,
+    ABbacklog,
 };
 
 export const caseStudyCrayon = {

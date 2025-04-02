@@ -1,36 +1,35 @@
 "use client"
-import { useState, useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
-import Image, { StaticImageData} from "next/image";
+import { useEffect, useState } from "react";
 
-import Windows95FrameInner from "@/components/Windows95FrameInner";
+import { BulletList } from "@/components/BulletList";
 import { CardContainer } from "@/components/CardContainer";
 import { CardSection } from "@/components/CardSection";
 import { CaseStudyTitleDivider } from "@/components/CaseStudyTitleDivider";
-import { BulletList } from "@/components/BulletList";
-import { CaseStudyImage } from "@/components/CaseStudyImage";
+import Windows95FrameInner from "@/components/Windows95FrameInner";
 
-import { projAssets } from "@/assets/projAssets";
 import { caseStudyMimic } from "@/assets/caseStudyImages";
+import { projAssets } from "@/assets/projAssets";
 // import CaseStudyNav from "@/components/CaseStudyNav";
-import { CardGap } from "@/components/CardGap";
 import { icon } from "@/assets/icon";
+import { CardGap } from "@/components/CardGap";
 
 
 const caseStudyData = {
   team: [
-    "Product Designer (Me)",
-    "Design Architect",
-    "2 Frontend Developers",
-    "Product Manager",
-    "Chief Product Officer",
+    "Product designer (Me)",
+    "Design architect",
+    "2 frontend developers",
+    "Product manager",
+    "Chief product officer",
   ],
   role: [
-    "Research & strategy",
+    "User research & strategy",
     "Usability testing",
-    "UI evolution",
+    "UI design & evolution",
     "Design system development",
-    "Brand application",
+    "Brand development",
   ],
   hero: projAssets[1].imageSecondary,
   heroDesc: "Mimic project hero image",
@@ -79,8 +78,8 @@ export default function crayonProject() {
       <CardContainer bgNone fullWidth>
         <CardSection>
           <h1 className="title-1">{currentProject.name}</h1>
-          <p className="text-lg">As one of the two founding designers at Mimic, I shipped the technically-driven MVP platform and evolved it into a user-centered solution, while setting up the design system and brand expression from scratch.</p>
-          <p className="text-lg">A year after I joined, Mimic secured $50 million in funding from Google Ventures.</p>          
+          <p className="text-lg">As one of the two founding designers at Mimic, I shipped a technically-driven MVP and evolved it into a user-centered cybersecurity platform while establishing a comprehensive design system and brand identity from scratch.</p>
+          <p className="text-lg">A year after I joined, Mimic secured $50 million in funding from Google Ventures. The exceptional design quality was called out by our design partners.</p>
           <div className="quote my-3">
             <p className="mb-2">This is the best looking MVP I've ever seen from a startup.</p>
             <span className="text-[1.1rem] not-italic">— REI, Design partner</span>
@@ -130,10 +129,9 @@ export default function crayonProject() {
               </CardSection>
             </div>
             <CardSection sectionTitle="Initial MVP delivery">
-              <p>When I joined Mimic as one of the two founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b></p>
-              <p>With limited time and no upfront access to users, we built the first version of the platform based primarily on technical requirements.</p>
+              <p>When I joined Mimic as one of the founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b> Given the tight timeline and limited access to users, we prioritized technical requirements when building the first version of the platform.</p>
               <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
-              <p>The initial MVP was well-received and demonstrated our technical capabilities, but <b>it lacked something foundational: Proper user research.</b></p>
+              <p>This approach allowed us to demonstrate our technical proficiency and launch on schedule. The initial MVP impressed early users with its capabilities, but our post-launch research revealed a critical gap: <b>Proper user research.</b></p>
             </CardSection>
           </CardGap>
         </CardContainer>
@@ -141,20 +139,20 @@ export default function crayonProject() {
       {/* Section - Background: END */}
 
       {/* * * * * Problem: START * * * * */}
-      <CaseStudyTitleDivider title="Problem"/>
+      <CaseStudyTitleDivider title="Research"/>
       <Windows95FrameInner>
         <CardContainer>
           <CardGap>
             <CardSection sectionTitle="Post-launch initiative">
-              <p>To address the lack of user research, I intitiated the following.</p>
+              <p>To address this gap, I worked with the UX architect to spearhead a comprehensive research initiative.</p>
               <BulletList>
-                <li><b>Card sorting study</b> to understand how users conceptualized node information</li>
-                <li><b>Interviews with internal users</b> who would be interacting with our platform</li>
-                <li>Supplementary research through following <b>conversations in online cybersecurity communities</b></li>
+                <li><b>Card sorting study</b> to understand how users conceptualized platform information</li>
+                <li><b>Interviews with internal users</b> who would be interacting with the platform</li>
+                <li>Analysis of <b>discourse in online cybersecurity communities</b> to identify pain points and workflow patterns</li>
               </BulletList>
             </CardSection>
-            <CardSection sectionTitle="Research insights">
-              <p>The deeper user research uncovered a critical insight: <b>We weren’t designing for one user, but two fundamentally different ones.</b></p>
+            <CardSection sectionTitle="Key insight">
+              <p>The deeper user research uncovered a critical insight that reshaped our product strategy: <b>We weren’t designing for a single user type, but two distinct ones.</b></p>
               {/* Table start */}
               <table className="min-w-full bg-white border border-slate-400/50 text-left text-sm table-fixed shadow-sm">
                 <thead className="bg-slate-300 md:bg-slate-200 text-slate-800">                      
@@ -186,7 +184,6 @@ export default function crayonProject() {
                       Key concerns
                     </td>
                   </tr>
-
                   <tr>
                     <td className="hidden md:table-cell p-2 border-b border-slate-300 font-semibold text-slate-600">
                       Key concerns
@@ -198,14 +195,11 @@ export default function crayonProject() {
                       Timeline of events, severity assessment, threat detection
                     </td>
                   </tr>
-
-
                   <tr className="table-row md:hidden">
                     <td colSpan={2} className="p-2 font-semibold text-slate-600 bg-slate-200"> 
                       Urgency
                     </td> 
                   </tr>
-
                   <tr>
                     <td className="hidden md:table-cell p-2 font-semibold text-slate-600">
                       Urgency
@@ -214,14 +208,13 @@ export default function crayonProject() {
                       Critical for our near-term growth: Getting security agents deployed
                     </td>
                     <td className="p-2">
-                      This persona would become increasingly important as our platform matured
+                      Increasingly important with growing platform maturity
                     </td>
                   </tr>
-
                 </tbody>
               </table>
               {/* Table end */}
-              <p>While we needed to eventually serve both personas, we prioritized the “Manage” persona to drive what mattered most at the time: <b>Getting nodes deployed across customer systems.</b></p>
+              <p>This insight led us to prioritize the "Manage" persona in our immediate development cycle to drive what mattered most at the time: <b>Getting nodes deployed across customer systems.</b></p>
             </CardSection>
           </CardGap>
         </CardContainer>
@@ -234,9 +227,7 @@ export default function crayonProject() {
         <CardContainer>
           <CardGap>
             <CardSection sectionTitle="Information architecture update">
-              <p>The insight informed our information architecture strategy for the Nodes navigation.</p>
-              <p>We restructured the platform’s information architecture to reflect the two personas, separating the node navigation into <b>Manage</b> and <b>Monitor</b> sections. This separation streamlined access to features based on each persona’s workflow.</p>
-              
+              <p>Based on our research findings, we reimagined the node navigation to directly reflect the two personas, splitting the Nodes Overview page into <b>“Manage”</b> and <b>“Monitor”</b> sections.</p>              
             </CardSection>
           </CardGap>
         </CardContainer>
@@ -245,13 +236,13 @@ export default function crayonProject() {
 
       <Windows95FrameInner>
         <CardContainer>
-          <CardSection sectionTitle="Node details redesign">
-            <p>With our refreshed information architecture in, I prioritized redesigning the Node Details page, a key touchpoint for IT professionals during installation, deployment, and troubleshooting.</p>
+          <CardSection sectionTitle="Node Details page redesign">
+            <p>Along with refreshing our information architecture, I prioritized redesigning the <b>Node Details page, which is a critical touchpoint</b> for installing, deploying, and troubleshooting the nodes.</p>
             <CardSection smaller sectionTitle="Updates">
               <BulletList>
                 <li>Separated connectivity from the node operational state to reduce confusion</li>
-                <li>Surfaced connectivity details only when there was an active or impending problem</li>
-                <li>Categorized node events to allow filtering for relevant details during troubleshooting</li>
+                <li>Surfaced connectivity details only when issues surfaced, reducing information overload</li>
+                <li>Categorized node events to enable filtering for faster troubleshooting</li>
               </BulletList>
             </CardSection>
           </CardSection>
@@ -268,9 +259,13 @@ export default function crayonProject() {
       <Windows95FrameInner>
         <CardContainer>
           <CardSection sectionTitle="Configuration experience">
-            <p>A crucial milestone in our roadmap for the IT operations persona was improving the node configuration process. However, early discussions stalled as the team debated feature priorities without a shared understanding of the user experience.</p>
-            <p>To break this deadlock, I designed a comprehensive "Ferrari" version of the configuration feature to align our vision, then deliberately scaled back to a focused "skateboard" MVP that started with a single-node configuration.</p>
-            <p>This flow started from the node (as opposed to from the configuration file), based on the assumption that IT operations users would have a list of installed nodes they needed to configure.</p>
+            <p>A major milestone in our roadmap was improving the node configuration process, but early discussions stalled as the team debated priorities.</p>
+            <p>To break this deadlock, I…</p>
+            <BulletList>
+              <li>Designed a comprehensive "Ferrari" version of the configuration feature to align the team's vision</li>
+              <li>Scaled back to a focused "skateboard" MVP that began with single-node configurations</li>
+              <li>Created a flexible, modular workflow that could grow with our evolving needs</li>
+            </BulletList>
           </CardSection>
         </CardContainer>
         <div className="relative w-full pb-[56.25%] h-0">
@@ -286,14 +281,22 @@ export default function crayonProject() {
         </div>
         <CardContainer>
           <CardSection>
-            <CardSection sectionTitle="Uncovering the third persona" smaller>
-              <p>However, user testing revealed that we had failed to account for a third crucial persona hidden in plain sight: <b>Internal configuration engineers</b> who needed to rapidly iterate on node configurations.</p>
-              <p>These were our actual, immediate users were internal teams repeatedly deploying test nodes and tweaking configurations. Their workflow leaned more heavily on starting from the configuration file itself.</p>
-            </CardSection>
-            <CardSection sectionTitle="Leveraging flexible design" smaller>
-              <p>Fortunately, I had designed the configuration wizard to be flexible, allowing it to work from both entry points. The flexiblility also allowed the workflow to easily estend to support bulk configurations</p>
-              <p>By delivering a solution that worked for both customer deployment and internal testing scenarios, we not only ensured the effectiveness of our security platform but also enabled our product team to rapidly iterate on configuration files before deployment to customers, accelerating our overall development cycle.</p>
-            </CardSection>
+            <CardGap>
+              <CardSection sectionTitle="Uncovering the third persona" smaller>
+                <p>One of the key debates centered on whether to start the configuration process from the node or the configuration file. Based on the assumption that IT operations would have a list of installed nodes they needed to configure, we decided to enter the flow from the node.</p>
+                <p>However, user testing revealed <b>a crucial third persona hidden in plain sight: internal configuration engineers</b>.</p>
+                <p>These internal users were our real, immediate users. They focused on configuration file development rather than node management, and <b>their workflow centered around rapidly iterating on configuration files.</b></p>
+
+              </CardSection>
+              <CardSection sectionTitle="Leveraging flexible design" smaller>
+                <p>Fortunately, anticipating the future need for multiple entry points, I had designed modular screens that could be swapped around. My flexible design approach enabled…</p>
+                <BulletList>
+                  <li>Support for both customer deployment and internal testing scenarios</li>
+                  <li>Seamless extension to bulk configuration capabilities</li>
+                  <li>Acceleration of our overall development cycle through faster internal iteration</li>
+                </BulletList>
+              </CardSection>
+            </CardGap>
           </CardSection>
         </CardContainer>
       </Windows95FrameInner>
@@ -306,7 +309,7 @@ export default function crayonProject() {
       <Windows95FrameInner>  
         <CardContainer>
           <CardGap>
-            <p>Alongside my product work, I also built out Mimic’s <b>design language</b>, ensuring visual consistency, scalability, and accessibility—from components to pitch decks to the marketing site.</p>
+            <p>Alongside product design work, I built Mimic's comprehensive design language to ensure visual consistency, scalability, and accessibility across all touchpoints.</p>
           <CardSection sectionTitle="Design system establishment">
               
               <CardSection smaller sectionTitle="Component library">
@@ -319,8 +322,8 @@ export default function crayonProject() {
               <CardSection smaller sectionTitle="Information architecture framework">
                 <BulletList>
                   <li>Analyzed common user workflows to identify repeating page patterns</li>
-                  <li>Created standardized template for recurring page types like "details" views and "overview" </li>
-                  <li>Created information architecture patterns that maintained consistency across different sections</li>
+                  <li>Created templates for recurring page types like "details" views and "overview" </li>
+                  <li>Designed information architecture patterns that maintained consistency across different sections</li>
                 </BulletList>
               </CardSection>
             </CardSection>
@@ -337,20 +340,22 @@ export default function crayonProject() {
                   <li>Enabled non-designers to create on-brand materials</li>
                 </BulletList>
               </CardSection>
-              <CardSection smaller sectionTitle="Public presence">
+              <CardSection smaller sectionTitle="Accessibility implementation">
                 <BulletList>
-                  <li><b>Implemented WCAG compliance standards</b> to protect the company from accessibility lawsuits</li>
+                  <li><b>Implemented WCAG compliance standards</b> for the marketing website, ensuring accessibility while protecting the company from lawsuits</li>
                   <li>Established <b>guidelines for future accessibility compliance</b></li>
-                  <li><b>Hand-crafted the hero section</b> for the landing page of the marketing website</li>
+                  <li><b>Hand-crafted the hero image</b> for the landing page of the marketing website</li>
                 </BulletList>
-                <p>Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline font-Doto">Mimic marketing website</a> and tab through — I worked with the devs to ensure keyboard operability, among other accessibility features.</p>
-                
               </CardSection>
             </CardSection>
           </CardGap>
-         
         </CardContainer>
-      <Image src={caseStudyMimic.MimicMarketing as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <Image src={caseStudyMimic.MimicMarketing as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <CardContainer>
+          <CardSection>
+          <p>Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline font-Doto">Mimic marketing website</a> and tab through — I worked with the devs to ensure keyboard operability, among other accessibility features.</p>
+          </CardSection>
+        </CardContainer>
       </Windows95FrameInner>
       {/* Additional contributions: END */}
 

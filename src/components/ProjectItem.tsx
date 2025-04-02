@@ -28,7 +28,7 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({name, company, descript
                 <TransitionLink href={link}>
                     <Windows95TitleBar label={name}></Windows95TitleBar>
                     <Windows95FrameInner>
-                        <Image src={image} alt="test" className=""/>
+                        <Image src={image} alt="Case study hero" className="transition duration-300 hover:brightness-75"/>
                     </Windows95FrameInner>
                     </TransitionLink>
                 {/* Show description and nav buttons when screen size is small: START */}

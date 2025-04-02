@@ -107,11 +107,11 @@ export default function crayonProject() {
       </Windows95FrameInner>
       {/* Hero image: END */}
 
-      {/* * * * * Section - Background: START * * * * */}
-      <CaseStudyTitleDivider title="Background"/>
+      {/* * * * * Section - Team: START * * * * */}
+      <CaseStudyTitleDivider title="Team"/>
       <Windows95FrameInner>  
         <CardContainer>
-          <CardGap>
+          
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <CardSection sectionTitle="Members">
                 <BulletList>
@@ -128,12 +128,20 @@ export default function crayonProject() {
                 </BulletList>
               </CardSection>
             </div>
-            <CardSection sectionTitle="Initial MVP delivery">
+          
+        </CardContainer>
+      </Windows95FrameInner>
+      {/* Section - Team: END */}
+
+      {/* * * * * Section - Background: START * * * * */}
+      <CaseStudyTitleDivider title="Background"/>
+      <Windows95FrameInner>  
+        <CardContainer>
+          <CardSection sectionTitle="Initial MVP delivery">
               <p>When I joined Mimic as one of the founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b> Given the tight timeline and limited access to users, we prioritized technical requirements when building the first version of the platform.</p>
               <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
               <p>This approach allowed us to demonstrate our technical proficiency and launch on schedule. The initial MVP impressed early users with its capabilities, but our post-launch research revealed a critical gap: <b>Proper user research.</b></p>
             </CardSection>
-          </CardGap>
         </CardContainer>
       </Windows95FrameInner>
       {/* Section - Background: END */}
@@ -341,6 +349,10 @@ export default function crayonProject() {
                 </BulletList>
               </CardSection>
               <CardSection smaller sectionTitle="Accessibility implementation">
+                <div className="mt-2 mb-4">
+                  <p className="bg-slate-200 py-3 px-4 rounded-md text-slate-700">Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="font-Doto text-blue-800 underline hover:no-underline">Mimic marketing website</a> and do a tab test — the developers and I worked together to ensure keyboard operability, among other accessibility features.</p>
+                  
+                </div>
                 <BulletList>
                   <li><b>Implemented WCAG compliance standards</b> for the marketing website, ensuring accessibility while protecting the company from lawsuits</li>
                   <li>Established <b>guidelines for future accessibility compliance</b></li>
@@ -351,21 +363,16 @@ export default function crayonProject() {
           </CardGap>
         </CardContainer>
         <Image src={caseStudyMimic.MimicMarketing as StaticImageData} alt="Initial MVP version of Node Details"/>
-        <CardContainer>
-          <CardSection>
-          <p>Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline font-Doto">Mimic marketing website</a> and tab through — I worked with the devs to ensure keyboard operability, among other accessibility features.</p>
-          </CardSection>
-        </CardContainer>
       </Windows95FrameInner>
       {/* Additional contributions: END */}
 
       {/* * * * * Impact: START * * * * */}
-      <CaseStudyTitleDivider title="Impact"/>
+      <CaseStudyTitleDivider title="Conclusion"/>
       <Windows95FrameInner>  
         <CardContainer>
           <CardSection>
             <p>Google Ventures invested in Mimic amid strong competition from numerous investors, validating our tactical design approach to balance quick wins and long-term vision.</p>
-            <p>What started as a technically-driven MVP evolved into a user-centered platform supported by scalable design foundations—positioning Mimic for long-term success.</p>
+            <p>What started as a technically-driven MVP evolved into a user-centered platform with scalable design foundations, positioning Mimic for long-term success.</p>
           </CardSection>
         </CardContainer>
       </Windows95FrameInner>

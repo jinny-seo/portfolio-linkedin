@@ -77,8 +77,8 @@ export default function abProject() {
       </Windows95FrameInner>
       {/* Hero image: END */}
 
-      {/* Section - Background: START */}
-      <CaseStudyTitleDivider title="Background"/>
+      {/* Section - Team: START */}
+      <CaseStudyTitleDivider title="Team"/>
       <Windows95FrameInner>  
         <CardContainer>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -99,21 +99,43 @@ export default function abProject() {
           </div>
           </CardContainer>
         </Windows95FrameInner>
+        {/* Section - Team: END */}
+        {/* Section - Background: START */}
+        <CaseStudyTitleDivider title="Background"/>
+          <Windows95FrameInner>  
+            <CardContainer>
+              <CardGap>
+                <CardSection sectionTitle="The internal tool">
+                  <p>The original tool was built in PowerBI. It had 23 dense columns filled with complex pharmaceutical jargon and lacked visual hierarchy. <b>I knew a direct copy would frustrate customers and risk adoption.</b></p>
+                </CardSection>
+                  <CaseStudyImage 
+                    src={caseStudyAB.ABinternaldash} 
+                    alt="Original PowerBI dashboard for the internal sales team"
+                    caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
+                  />
+              </CardGap>
+            </CardContainer>  
+          </Windows95FrameInner>
         {/* Section - Background: END */}
 
         {/* Section - Challenge: START */}
-        <CaseStudyTitleDivider title="Problem"/>
+        <CaseStudyTitleDivider title="Challenges"/>
         <Windows95FrameInner>
           <CardContainer>
             <CardGap>
-              <CardSection sectionTitle="The internal tool" smaller>
-                <p>The original tool was built in PowerBI. It had 23 dense columns filled with complex pharmaceutical jargon and lacked visual hierarchy. <b>I knew a direct copy would frustrate customers and risk adoption.</b></p>
+              <CardSection sectionTitle="Stakeholder management">
+                <p>Leadership strongly pushed for a direct port of the internal dashboard to meet tight deadlines.</p>
+                <p>Despite pressure, I advocated for a <b>foundational redesign focused on clarity and exploration</b> by making a case for user adoption.</p>
               </CardSection>
-                <CaseStudyImage 
-                  src={caseStudyAB.ABinternaldash} 
-                  alt="Original PowerBI dashboard for the internal sales team"
-                  caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
-                />
+              <CardSection sectionTitle="Building alignment">
+                <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
+                <div className="py-4">
+                  <CaseStudyImage spaceBottom src={caseStudyAB.ABinitialdesignfilters}
+                    alt="Proposed initial design with filters drawer"
+                    caption="The initial proposed design I was given was a direct port of the internal sales tool, and there were misaligned expectations around features"
+                  />
+                </div>
+              </CardSection>
             </CardGap>
           </CardContainer>
         </Windows95FrameInner>
@@ -124,23 +146,7 @@ export default function abProject() {
         <Windows95FrameInner>
           <CardContainer>
             <CardGap>
-              <CardSection sectionTitle="Stakeholder management" smaller>
-                <p>Leadership strongly pushed for a direct port of the internal dashboard to meet tight deadlines.</p>
-                <p>Despite pressure, I advocated for a <b>foundational redesign focused on clarity and exploration</b> by making a case for user adoption.</p>
-              </CardSection>
-              
-              <CardSection sectionTitle="Building alignment" smaller>
-                <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
-                <div className="py-4">
-                  <CaseStudyImage spaceBottom src={caseStudyAB.ABinitialdesignfilters}
-                    alt="Proposed initial design with filters drawer"
-                    caption="The initial proposed design I was given was a direct port of the internal sales tool, and there were misaligned expectations around features"
-                  />
-                </div>
-              </CardSection>
-
-              
-              <CardSection smaller sectionTitle="The redesign">
+              <CardSection>
                 <BulletList>
                   <li>Replaced overwhelming filters with <b>interactive tables to guide users</b> through the data</li>
                   <li>Converted the KPI unit from dollars to percentages to <b>better align with how pharmacy managers actually make decisions</b></li>
@@ -155,11 +161,11 @@ export default function abProject() {
         {/* Section - Solution: END */}
 
         {/* Section - Impact: START */}
-        <CaseStudyTitleDivider title="Impact"/>
+        <CaseStudyTitleDivider title="Validation"/>
         <Windows95FrameInner>
           <CardContainer>
             <CardGap>
-              <CardSection sectionTitle="Usability testing">
+              <CardSection sectionTitle="Customer feedback">
                 <p>I built clickable prototypes, collaborating with the research team to test the tool with <b>10 customers</b> and confirmed the redesign’s effectiveness.</p>
                 <p>Out of the two other tools tested alongside it, the Opportunities Dashboard earned the <b>highest usability score of 8.2</b>.</p>
                 <div className="py-4">
@@ -189,24 +195,35 @@ export default function abProject() {
         {/* Section - Impact: END */}
 
         {/* Section - Delivery: START */}
-        <CaseStudyTitleDivider title="Delivery"/>
+        <CaseStudyTitleDivider title="Roadmapping"/>
         <Windows95FrameInner>
           <CardContainer removeSpaceBottom>
             <CardGap>
-              <CardSection sectionTitle="Future roadmapping">
-                <p>To ensure a smooth handoff, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive enhancement roadmap. <b>I prioritized features based on urgency and implementation complexity</b> to guide resource allocation.</p>
+              <CardSection>
+                <p>To ensure a smooth handoff, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive <b>future enhancement roadmap.</b></p>
                 <div className="py-4">
-                  <CaseStudyImage src={caseStudyAB.ABbacklog} alt="Enhancement roadmap"/>
+                  <CaseStudyImage src={caseStudyAB.ABbacklog} alt="Enhancement roadmap" caption="To guide resource allocation, I mapped out features based on urgency per customer feedback and development complexity"/>
                 </div>
-              </CardSection>
-              <CardSection sectionTitle="MVP launch">
-                <p>I led this project for just over a year, successfully launching a working MVP by the end-of-year deadline.</p>
-                <p><b>What began as a copy request evolved into a customer-focused product that was not only easier to use but gave AmerisourceBergen users a reason to log on.</b></p>
               </CardSection>
             </CardGap>
           </CardContainer>
         </Windows95FrameInner>
         {/* Section - Delivery: END */}
+
+        {/* Section - Impact: START */}
+        <CaseStudyTitleDivider title="Conclusion"/>
+        <Windows95FrameInner>
+          <CardContainer removeSpaceBottom>
+            <CardGap>
+              <CardSection>
+                <p>I led this project for just over a year, successfully launching a working MVP by the end-of-year deadline.</p>
+                <p>What was a simple copy request evolved into a customer-focused product that was not only easier to use but gave AmerisourceBergen users a reason to log on.</p>
+              </CardSection>
+            </CardGap>
+          </CardContainer>
+        </Windows95FrameInner>
+        {/* Section - Impact: END */}
+
         {/* Full screen image overlay: START */}
         {openImage && (
           <div

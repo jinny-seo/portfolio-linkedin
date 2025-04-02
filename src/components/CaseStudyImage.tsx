@@ -14,7 +14,7 @@ export const CaseStudyImage: FC<CaseStudyImageProps> = ({ src, caption, alt = ""
     return(
         <div className="flex flex-col gap-0">
             <Image 
-                className="shadow-sm border-slate-300/60 border"
+                className="shadow-sm border-slate-200 border"
                 src={src}
                 alt={alt}
             />

@@ -20,16 +20,6 @@ export const projAssets = [
         imageSecondary: projMimicSecondary,
     },
     {
-        name: "Transforming a pharmaceutical cost-savings platform",
-        company: "AmerisourceBergen",
-        date: "03/2021 - 12/2021",
-        duration: "10 months",
-        description: "Launching a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
-        link: "ab",
-        image: projAB,
-        imageSecondary: projABSecondary,
-    },
-    {
         name: "Redesigning Crayon's onboarding experience",
         company: "Crayon",
         date: "02/2022 — 07/2022",
@@ -40,6 +30,17 @@ export const projAssets = [
         imageSecondary: projCrayonSecondary,
 
     },
+    {
+        name: "Transforming a pharmaceutical cost-savings platform",
+        company: "AmerisourceBergen",
+        date: "03/2021 - 12/2021",
+        duration: "10 months",
+        description: "Launching a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
+        link: "ab",
+        image: projAB,
+        imageSecondary: projABSecondary,
+    },
+
 ];
 
 export const projAssetsArchive = [

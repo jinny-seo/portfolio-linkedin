@@ -209,7 +209,7 @@ export default function crayonProject() {
               </BulletList>
             </CardSection>
           </CardContainer>
-          <CaseStudyImage src={caseStudyCrayon.CrayonNewInsights} alt="Crayon new insights" />
+          <CaseStudyImage src={caseStudyCrayon.CrayonNewInsights} alt="Crayon new insights" className="border-t"/>
         </Windows95FrameInner>
 
         <Windows95FrameInner>
@@ -222,7 +222,7 @@ export default function crayonProject() {
               </BulletList>
             </CardSection>
           </CardContainer>
-          <CaseStudyImage src={caseStudyCrayon.CrayonNewAppcues} alt="Crayon new dropdown" />
+          <CaseStudyImage src={caseStudyCrayon.CrayonNewAppcues} alt="Crayon new dropdown" className="border-t"/>
         </Windows95FrameInner>
 
         <Windows95FrameInner>
@@ -233,9 +233,11 @@ export default function crayonProject() {
                 <li>Enhanced integration discoverability through notification badges and making integrations part of onboarding</li>
                 <li>Accelerated competitor selection with a custom dropdown solution, partnering with the design system team to add it to the shared library</li>
               </BulletList>
+              
             </CardSection>
           </CardContainer>
-          <CaseStudyImage src={caseStudyCrayon.CrayonNewGong2} alt="Crayon new gong" />
+          <CaseStudyImage src={caseStudyCrayon.CrayonNewGong1} alt="Crayon-Gong integration landing" className="border-t"/>
+          <CaseStudyImage src={caseStudyCrayon.CrayonNewGong2} alt="Crayon-Gong integration wizard" className="border-t"/>
         </Windows95FrameInner>
         {/* Solution: END */}
         

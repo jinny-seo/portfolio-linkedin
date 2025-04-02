@@ -270,7 +270,7 @@ export default function crayonProject() {
             />
             <p className={`caption text-center`}>Node Details page when node is connected</p>
           </div>
-          <div className="flex flex-col gap-4 mb-8">
+          <div className="flex flex-col gap-4 mb-8 md:mb-12 lg:mb-16">
             <CaseStudyImage 
               src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} 
               alt="Initial MVP version of Node Details"
@@ -306,7 +306,7 @@ export default function crayonProject() {
             allowFullScreen
           />
         </div>
-        <p className={`bg-white caption text-center pt-4`}>Configuration experience walkthrough for the developers</p>
+        <p className={`bg-white caption text-center pt-4`}>Configuration experience walkthrough for the developers to review</p>
         <CardContainer>
           <CardSection>
             <CardGap>

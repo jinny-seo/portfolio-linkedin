@@ -18,7 +18,7 @@ import { CardGap } from "@/components/CardGap";
 
 const caseStudyData = {
   team: [
-    "Product designer (Me)",
+    "Product designer (me)",
     "Design architect",
     "2 frontend developers",
     "Product manager",

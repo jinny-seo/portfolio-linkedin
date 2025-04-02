@@ -19,15 +19,15 @@ import { icon } from "@/assets/icon";
 
 const caseStudyData = {
   team: [
-    "Sole designer (Me)",
+    "Sole designer (me)",
     "Team of 6 developers",
+    "Research team",
     "Director of Product",
     "Product owner",
   ],
   role: [
     "Discovery",
     "Stakeholder management",
-    "Customer interviews", 
     "Usability testing",
     "MVP launch",
     "Future roadmapping",
@@ -52,8 +52,8 @@ export default function abProject() {
       <CardContainer bgNone fullWidth>
         <CardSection>
           <h1 className="title-1">{currentProject.name}</h1>
-          <p className="text-lg">Pharmacy managers were missing critical cost-saving opportunities — simply because they had to wait to talk to a sales rep.</p>
-          <p className="text-lg">Due to deadline pressures, AmerisourceBergen wanted to simply re-skin this internal dashboard for the customers. I advocated for a different approach.</p>
+          <p className="text-lg">Pharmacy managers were missing critical cost-saving opportunities — all because they had to wait to speak with a sales rep.</p>
+          <p className="text-lg">Due to deadline pressure, AmerisourceBergen wanted to simply re-skin this internal dashboard for the customers. I pushed for a different approach.</p>
         </CardSection>
       </CardContainer>
       
@@ -107,19 +107,13 @@ export default function abProject() {
           <CardContainer>
             <CardGap>
               <CardSection sectionTitle="The internal tool" smaller>
-                <p>The original tool was built in PowerBI and had 23 dense columns, complex pharmaceutical jargon, and no visual hierarchy. I knew a direct copy would frustrate customers and risk adoption.</p>
+                <p>The original tool was built in PowerBI. It had 23 dense columns filled with complex pharmaceutical jargon and lacked visual hierarchy. <b>I knew a direct copy would frustrate customers and risk adoption.</b></p>
               </CardSection>
                 <CaseStudyImage 
                   src={caseStudyAB.ABinternaldash} 
                   alt="Original PowerBI dashboard for the internal sales team"
                   caption="The original PowerBI dashboard for the internal sales team contained a table with 23 columns"
                 />
-              <CaseStudyImage
-                 src={caseStudyAB.ABinitialdesignfilters}
-                 alt="Proposed initial design with filters drawer"
-                 caption="The proposed initial design I received was a direct port of the internal sales tool, and there was misalignment around feature expectations"
-                 spaceBottom
-               />
             </CardGap>
           </CardContainer>
         </Windows95FrameInner>
@@ -131,17 +125,26 @@ export default function abProject() {
           <CardContainer>
             <CardGap>
               <CardSection sectionTitle="Stakeholder management" smaller>
-                <p>Leadership was pushing to for a direct port of the internal dashboard to meet deadlines. Despite pressures, I advocated for a foundational redesign rather than a direct port by making a case for user adoption.</p>
-                <p>Instead of a direct port of the PowerBI dashboard, <b>I proposed a redesigned experience that centered around exploration and clarity.</b></p>
+                <p>Leadership strongly pushed for a direct port of the internal dashboard to meet tight deadlines.</p>
+                <p>Despite pressure, I advocated for a <b>foundational redesign focused on clarity and exploration</b> by making a case for user adoption.</p>
               </CardSection>
-              <CardSection sectionTitle="Building alignment" smaller>
-                <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
-              </CardSection>
+              <CardGap>
+                <CardSection sectionTitle="Building alignment" smaller>
+                  <p>Early on, I uncovered major misalignment on feature expectations for the MVP. I brought stakeholders together, clarified priorities, and helped the team shift from a “ship fast” mindset to a “ship smart” one.</p>
+
+                </CardSection>
+                <CaseStudyImage
+                 src={caseStudyAB.ABinitialdesignfilters}
+                 alt="Proposed initial design with filters drawer"
+                 caption="The initial proposed design I was given was a direct port of the internal sales tool, and there were misaligned expectations around features"
+                 spaceBottom
+               />
+              </CardGap>
               <CardSection smaller sectionTitle="The redesign">
                 <BulletList>
                   <li>Replaced overwhelming filters with <b>interactive tables to guide users</b> through the data</li>
-                  <li>Converted the KPI unit from dollars to percentages to <b>better align with the actual decision making process</b> of pharmacy managers</li>
-                  <li>Merged related data and <b>reduced column count to 10</b> from 23</li>
+                  <li>Converted the KPI unit from dollars to percentages to <b>better align with how pharmacy managers actually make decisions</b></li>
+                  <li>Merged related data and <b>reduced the column count from 23 to 10</b></li>
                   <li>Implemented a feature that converted between ID systems to <b>address a customer pain point</b> discovered during usability testing</li>
                 </BulletList>
               </CardSection>
@@ -157,7 +160,7 @@ export default function abProject() {
           <CardContainer>
             <CardGap>
               <CardSection sectionTitle="Usability testing">
-                <p>To prove the value of interactivity and usability, I built clickable prototypes and usability-tested them with <b>10 customers</b>.</p>
+                <p>I built clickable prototypes, collaborating with the research team to test the tool with <b>10 customers</b> and confirmed the redesign’s effectiveness.</p>
                 <p>Out of the two other tools tested alongside it, the Opportunities Dashboard earned the <b>highest usability score of 8.2</b>.</p>
                 <div className="py-4">
                   <CaseStudyImage 
@@ -166,17 +169,18 @@ export default function abProject() {
                   />
                 </div>
                 <div className="flex flex-col gap-6">
-                  <p>Customers praised clarity, usability, and business value of the product.</p>
+                  <p>Customers praised the clarity, usability, and business value of the product.</p>
                   <div className="flex flex-col gap-6">
-                    <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with it.</p>
-                    <p className="quote">This would give me a reason to log onto ABC.</p>
+                    <p className="quote">It's really helpful for us to see the opportunities laid out better and to be able to play with them.</p>
+                    <p className="quote">This would give me a reason to log onto AmerisourceBergen.</p>
                   </div>
                 </div>
                 {/* </CardSection> */}
               </CardSection>
 
-              <CardSection sectionTitle="C-Suite presentation">
-                <p>The dashboard designs and the usability findings were presented at a C-level stakeholders meeting, who <b>unanimously approved</b> the next phase of development, securing buy-in for this proposal originally pitched by the Senior Director.</p>
+              <CardSection sectionTitle="C-suite presentation">
+                <p>The research team and I presented the Opportunities Dashboard designs alongside the usability findings at a C-level stakeholders meeting.</p>
+                <p>The stakeholders unanimously approved the next phase of development, <b>securing buy-in for this proposal</b> originally pitched by the Senior Director.</p>
               </CardSection>
             </CardGap>
           </CardContainer>
@@ -189,11 +193,12 @@ export default function abProject() {
           <CardContainer removeSpaceBottom>
             <CardGap>
               <CardSection sectionTitle="Future roadmapping">
-                <p>Before transitioning off the project, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive enhancement roadmap. To guide resource allocation, I prioritized features based on urgency and implementation complexity.</p>
+                <p>To ensure a smooth handoff, I established a foundation for future success by analyzing user testing feedback and developing a comprehensive enhancement roadmap. <b>I prioritized features based on urgency and implementation complexity</b> to guide resource allocation.</p>
               </CardSection>
               <CardSection sectionTitle="MVP launch">
                 <p>I led this project for just over a year, successfully launching a working MVP by the end-of-year deadline.</p>
-                <p><b>What started as a request to copy an internal sales tool became a customer-focused product that was not only easier to use—but actually gave pharmacy managers a reason to log in.</b></p>
+                
+                <p><b>What began as a copy request evolved into a customer-focused product that was not only easier to use but gave AmerisourceBergen users a reason to log on.</b></p>
               </CardSection>
             </CardGap>
           </CardContainer>
@@ -223,8 +228,6 @@ export default function abProject() {
           </div>
         )}
         {/* Full screen image overlay: END */}
-
-    
     </div>
   );
 }

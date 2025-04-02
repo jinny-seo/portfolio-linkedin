@@ -20,7 +20,7 @@ import { icon } from "@/assets/icon";
 
 const caseStudyData = {
   team: [
-    "Main designer (Me)",
+    "Main designer (me)",
     "Team of 4 developers",
     "Product Manager",
     "Chief Product Officer",

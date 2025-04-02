@@ -8,13 +8,15 @@ import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
 import projOM from './project/proj-om.png';
 
+
+
 export const projAssets = [
     {
         name: "Building a cybersecurity platform from the ground up",
         company: "Mimic",
         date: "01/2024 — 02/2025",
         duration: "14 months",
-        description: "Launching and evolving a cybersecurity platform that secured $50M in funding",
+        description: "A technical MVP transformed into a user-centered platform that secured $50M in funding through persona-driven IA and redesign",
         link: "mimic",
         image: projMimic,
         imageSecondary: projMimicSecondary,
@@ -24,7 +26,7 @@ export const projAssets = [
         company: "Crayon",
         date: "02/2022 — 07/2022",
         duration: "6 months",
-        description: "A new onboarding and landing experience for a competitive intelligence platform",
+        description: "A simple request to port an internal tool became a top-rated customer experience through usability reframing",
         link: "crayon",
         image: projCrayon,
         imageSecondary: projCrayonSecondary,
@@ -35,7 +37,7 @@ export const projAssets = [
         company: "AmerisourceBergen",
         date: "03/2021 - 12/2021",
         duration: "10 months",
-        description: "Launching a dashboard used by pharmacy purchasing managers to find cheaper alternatives",
+        description: "A navigation fix developed into an onboarding system that clarified value to customers and empowered users",
         link: "ab",
         image: projAB,
         imageSecondary: projABSecondary,

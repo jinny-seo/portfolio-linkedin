@@ -43,12 +43,12 @@ export const HeroSocialIcons = () => {
       {socials.map((item, index) => (
         <li key={index} className="relative group">
           <a href={item.href} target="_blank" rel="noopener noreferrer">
-            <Image src={item.image} alt={item.name} width={26} height={26} />
+            <Image src={item.image} alt={item.name} width={26} height={26} className="block md:hidden"/>
+            <Image src={item.image} alt={item.name} width={30} height={30} className="hidden md:block"/>
           </a>
           <div className="absolute left-1/2 -translate-x-1/2 -top-9 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-10 after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-black" >
-  {item.tooltip}
-</div>
-
+            {item.tooltip}
+          </div>
         </li>
       ))}
     </ul>

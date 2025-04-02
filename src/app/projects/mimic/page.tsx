@@ -14,6 +14,7 @@ import { projAssets } from "@/assets/projAssets";
 // import CaseStudyNav from "@/components/CaseStudyNav";
 import { icon } from "@/assets/icon";
 import { CardGap } from "@/components/CardGap";
+import { CaseStudyImage } from "@/components/CaseStudyImage";
 
 
 const caseStudyData = {
@@ -141,7 +142,8 @@ export default function crayonProject() {
             <p>When I joined Mimic as one of the founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b> Given the tight timeline and limited access to users, we prioritized technical requirements when building the first version of the platform.</p>
           </CardSection>
         </CardContainer>
-        <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <CaseStudyImage src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details" className="border-t border-b"/>
+        
         <CardContainer>
           <CardSection>
             <p>This approach allowed us to demonstrate our technical proficiency and launch on schedule. The initial MVP impressed early users with its capabilities, but our post-launch research revealed a critical gap: <b>Proper user research.</b></p>
@@ -243,7 +245,8 @@ export default function crayonProject() {
             </CardSection>
           </CardGap>
         </CardContainer>
-        <Image src={caseStudyMimic.MimicNewNodesOverview as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <CaseStudyImage src={caseStudyMimic.MimicNewNodesOverview as StaticImageData} alt="Initial MVP version of Node Details" className="border-t"/>
+        
       </Windows95FrameInner>
 
       <Windows95FrameInner>
@@ -259,11 +262,23 @@ export default function crayonProject() {
             </CardSection>
           </CardSection>
         </CardContainer>
-        <Image src={caseStudyMimic.MimicNewNodesDetails1 as StaticImageData} alt="Initial MVP version of Node Details"/>
-        <div className="hidden bg-white lg:grid lg:grid-cols-2 lg:p-4 lg:gap-4">
-          <Image src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} alt="Initial MVP version of Node Details"/>
-          <Image src={caseStudyMimic.MimicNewNodesDetails3 as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <div className="flex flex-col bg-white">
+          <div className="flex flex-col gap-4 mb-8">
+            <CaseStudyImage 
+              src={caseStudyMimic.MimicNewNodesDetails1 as StaticImageData} 
+              alt="Initial MVP version of Node Details" 
+            />
+            <p className={`caption text-center`}>Node Details page when node is connected</p>
+          </div>
+          <div className="flex flex-col gap-4 mb-8">
+            <CaseStudyImage 
+              src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} 
+              alt="Initial MVP version of Node Details"
+            />
+            <p className={`caption text-center`}>Node Details page when node is degraded</p>
+          </div>
         </div>
+        
 
         
       </Windows95FrameInner>
@@ -291,6 +306,7 @@ export default function crayonProject() {
             allowFullScreen
           />
         </div>
+        <p className={`bg-white caption text-center pt-4`}>Configuration experience walkthrough for the developers</p>
         <CardContainer>
           <CardSection>
             <CardGap>
@@ -320,10 +336,17 @@ export default function crayonProject() {
       <CaseStudyTitleDivider title="Additional contributions"/>
       <Windows95FrameInner>  
         <CardContainer>
-          <CardGap>
-            <p>Alongside product design work, I built Mimic's comprehensive design language to ensure visual consistency, scalability, and accessibility across all touchpoints.</p>
           <CardSection sectionTitle="Design system establishment">
-              
+            <p>Alongside product design work, I built Mimic's comprehensive design language to ensure visual consistency, scalability, and accessibility across all touchpoints.</p>
+          </CardSection>          
+        </CardContainer>
+
+        <CaseStudyImage src={caseStudyMimic.MimicDS as StaticImageData} alt="Initial MVP version of Node Details"/>
+        
+        <CardContainer>
+          <CardGap>
+
+            <CardSection>
               <CardSection smaller sectionTitle="Component library">
                 <BulletList>
                   <li>Established foundational components with primitive, semantic, and component tokens</li>
@@ -339,31 +362,29 @@ export default function crayonProject() {
                 </BulletList>
               </CardSection>
             </CardSection>
-            </CardGap>
-            </CardContainer>
-            <Image src={caseStudyMimic.MimicDS as StaticImageData} alt="Initial MVP version of Node Details"/>
-            <CardContainer>
-            <CardGap>
+
             <CardSection sectionTitle="Brand experience">
-              <CardSection smaller sectionTitle="Communication materials">
-                <BulletList>
-                  <li>Developed unified visual language across various channels and mediums</li>
-                  <li>Created templates for pitch decks and marketing collateral</li>
-                  <li>Enabled non-designers to create on-brand materials</li>
-                </BulletList>
-              </CardSection>
-              <CardSection smaller sectionTitle="Accessibility implementation">
-                <div className="mt-2 mb-4">
-                  <p className="bg-slate-200 py-3 px-4 rounded-md text-slate-700">Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="font-Doto text-blue-800 underline hover:no-underline">Mimic marketing website</a> and do a tab test — the developers and I worked together to ensure keyboard operability, among other accessibility features.</p>
-                  
-                </div>
-                <BulletList>
-                  <li><b>Implemented WCAG compliance standards</b> for the marketing website, ensuring accessibility while protecting the company from lawsuits</li>
-                  <li>Established <b>guidelines for future accessibility compliance</b></li>
-                  <li><b>Hand-crafted the hero image</b> for the landing page of the marketing website</li>
-                </BulletList>
-              </CardSection>
+              <BulletList>
+                <li>Developed unified visual language across various channels and mediums</li>
+                <li>Created templates for pitch decks and marketing collateral</li>
+                <li>Enabled non-designers to create on-brand materials</li>
+              </BulletList>
+              <CaseStudyImage src={caseStudyMimic.MimicDiagram as StaticImageData} alt="Architecture diagram for a white paper" caption="Maintaining the brand experience across all touchpoints, like this architecture diagram in one of Mimic's white papers."/>
             </CardSection>
+
+            <CardSection sectionTitle="Accessibility">
+              <div className="mt-2 mb-4">
+                <p className="bg-slate-200 py-3 px-4 rounded-md text-slate-700">Check out the <a href="https://mimic.com/" target="_blank" rel="noopener noreferrer" className="font-Doto text-blue-800 underline hover:no-underline">Mimic marketing website</a> and do a tab test — the developers and I worked together to ensure keyboard operability, among other accessibility features.</p>
+                
+              </div>
+              <BulletList>
+                <li><b>Implemented WCAG compliance standards</b> for the marketing website, ensuring accessibility while protecting the company from lawsuits</li>
+                <li>Established <b>guidelines for future accessibility compliance</b></li>
+                <li><b>Hand-crafted the hero image</b> for the landing page of the marketing website</li>
+              </BulletList>
+            </CardSection>
+            
+          
           </CardGap>
         </CardContainer>
         <Image src={caseStudyMimic.MimicMarketing as StaticImageData} alt="Initial MVP version of Node Details"/>

@@ -138,10 +138,14 @@ export default function crayonProject() {
       <Windows95FrameInner>  
         <CardContainer>
           <CardSection sectionTitle="Initial MVP delivery">
-              <p>When I joined Mimic as one of the founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b> Given the tight timeline and limited access to users, we prioritized technical requirements when building the first version of the platform.</p>
-              <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
-              <p>This approach allowed us to demonstrate our technical proficiency and launch on schedule. The initial MVP impressed early users with its capabilities, but our post-launch research revealed a critical gap: <b>Proper user research.</b></p>
-            </CardSection>
+            <p>When I joined Mimic as one of the founding designers, the goal was clear: <b>Ship an MVP fast to attract early customers and investors.</b> Given the tight timeline and limited access to users, we prioritized technical requirements when building the first version of the platform.</p>
+          </CardSection>
+        </CardContainer>
+        <Image src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details"/>
+        <CardContainer>
+          <CardSection>
+            <p>This approach allowed us to demonstrate our technical proficiency and launch on schedule. The initial MVP impressed early users with its capabilities, but our post-launch research revealed a critical gap: <b>Proper user research.</b></p>
+          </CardSection>
         </CardContainer>
       </Windows95FrameInner>
       {/* Section - Background: END */}

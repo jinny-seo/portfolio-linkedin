@@ -5,16 +5,17 @@ import Windows95FrameOuter from "@/components/Windows95FrameOuter";
 
 
 export const  metadata: Metadata = {
+  metadataBase: new URL('https://jinnyseo.design'),
   title: "Jinny Eunji Seo | Portfolio",
   description: "I'm a problem-solving creative who digs beyond the surface to uncover the problem worth solving. From B2B SaaS platforms to design systems built from the ground up, I turn complexity into clarity and ship what matters.",
   openGraph: {
     title: "Jinny Eunji Seo | Portfolio",
     description: "I'm a problem-solving creative who digs beyond the surface to uncover the problem worth solving. From B2B SaaS platforms to design systems built from the ground up, I turn complexity into clarity and ship what matters.",
-    url: 'http://localhost:3000/',
+    url: 'https://jinnyseo.design/',
     siteName: "Jinny Seo",
     images: [
       {
-        url: 'http://localhost:3000/social-preview.png', // <-- 🔥 this is your new thumbnail
+        url: 'https://jinnyseo.design/social-preview.png', // <-- 🔥 this is your new thumbnail
         width: 1200,
         height: 630,
         alt: 'Portfolio preview image for Jinny Eunji Seo',
@@ -26,7 +27,7 @@ export const  metadata: Metadata = {
     card: 'summary_large_image',
     title: "Jinny Eunji Seo | Portfolio",
     description: "I'm a problem-solving creative who digs beyond the surface to uncover the problem worth solving. From B2B SaaS platforms to design systems built from the ground up, I turn complexity into clarity and ship what matters.",
-    images: ['http://localhost:3000/social-preview.png'],
+    images: ['https://jinnyseo.design/social-preview.png'],
   },
 };
 

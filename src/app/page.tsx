@@ -70,7 +70,7 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-x-1 py-12 lg:mr-[13rem] xl:mr-[16rem] lg:max-w-[800px] justify-center">
             <div className="col-span-1">
 
-            <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg">
+            <div className="bg-green-200/70 border-orange-300/50 border-[0.05em] flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg">
               <span className="font-Doto text-[1.1rem]">Product</span>
               <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
                 <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
@@ -95,7 +95,7 @@ export default function Home() {
             </div>
             </div>
             <div className="mt-4 col-span-1">
-              <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] -rotate-3 shadow-lg">
+              <div className="bg-yellow-200/80 border-yellow-300/50 border-[0.05em] flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] -rotate-3 shadow-lg">
                 <span className="font-Doto text-[1.1rem]">Design</span>
                 <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
                   <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-span-1 ">
-            <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg md:-ml-8 lg:-ml-4">
+            <div className="bg-red-200 border-red-300/50 border-[0.05em] flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg md:-ml-8 lg:-ml-4">
               <span className="font-Doto text-[1.1rem]">Code</span>
               <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
                 <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">

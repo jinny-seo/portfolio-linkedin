@@ -1,0 +1,14 @@
+name = "design-portfolio-2025"
+main = ".open-next/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+routes = [
+  "jinnyseo.design/*",
+  "www.jinnyseo.design/*"
+]

@@ -37,7 +37,7 @@ export const ResumeSection = () => {
                             items={[
                                 "One of two founding designers at a cybersecurity startup, supporting company growth from $27M to $70M+ in funding",
                                 "Delivered MVP in 8 months, securing U.S. government and Fortune 500 clients like REI",
-                                "Established design system and brand identity, as well as ensuring WCAG compliance on the public-facing website",
+                                "Established design system and brand identity and ensured WCAG compliance on the public-facing website",
                             ]}
                             />
                             <ResumeExperience 
@@ -57,7 +57,7 @@ export const ResumeSection = () => {
                             startDate="08/2018"
                             endDate="12/2021"
                             items={[  
-                                "Delivered complex B2B enterprise consulting engagements for 8 companies across healthcare, financial services, and more",
+                                "Delivered complex B2B enterprise consulting engagements for eight companies across healthcare, financial services, and more",
                                 "Built and maintained design systems for complex enterprise solutions",
                                 "Created company-wide audit process for accessibility engagements and internal education materials",
                             ]}

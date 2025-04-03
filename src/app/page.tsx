@@ -66,37 +66,120 @@ export default function Home() {
         {/* Resume: START */}
         <section id="resume" className="hidden md:block py-container">
           <ResumeSection/>
+
+          <div className="grid grid-cols-3 gap-x-1 py-12 lg:mr-[13rem] xl:mr-[16rem] lg:max-w-[800px] justify-center">
+            <div className="col-span-1">
+
+            <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg">
+              <span className="font-Doto text-[1.1rem]">Product</span>
+              <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  Interaction design
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  Prototyping
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  User research
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  User testing
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  Design systems
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  Accessibility
+                </li>
+              </ul>
+            </div>
+            </div>
+            <div className="mt-4 col-span-1">
+              <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] -rotate-3 shadow-lg">
+                <span className="font-Doto text-[1.1rem]">Design</span>
+                <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    Figma
+                  </li>
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    Sketch
+                  </li>
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    Illustrator
+                  </li>
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    Photoshop
+                  </li>
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    After Effects
+                  </li>
+                  <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                    InDesign
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-span-1 ">
+            <div className="bg-yellow-300 flex flex-col gap-y-2 px-[1.8em] py-[1.5em] w-[16em] h-[16em] aspect-[1] rotate-2 shadow-lg md:-ml-8 lg:-ml-4">
+              <span className="font-Doto text-[1.1rem]">Code</span>
+              <ul className="grid grid-cols-1 gap-x-[0.5rem] list-inside ">
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  HTML/CSS
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  JavaScript
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  TypeScript
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  React
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  NextJS
+                </li>
+                <li className="relative pl-5 before:content-['-'] before:absolute before:left-[0.2em] before:top-0">
+                  Tailwind
+                </li>
+              </ul>
+            </div>
+            </div>
+
+          </div>
         </section>
         {/* Resume: END */}
-            <footer className="py-[7rem] lg:pt-[4rem] lg:pb-[0rem]">
-              <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">
-                <p className="font-Doto text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">. . .</p>
-                <div className="flex flex-col gap-[0.5rem] font-Doto text-center lg:text-left">
-                  {/* For smaller breakpoints */}
-                  <div className="block lg:hidden">
-                    <p>Hand-coded with 🩷 with React, NextJS, and Tailwind</p>
-                    <a href="https://github.com/jinny-seo/design-portfolio-2025" 
+
+        {/* Footer: START */}
+        <footer className="py-[7rem] lg:pt-[4rem] lg:pb-[0rem]">
+          <div className="flex flex-col py-container gap-6 md:gap-8 lg:gap-10 items-center lg:items-start">
+            <p className="font-Doto text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">. . .</p>
+            <div className="flex flex-col gap-[0.5rem] font-Doto text-center lg:text-left">
+              {/* For smaller breakpoints */}
+              <div className="block lg:hidden">
+                <p>Hand-coded with 🩷 with React, NextJS, and Tailwind</p>
+                <a href="https://github.com/jinny-seo/design-portfolio-2025" 
+                  target="_blank" rel="noopener noreferrer" 
+                  className="text-blue-800 underline underline-offset-2 hover:no-underline"
+                >
+                  View on Github
+                </a>
+              </div>
+              {/* For larger breakpoints */}
+              <div className="hidden lg:block ">
+                  <span>Hand-coded with 🩷 with React, NextJS, and Tailwind</span>
+                  <a href="https://github.com/jinny-seo/design-portfolio-2025" 
                       target="_blank" rel="noopener noreferrer" 
-                      className="text-blue-800 underline underline-offset-2 hover:no-underline"
+                      className="text-blue-800 underline underline-offset-2 hover:no-underline mx-2 px-2"
                     >
                       View on Github
                     </a>
-                  </div>
-                  {/* For larger breakpoints */}
-                  <div className="hidden lg:block ">
-                      <span>Hand-coded with 🩷 with React, NextJS, and Tailwind</span>
-                      <a href="https://github.com/jinny-seo/design-portfolio-2025" 
-                          target="_blank" rel="noopener noreferrer" 
-                          className="text-blue-800 underline underline-offset-2 hover:no-underline mx-2 px-2"
-                        >
-                          View on Github
-                        </a>
-                  </div>
-
-                  <p className="my-6">Jinny Seo (c) 2025</p>
-                </div>
               </div>
-            </footer>
+
+              <p className="my-6">Jinny Seo (c) 2025</p>
+            </div>
+          </div>
+        </footer>
+        {/* Footer: END */}
       </div>     
     </main>
   );

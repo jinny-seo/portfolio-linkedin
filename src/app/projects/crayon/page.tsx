@@ -134,23 +134,18 @@ export default function crayonProject() {
             <CardGap>
               <CardSection>
                 <p>The original ask was simple: <b>Redesign the navigation.</b> However, once I started digging into Crayon’s platform, it became clear that navigation wasn’t the root problem. Behind it was a tangle of onboarding friction, underused features, and unclear value delivery.</p>                
+                <p>We need to help users <b>understand and activate the power of Crayon’s competitive intelligence platform—without needing handholding from customer success.</b></p>
               </CardSection>
-              <CardSection sectionTitle="The old interface">
-                <p>New users landed on an empty “My Feed” page with no context or direction. Critical features like saved searches—the engine behind Crayon’s daily email alerts—were hidden, and many users didn’t even know how they got their alerts, let alone how to set up new ones.</p>
+              <CardSection sectionTitle="The old experience">
+                <p>The platform had grown organically over six years into a “Frankensteined” structure filled with <b>redundant elements and vestigial pages.</b></p>
+                <p>New users landed on a blank “My Feed” page that assumed familiarity with “Saved Searches,” a <b>core feature most users didn’t yet understand.</b></p>
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonOldMyFeed} alt="Old landing page" caption="New users landed on an empty page without a clear CTA"/>
                 </div>
-                <p>Power users had learned to work around the platform’s gaps, but newer users struggled. And nearly all users relied on CS teams to configure what was meant to be a self-service experience.</p>
-              </CardSection>
-              <CardSection sectionTitle="Core challenge">
-                <p>We needed to <b>help users understand and activate the power of Crayon’s competitive intelligence platform</b>, without needing handholding from customer success.</p>
-                <CardSection smaller sectionTitle="Areas for improvement">
-                  <BulletList>
-                    <li><b>Self-Service adoption gap.</b> Users relied heavily on manual onboarding from customer success teams rather than configuring their own monitoring settings</li>
-                    <li><b>Email-dependent workflow.</b> Users found value in daily email alerts but struggled to update them or set up new ones</li>
-                    <li><b>Integration underutilization.</b> The platform's integration capabilities were hard to discover</li>
-                  </BulletList>
-                </CardSection>
+                <p>Furthermore, <b>critical workflows</b> like saved searches and daily alerts were <b>buried behind admin-style pages.</b></p>
+                <div className="py-4">
+                  <CaseStudyImage src={caseStudyCrayon.CrayonOldSavedSearches} alt="Old landing page"/>
+                </div>                
               </CardSection>
             </CardGap>
           </CardSection>
@@ -164,8 +159,20 @@ export default function crayonProject() {
           <CardContainer>
             <CardGap>
               <CardSection>
-                <p>I integrated <b>customer feedback gathered Productboard</b>, <b>input from customer success team members</b>, and <b>Heap data from the Product team</b> to develop a larger picture of the current state of the platform.</p>
-                <p>It became clear that <b>the interface had grown a “Frankensteined nav”</b> with vestigial features, confusing terminology, and redundant features. The onboarding experience hadn’t kept up with the platform’s evolution.</p>
+                <p>To get a fuller picture, I worked with Product to gather the following.</p>
+                <BulletList>
+                  <li><b>Customer feedback</b> from Productboard</li>
+                  <li><b>Heap analytics</b> on feature usage</li>
+                  <li><b>Interviews</b> with customer success team members</li>
+                </BulletList>
+                <p>This revealed a few key issues.</p>
+                <BulletList>
+                  <li>Power users had learned to work with the platform, but newer users struggled</li>
+                  <li>Nearly all users relied on CS teams to configure what was meant to be a self-service experience</li>
+                  <li>“My Feed” and “All Insights” were nearly indistinguishable, creating navigational ambiguity</li>
+                  <li>Users found value in daily email alerts but did not realize following a search triggered them</li>
+                  <li>The platform's integration capabilities were hard to discover</li>
+                </BulletList>
               </CardSection>
               <CardSection sectionTitle="System analysis">
                 <p>Looking beyond the navigation problem, I restructured the problem into three focus areas.</p>                  

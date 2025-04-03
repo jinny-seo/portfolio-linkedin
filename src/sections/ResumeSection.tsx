@@ -7,7 +7,7 @@ import ResumeExperience from "./ResumeExperience";
 export const ResumeSection = () => {
     return (
         <div>
-            <div className="bg-white shadow-lg lg:mr-[16rem] xl:mr-[18rem] lg:max-w-[800px]">
+            <div className="bg-white shadow-lg lg:mr-[13rem] xl:mr-[16rem] lg:max-w-[800px]">
                 <NotebookPaperContainer notebookPaperBg={false}>
                     <div className="flex mt-[4.5rem]">
                         <h2 className="flex-1 font-Doto -mb-[0.4rem] text-[1.8rem] lg:text-[2rem]">Resume</h2>
@@ -35,9 +35,9 @@ export const ResumeSection = () => {
                             startDate="12/2023"
                             endDate="02/2025"
                             items={[
-                                "One of two fouding designers at a cybersecurity startup, from its $27M seed to $70M+ in funding",
-                                "MVP platform delivery from initial concept to deployment, securing U.S. government and Fortune 500 clients like REI",
-                                "Established company’s first design system and visual language across internal and external touchpoints"
+                                "One of two founding designers at a cybersecurity startup, supporting company growth from $27M to $70M+ in funding",
+                                "Delivered MVP in 8 months, securing U.S. government and Fortune 500 clients like REI",
+                                "Established design system and brand identity, as well as ensuring WCAG compliance on the public-facing website",
                             ]}
                             />
                             <ResumeExperience 
@@ -46,9 +46,9 @@ export const ResumeSection = () => {
                             startDate="08/2018"
                             endDate="12/2021"
                             items={[
-                                "Led onboarding experience redesign, collaborating across engineering, product, and leadership teams to deliver roadmap initiatives",   
-                                "Spearheaded first third-party integration experience",
-                                "Collaborated with development to create the company’s first component library"
+                                "Led platform-wide redesign of the navigation, onboarding, and integrations to improve user workflows",
+                                "Shipped improvements to daily alerts and email clarity, helping users understand key feature values of the platform",
+                                "Collaborated with development to create company’s first component library",
                             ]}
                             />
                             <ResumeExperience 
@@ -57,8 +57,9 @@ export const ResumeSection = () => {
                             startDate="08/2018"
                             endDate="12/2021"
                             items={[  
-                                "B2B enterprise consulting engagements for 8 companies, delivering complex systems while building and evolving various design systems",
-                                "Established company-wide audit process for accessibility consulting engagements, leading to internal education initiatives and client implementation"
+                                "Delivered complex B2B enterprise consulting engagements for 8 companies across healthcare, financial services, and more",
+                                "Built and maintained design systems for complex enterprise solutions",
+                                "Created company-wide audit process for accessibility engagements and internal education materials",
                             ]}
                             />  
                             <ResumeExperience 
@@ -67,8 +68,10 @@ export const ResumeSection = () => {
                             startDate="08/2018"
                             endDate="12/2021"
                             items={[
-                                "Pioneered company’s thought leadership on emerging technologies through research and rapid prototyping",
-                                "Published industry-leading chatbot design guidelines (100k+ views, 2.5k+ likes), establishing thought leadership in conversational UI as one of the first guidelines for chatbots"
+
+                                "Created interactive prototypes to explore future tech applications in the travel and hospitality space",
+                                "Produced tech trend reports with custom illustrations to communicate R&D insights",
+                                "Published industry-first chatbot guidelines with 100k+ views and 2k+ likes",
                             ]}
                             />
 

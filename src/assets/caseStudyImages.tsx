@@ -16,7 +16,11 @@ import CrayonNewDropdown from './project/Crayon_hero-dropdown.png';
 import CrayonNewAppcues from './project/Crayon-new_appcues.png';
 import CrayonNewGong1 from './project/Crayon-new_gong-1.png';
 import CrayonNewGong2 from './project/Crayon-new_gong-2.png';
-
+import CrayonCompetitiveAnalysis from './project/Crayon_competitive-analysis.png';
+import CrayonNavIterations from './project/Crayon_early-iterations.png';
+import CrayonUserTesting1 from './project/Crayon_user-testing-1.png';
+import CrayonUserTesting2 from './project/Crayon_user-testing-2.png';
+import CrayonUserTesting3 from './project/Crayon_user-testing-3.png';
 import MimicOld from './project/Mimic_old.png';
 import MimicNewNodesOverview from './project/Mimic_new-nodes-overview.png';
 import MimicNewNodesDetails1 from './project/Mimic_new-node-details-1.png';
@@ -51,6 +55,11 @@ export const caseStudyCrayon = {
     CrayonNewAppcues,
     CrayonNewGong1,
     CrayonNewGong2,
+    CrayonCompetitiveAnalysis,
+    CrayonNavIterations,
+    CrayonUserTesting1,
+    CrayonUserTesting2,
+    CrayonUserTesting3,
 };
 
 export const caseStudyMimic = {

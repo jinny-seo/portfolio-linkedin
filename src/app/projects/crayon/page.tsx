@@ -136,7 +136,7 @@ export default function crayonProject() {
               <CardSection>
                 <p>The original ask was simple: <b>Redesign the navigation.</b></p>
                 <p>However, once I started digging into Crayon’s platform, it became clear that navigation wasn’t the root problem. Behind it was a tangle of onboarding friction, underused features, and unclear value delivery.</p>
-                <p><b>We needed to help users understand and activate the power of Crayon's competitive intelligence platform without requiring hand-holding from customer success.</b></p>
+                <p><b>We needed to help users activate the power of Crayon's competitive intelligence platform without requiring hand-holding from customer success.</b></p>
               </CardSection>
             </CardGap>
           </CardSection>
@@ -161,10 +161,10 @@ export default function crayonProject() {
               <CardSection sectionTitle="Key findings">
                 <BulletList>
                   <li><b>Onboarding dependency.</b> New users relied heavily on customer success due to empty default states and a lack of guidance</li>
-                  <li><b>Interface redundancy.</b> “My Feed” and “All Insights” were nearly indistinguishable, creating confusion in core navigation</li>
-                  <li><b>Unscalable workarounds.</b> Quick links was a stopgap solution that had gained widespread adoption, but this temporary fix didn’t scale with user growth</li>
+                  <li><b>Interface redundancy.</b> “My Feed” and the main Insights page were nearly indistinguishable, creating confusion in core navigation</li>
+                  <li><b>Unscalable workarounds.</b> Quick links were a stopgap solution that had gained widespread adoption, but this temporary fix didn’t scale with user growth</li>
                   <li><b>Cluttered navigation.</b> Underused features like “Team Activity” occupied prime space in the navigation, distracting from the platform’s core value drivers</li>
-                  <li><b>Hidden features.</b> Critical capabilities—like integrations and saved searches (which powered email alerts)—were difficult to discover and poorly explained</li>
+                  <li><b>Hidden features.</b> Critical capabilities—like integrations and Saved Searches (which powered email alerts)—were difficult to discover and poorly explained</li>
                 </BulletList>
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonOldSavedSearches} alt="Old landing page" caption="The platform had grown organically over six years into what I call a “Frankensteined” structure, with redundant elements, vestigial pages, and critical workflows buried in admin-style layouts."/>
@@ -172,6 +172,10 @@ export default function crayonProject() {
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonOldMyFeed} alt="Old landing page" caption="Furthermore, new users were dropped into a blank “My Feed” page. The CTA assumed familiarity with “Saved Searches,” a core feature most new users would not understand."/>
                 </div>
+                <CardSection sectionTitle="Reframing the problem">
+                  <p>Crayon's issues stemmed from more than just navigation problems. They were rooted in onboarding friction and unclear value delivery.</p>
+                  <p>This wasn’t just a design issue; it was a perception gap. <b>How could we help users feel Crayon’s value from the start?</b></p>
+                </CardSection>
               </CardSection>
             </CardGap>
           </CardSection>
@@ -185,14 +189,13 @@ export default function crayonProject() {
           <CardContainer>
             <CardGap>
               <CardSection>
-                <p>The challenge was larger than just the navigation. The real question was: <b>How do we make Crayon feel intuitive and valuable from day one?</b></p>
                 <p>To answer this question, I reorganized the problem into three strategic opportunity areas.</p>
               </CardSection>
               <CardSection sectionTitle="Navigation and onboarding">
                 <BulletList>
                   <li><b>First-session activation.</b> Guide users to meaningful action on their very first visit</li>
-                  <li><b>Content differentiation.</b> Create clear delineation between "My Feed" and "All Insights"</li>
-                  <li><b>Value driver education.</b> Introduce saved searches as a powerful, accessible tool</li>
+                  <li><b>Content differentiation.</b> Create clear delineation between "My Feed" and "Search All Insights"</li>
+                  <li><b>Value driver education.</b> Introduce Saved Searches as a powerful, accessible tool</li>
                 </BulletList>
               </CardSection>
               <CardSection sectionTitle="Feature clarification">
@@ -204,7 +207,7 @@ export default function crayonProject() {
               </CardSection>
               <CardSection sectionTitle="Integration ecosystem">
                 <BulletList>
-                  <li><b>Self-service facilitation.</b> Enable email digest setup without CS intervention</li>
+                  <li><b>Self-service facilitation.</b> Enable email digest setup without customer success intervention</li>
                   <li><b>Discoverability enhancement.</b> Surface integration options within natural user flows</li>
                   <li><b>Philosophy alignment.</b> Fulfill Crayon's promise to "meet users where they are"</li>
                 </BulletList>
@@ -224,7 +227,7 @@ export default function crayonProject() {
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonCompetitiveAnalysis} alt="Competitive analysis for navigation redesign" caption="I conducted competitive analysis of navigation models from feed-based platforms and beyond"/>
                 </div>
-                <p>What stood out during this second round of exploration was a dropdown navigation model that was light, modern, and preserved context by avoiding full-page switches.</p>
+                <p>What stood out during this second round of exploration was a dropdown model that was light and modern while preserving context.</p>
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonNavIterations} alt="Early iterations of navigation redesign" caption="Early sketches and higher-fidelity iterations of the navigation redesign"/>
                 </div>
@@ -232,9 +235,9 @@ export default function crayonProject() {
               <CardSection smaller sectionTitle="Final transformation">
                 <p>This led to a two-panel dropdown navigation featuring the following improvements.</p>
                 <BulletList>
-                  <li><b>Menu item consolidation.</b> Consolidated "My Feed," "Saved Searches," and "All Insights" into a scalable, elastic-searchable dropdown with hover states and expansion options</li>
-                  <li><b>Taxonomy clarification.</b> Replaced ambiguous labels with clearer alternatives (e.g., "New Search" to "Search All Insights")</li>
-                  <li><b>Streamlined actions.</b> Simplified creation of saved searches and clarified their connection to the daily email updates that the users valued</li>
+                  <li><b>Menu item consolidation.</b> Consolidated the main navigation items into a scalable, elastic-searchable dropdown with hover states and expansion options</li>
+                  <li><b>Taxonomy clarification.</b> Replaced ambiguous labels with clearer alternatives (e.g., "New Search" to "Search All Insights", "My Feed" to "Following")</li>
+                  <li><b>Streamlined actions.</b> Simplified creation of Saved Searches and clarified their connection to the daily email updates that the users valued</li>
                 </BulletList>
               </CardSection>
             </CardGap>
@@ -248,7 +251,7 @@ export default function crayonProject() {
               <BulletList>
                 <li><b>Navigation simplification.</b> Removed low-usage elements like “Team Activity” based on analytics and testing</li>
                 <li><b>Quick filter KPI cards.</b> Introduced visual cards for commonly used filters</li>
-                <li><b>Onboarding flow improvements.</b> Replaced blank landing pages with pre-populated insights and added guided tooltips</li>
+                <li><b>Onboarding flow improvements.</b> Replaced blank landing pages with pre-populated Insights and added guided tooltips</li>
               </BulletList>
             </CardSection>
           </CardContainer>
@@ -275,22 +278,25 @@ export default function crayonProject() {
         <Windows95FrameInner>  
           <CardContainer>
             <CardGap>
-              <p>I validated designs through two rounds of testing: first with <b>four customer success employees</b>, then with <b>four external customers</b>.</p>
+              <CardSection>
+                <p>With the redesigned navigation and onboarding prototyped, we turned to user testing.</p>
+                <p>I validated designs through two rounds of testing: first with <b>four customer success employees</b>, then with <b>four external customers</b>.</p>
+              </CardSection>
               <CardSection sectionTitle="Key findings">
                 <BulletList>
                   <li>The dropdown was immediately understood as interactive</li>
-                  <li>Landing the users on a page with the dropdown already open confused users, and we reverted to landing on "Search All Insights"</li>
+                  <li>Landing users on a page with the dropdown already open confused users, and we reverted to landing on "Search All Insights"</li>
                   <li>Tooltips in the "Follow" button helped users connect it to daily alerts</li>
-                  <li>Users intuitively grasped the starring mechanism for saved searches</li>
+                  <li>Users intuitively grasped the starring mechanism for Saved Searches</li>
                   <li>Removal of low-usage items was not noticed</li>
                   <li>Terminology changes like "My Feed" to "Following" tested positively</li>
-                  <li>Quick-filter KPI cards had strong engagement but were deprioritized due to technical complexity</li>
+                  <li>Quick-filter KPI cards saw strong engagement but had to be scaled down in scope due to technical constraints</li>
                 </BulletList>
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonUserTesting1} alt="Crayon user testing 1"/>
                 </div>
                 <div className="py-4">
-                  <CaseStudyImage src={caseStudyCrayon.CrayonUserTesting3} alt="Crayon user testing 2" caption="I had discoverability concerns around the navigation dropdown and tested a prototype with it pre-opened. It did not test well, and found through further testing that users understood the closed dropdown intuitively."/>
+                  <CaseStudyImage src={caseStudyCrayon.CrayonUserTesting3} alt="Crayon user testing 2" caption="I had discoverability concerns around the navigation dropdown and tested it pre-opened. It did not test well, and further user testing showed users understood the closed dropdown intuitively."/>
                 </div>
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonUserTesting2} alt="Crayon user testing 2" caption="Just by putting the email explanation inside the 'Follow' button, users better understood that clicking it would start the alerts"/>
@@ -305,10 +311,10 @@ export default function crayonProject() {
         <Windows95FrameInner>  
           <CardContainer>
             <CardGap>
-              <p>We successfully launched with no negative feedback in the first month after launch, despite changing core navigation flows</p>
+              <p>We launched successfully with no negative feedback in the first month, despite changing core navigation flows</p>
               <CardSection sectionTitle="Post-launch iteration">
                 <p>Shortly after launch, we noticed a friction point: users were thrown off by the saved search they were currently viewing jumping to the top of the list.</p>
-                <p>Through observation and testing, we realized many users processed searches sequentially. I worked with the development team to quickly update the pattern to preserve static order of the saved searches, improving predictability.</p>
+                <p>Through observation and testing, we realized many users processed searches sequentially. I worked with the development team to quickly update the pattern to preserve static order of the Saved Searches, improving predictability.</p>
               </CardSection>
             </CardGap>
           </CardContainer>
@@ -323,13 +329,13 @@ export default function crayonProject() {
             <CardSection>
                 <p>This project taught me that onboarding isn’t a moment, but a system. These are the things I would push for if I could do it again.</p>
                 <CardSection smaller sectionTitle="Deeper segmentation">
-                  <p>Power users were the most vocal and accessible and dominated our feedback loop. However, their advanced behavior doesn't reflect the broader user base — particularly the new users we were concerned about. Equal input from all segements of users would have led to a more balanced solution.</p>
+                  <p>Power users were the most vocal and accessible and dominated our feedback loop. However, their advanced behavior doesn't reflect the broader user base — particularly the new users we were concerned about. Equal input from all segments of users would have led to a more balanced solution.</p>
                 </CardSection>
                 <CardSection smaller sectionTitle="Progressive onboarding">
-                  <p>To improve sign-up conversion, we pared down the requirements for user input, but we lost valuable context. Instead, we could’ve explored approaches where we collect and refine user inputs over time instead of all up front.</p>
+                  <p>To improve sign-up conversion, we pared down the requirements for user input, but we lost valuable context. Instead, we could’ve explored approaches where we collect and refine user inputs over time, rather than all at once.</p>
                 </CardSection>
                 <CardSection smaller sectionTitle="Reconsidering tooltip tutorials">
-                  <p>No one likes to read. Users skip tooltips. While Appcues offered a quick, trackable onboarding solution, embedding feature education into user workflows would offer more meaningful education while dovetailing with progressive onboarding.</p>
+                  <p>No one likes to read. Users skip tooltips. While Appcues offered a quick, trackable onboarding solution through tooltips, embedding feature education into user workflows would offer more meaningful education while dovetailing with progressive onboarding.</p>
                 </CardSection>
               </CardSection>                          
               <hr/>

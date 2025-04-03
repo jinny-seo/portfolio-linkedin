@@ -251,36 +251,41 @@ export default function crayonProject() {
 
       <Windows95FrameInner>
         <CardContainer>
-          <CardSection sectionTitle="Node Details page redesign">
-            <p>Along with refreshing our information architecture, I prioritized redesigning the <b>Node Details page, which is a critical touchpoint</b> for installing, deploying, and troubleshooting the nodes.</p>
-            <CardSection smaller sectionTitle="Updates">
-              <BulletList>
-                <li>Separated connectivity from the node operational state to reduce confusion</li>
-                <li>Surfaced connectivity details only when issues surfaced, reducing information overload</li>
-                <li>Categorized node events to enable filtering for faster troubleshooting</li>
-              </BulletList>
+          <CardGap>
+            <CardSection sectionTitle="Node Details redesign">
+              <p>Along with refreshing our information architecture, I prioritized redesigning the <b>Node Details page, which is a critical touchpoint</b> for installing, deploying, and troubleshooting the nodes.</p>
+              <CardSection smaller sectionTitle="Before">
+                <CaseStudyImage src={caseStudyMimic.MimicOld as StaticImageData} alt="Initial MVP version of Node Details" 
+                  caption="The initial MVP version of Node Details were laid out linearly with no regard to the user's workflow"
+                  className="border-t border-b"
+                />
+              </CardSection>
             </CardSection>
-          </CardSection>
-        </CardContainer>
-        <div className="flex flex-col bg-white">
-          <div className="flex flex-col gap-4 mb-8">
-            <CaseStudyImage 
-              src={caseStudyMimic.MimicNewNodesDetails1 as StaticImageData} 
-              alt="Initial MVP version of Node Details" 
-            />
-            <p className={`caption text-center`}>Node Details page when node is connected</p>
-          </div>
-          <div className="flex flex-col gap-4 mb-8 md:mb-12 lg:mb-16">
-            <CaseStudyImage 
-              src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} 
-              alt="Initial MVP version of Node Details"
-            />
-            <p className={`caption text-center`}>Node Details page when node is degraded</p>
-          </div>
-        </div>
-        
-
-        
+            <CardSection smaller sectionTitle="After">
+                <BulletList>
+                  <li>Separated connectivity from the node operational state to reduce confusion</li>
+                  <li>Surfaced connectivity details only when issues surfaced, reducing information overload</li>
+                  <li>Categorized node events to enable filtering for faster troubleshooting</li>
+                </BulletList>
+              </CardSection>
+            </CardGap>
+          </CardContainer>
+          <div className="flex flex-col bg-white">
+            <div className="flex flex-col gap-4 mb-8">
+              <CaseStudyImage 
+                src={caseStudyMimic.MimicNewNodesDetails1 as StaticImageData} 
+                alt="Initial MVP version of Node Details" 
+              />
+              <p className={`caption text-center`}>Node Details page when node is connected</p>
+            </div>
+            <div className="flex flex-col gap-4 mb-8 md:mb-12 lg:mb-16">
+              <CaseStudyImage 
+                src={caseStudyMimic.MimicNewNodesDetails2 as StaticImageData} 
+                alt="Initial MVP version of Node Details"
+              />
+              <p className={`caption text-center`}>Node Details page when node is degraded</p>
+            </div>
+          </div>        
       </Windows95FrameInner>
 
       <Windows95FrameInner>

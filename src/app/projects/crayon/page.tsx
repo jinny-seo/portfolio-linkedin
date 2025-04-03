@@ -172,11 +172,11 @@ export default function crayonProject() {
                 <div className="py-4">
                   <CaseStudyImage src={caseStudyCrayon.CrayonOldMyFeed} alt="Old landing page" caption="Furthermore, new users were dropped into a blank “My Feed” page. The CTA assumed familiarity with “Saved Searches,” a core feature most new users would not understand."/>
                 </div>
-                <CardSection sectionTitle="Reframing the problem">
+              </CardSection>
+              <CardSection sectionTitle="Reframing the problem">
                   <p>Crayon's issues stemmed from more than just navigation problems. They were rooted in onboarding friction and unclear value delivery.</p>
                   <p>This wasn’t just a design issue; it was a perception gap. <b>How could we help users feel Crayon’s value from the start?</b></p>
                 </CardSection>
-              </CardSection>
             </CardGap>
           </CardSection>
         </CardContainer>
@@ -222,17 +222,27 @@ export default function crayonProject() {
         <Windows95FrameInner>  
           <CardContainer>
             <CardGap>
-              <CardSection sectionTitle="Navigation transformation">
+              <CardSection sectionTitle="Competitive analysis">
                 <p>I began with low-fidelity sketches exploring horizontal tabs, vertical menus, and hybrid structures. After feedback from the CPO that the sketches were too similar to the existing design, I conducted additional competitive analysis beyond feed-based platforms.</p>
+                <p>During this second round of iteration, what stood out was a dropdown model that was light and modern while preserving context.</p>
                 <div className="py-4">
-                  <CaseStudyImage src={caseStudyCrayon.CrayonCompetitiveAnalysis} alt="Competitive analysis for navigation redesign" caption="I conducted competitive analysis of navigation models from feed-based platforms and beyond"/>
+                  <CaseStudyImage 
+                    src={caseStudyCrayon.CrayonCompetitiveAnalysis} alt="Competitive analysis for navigation redesign" 
+                    caption="I conducted competitive analysis of navigation models from feed-based platforms and beyond"
+                    className="border-none shadow-none"
+                  />
                 </div>
-                <p>What stood out during this second round of exploration was a dropdown model that was light and modern while preserving context.</p>
+                
                 <div className="py-4">
-                  <CaseStudyImage src={caseStudyCrayon.CrayonNavIterations} alt="Early iterations of navigation redesign" caption="Early sketches and higher-fidelity iterations of the navigation redesign"/>
+                  <CaseStudyImage 
+                    src={caseStudyCrayon.CrayonNavIterations} 
+                    alt="Early iterations of navigation redesign" 
+                    caption="Early sketches and higher-fidelity iterations of the navigation redesign"
+                    className="border-none shadow-none"
+                  />
                 </div>
               </CardSection>
-              <CardSection smaller sectionTitle="Final transformation">
+              <CardSection sectionTitle="Navigation transformation">
                 <p>This led to a two-panel dropdown navigation featuring the following improvements.</p>
                 <BulletList>
                   <li><b>Menu item consolidation.</b> Consolidated the main navigation items into a scalable, elastic-searchable dropdown with hover states and expansion options</li>

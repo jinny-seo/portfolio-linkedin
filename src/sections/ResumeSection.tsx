@@ -65,8 +65,8 @@ export const ResumeSection = () => {
                             <ResumeExperience 
                             company="Sabre Labs"
                             title="R&D UX Designer"
-                            startDate="08/2018"
-                            endDate="12/2021"
+                            startDate="07/2016"
+                            endDate="08/2018"
                             items={[
 
                                 "Created interactive prototypes to explore future tech applications in the travel and hospitality space",

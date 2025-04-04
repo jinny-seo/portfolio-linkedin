@@ -43,8 +43,8 @@ export const ResumeSection = () => {
                             <ResumeExperience 
                             company="Crayon"
                             title="Senior UX Designer"
-                            startDate="08/2018"
-                            endDate="12/2021"
+                            startDate="01/2022"
+                            endDate="04/2023"
                             items={[
                                 "Led platform-wide redesign of the navigation, onboarding, and integrations to improve user workflows",
                                 "Shipped improvements to daily alerts and email clarity, helping users understand key feature values of the platform",

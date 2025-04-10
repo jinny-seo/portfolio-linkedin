@@ -3804,32 +3804,32 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js": {
-      "bytes": 5073,
+      "bytes": 5004,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js": {
-      "bytes": 5148,
+      "bytes": 5076,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/mimic/page_client-reference-manifest.js": {
-      "bytes": 5530,
+      "bytes": 5455,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/crayon/page_client-reference-manifest.js": {
-      "bytes": 5531,
+      "bytes": 5456,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/ab/page_client-reference-manifest.js": {
-      "bytes": 5521,
+      "bytes": 5446,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.js": {
-      "bytes": 12756,
+      "bytes": 12741,
       "imports": [
         {
           "path": "fs",
@@ -3849,27 +3849,27 @@
         {
           "path": ".open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/mimic/page_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/mimic/page_client-reference-manifest.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/mimic/page_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/crayon/page_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/crayon/page_client-reference-manifest.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/crayon/page_client-reference-manifest.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/ab/page_client-reference-manifest.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/ab/page_client-reference-manifest.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/ab/page_client-reference-manifest.js"
         }
       ],
       "format": "cjs"
@@ -3890,18 +3890,23 @@
       ],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/403.js": {
-      "bytes": 161250,
+    ".open-next/server-functions/default/.next/server/chunks/147.js": {
+      "bytes": 16458,
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/489.js": {
-      "bytes": 12476,
+    ".open-next/server-functions/default/.next/server/chunks/25.js": {
+      "bytes": 12501,
+      "imports": [],
+      "format": "cjs"
+    },
+    ".open-next/server-functions/default/.next/server/chunks/403.js": {
+      "bytes": 161227,
       "imports": [],
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/chunks/627.js": {
-      "bytes": 67073,
+      "bytes": 67076,
       "imports": [
         {
           "path": "@builder.io/partytown/integration",
@@ -3921,23 +3926,23 @@
       "imports": [],
       "format": "cjs"
     },
-    ".open-next/server-functions/default/.next/server/chunks/73.js": {
-      "bytes": 16462,
-      "imports": [],
-      "format": "cjs"
-    },
     ".open-next/server-functions/default/.next/server/webpack-runtime.js": {
       "bytes": 1881,
       "imports": [
         {
+          "path": ".open-next/server-functions/default/.next/server/chunks/147.js",
+          "kind": "require-call",
+          "original": "./chunks/147.js"
+        },
+        {
+          "path": ".open-next/server-functions/default/.next/server/chunks/25.js",
+          "kind": "require-call",
+          "original": "./chunks/25.js"
+        },
+        {
           "path": ".open-next/server-functions/default/.next/server/chunks/403.js",
           "kind": "require-call",
           "original": "./chunks/403.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/489.js",
-          "kind": "require-call",
-          "original": "./chunks/489.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/chunks/627.js",
@@ -3953,11 +3958,6 @@
           "path": ".open-next/server-functions/default/.next/server/chunks/666.js",
           "kind": "require-call",
           "original": "./chunks/666.js"
-        },
-        {
-          "path": ".open-next/server-functions/default/.next/server/chunks/73.js",
-          "kind": "require-call",
-          "original": "./chunks/73.js"
         }
       ],
       "format": "cjs"
@@ -11190,7 +11190,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/favicon.ico/route.js": {
-      "bytes": 27062,
+      "bytes": 27059,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11226,7 +11226,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/_not-found/page.js": {
-      "bytes": 3994,
+      "bytes": 3991,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11267,7 +11267,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/page.js": {
-      "bytes": 21929,
+      "bytes": 23743,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11313,7 +11313,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/ab/page.js": {
-      "bytes": 11202,
+      "bytes": 11184,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11359,7 +11359,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/crayon/page.js": {
-      "bytes": 19194,
+      "bytes": 19175,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11405,7 +11405,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/.next/server/app/projects/mimic/page.js": {
-      "bytes": 19274,
+      "bytes": 19256,
       "imports": [
         {
           "path": ".open-next/server-functions/default/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js",
@@ -11451,7 +11451,7 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
-      "bytes": 17506,
+      "bytes": 17479,
       "imports": [
         {
           "path": "path",
@@ -11501,47 +11501,47 @@
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_app.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_app.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_app.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_error.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_error.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_error.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_document.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_document.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_document.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/favicon.ico/route.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/favicon.ico/route.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/favicon.ico/route.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/_not-found/page.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/_not-found/page.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/_not-found/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/page.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/page.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/ab/page.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/ab/page.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/ab/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/crayon/page.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/crayon/page.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/crayon/page.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/app/projects/mimic/page.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/app/projects/mimic/page.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/app/projects/mimic/page.js"
         }
       ],
       "format": "cjs"
@@ -11864,22 +11864,22 @@
       "format": "cjs"
     },
     ".open-next/server-functions/default/node_modules/next/dist/server/lib/module-loader/node-module-loader.js": {
-      "bytes": 890,
+      "bytes": 881,
       "imports": [
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_app.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_app.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_app.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_error.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_error.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_error.js"
         },
         {
           "path": ".open-next/server-functions/default/.next/server/pages/_document.js",
           "kind": "require-call",
-          "original": "/Users/jinny/design-portfolio-2025/.open-next/server-functions/default/.next/server/pages/_document.js"
+          "original": "/Users/jinny/portfolio-linkedin/.open-next/server-functions/default/.next/server/pages/_document.js"
         }
       ],
       "format": "cjs"
@@ -12557,7 +12557,7 @@
       "format": "esm"
     },
     ".open-next/server-functions/default/index.mjs": {
-      "bytes": 104472,
+      "bytes": 104466,
       "imports": [
         {
           "path": "node:module",
@@ -14050,19 +14050,19 @@
           "bytesInOutput": 880
         },
         ".open-next/server-functions/default/.next/server/app/page_client-reference-manifest.js": {
-          "bytesInOutput": 5878
+          "bytesInOutput": 5809
         },
         ".open-next/server-functions/default/.next/server/app/_not-found/page_client-reference-manifest.js": {
-          "bytesInOutput": 5967
+          "bytesInOutput": 5895
         },
         ".open-next/server-functions/default/.next/server/app/projects/mimic/page_client-reference-manifest.js": {
-          "bytesInOutput": 6365
+          "bytesInOutput": 6290
         },
         ".open-next/server-functions/default/.next/server/app/projects/crayon/page_client-reference-manifest.js": {
-          "bytesInOutput": 6367
+          "bytesInOutput": 6292
         },
         ".open-next/server-functions/default/.next/server/app/projects/ab/page_client-reference-manifest.js": {
-          "bytesInOutput": 6353
+          "bytesInOutput": 6278
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/load-manifest.js": {
           "bytesInOutput": 13029
@@ -14073,23 +14073,23 @@
         ".open-next/server-functions/default/node_modules/react/jsx-runtime.js": {
           "bytesInOutput": 285
         },
-        ".open-next/server-functions/default/.next/server/chunks/403.js": {
-          "bytesInOutput": 243078
+        ".open-next/server-functions/default/.next/server/chunks/147.js": {
+          "bytesInOutput": 18716
         },
-        ".open-next/server-functions/default/.next/server/chunks/489.js": {
-          "bytesInOutput": 14439
+        ".open-next/server-functions/default/.next/server/chunks/25.js": {
+          "bytesInOutput": 14463
+        },
+        ".open-next/server-functions/default/.next/server/chunks/403.js": {
+          "bytesInOutput": 243056
         },
         ".open-next/server-functions/default/.next/server/chunks/627.js": {
-          "bytesInOutput": 99718
+          "bytesInOutput": 99721
         },
         ".open-next/server-functions/default/.next/server/chunks/638.js": {
           "bytesInOutput": 152766
         },
         ".open-next/server-functions/default/.next/server/chunks/666.js": {
           "bytesInOutput": 84184
-        },
-        ".open-next/server-functions/default/.next/server/chunks/73.js": {
-          "bytesInOutput": 18720
         },
         ".open-next/server-functions/default/.next/server/webpack-runtime.js": {
           "bytesInOutput": 3203
@@ -16063,22 +16063,22 @@
           "bytesInOutput": 132994
         },
         ".open-next/server-functions/default/.next/server/app/favicon.ico/route.js": {
-          "bytesInOutput": 34217
+          "bytesInOutput": 34214
         },
         ".open-next/server-functions/default/.next/server/app/_not-found/page.js": {
-          "bytesInOutput": 4865
+          "bytesInOutput": 4862
         },
         ".open-next/server-functions/default/.next/server/app/page.js": {
-          "bytesInOutput": 25936
+          "bytesInOutput": 28038
         },
         ".open-next/server-functions/default/.next/server/app/projects/ab/page.js": {
-          "bytesInOutput": 13023
+          "bytesInOutput": 13005
         },
         ".open-next/server-functions/default/.next/server/app/projects/crayon/page.js": {
-          "bytesInOutput": 21737
+          "bytesInOutput": 21718
         },
         ".open-next/server-functions/default/.next/server/app/projects/mimic/page.js": {
-          "bytesInOutput": 21788
+          "bytesInOutput": 21770
         },
         ".open-next/server-functions/default/node_modules/next/dist/server/require.js": {
           "bytesInOutput": 15821
@@ -16204,10 +16204,10 @@
           "bytesInOutput": 8944
         },
         ".open-next/server-functions/default/index.mjs": {
-          "bytesInOutput": 102042
+          "bytesInOutput": 102036
         }
       },
-      "bytes": 11912057
+      "bytes": 11913727
     }
   }
 }

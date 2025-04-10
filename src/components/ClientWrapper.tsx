@@ -1,15 +1,24 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import mixpanel from 'mixpanel-browser';
+
+function getUtmSource(searchParams: URLSearchParams) {
+  const utm_source = searchParams.get('utm_source') ?? 'direct';
+
+  // Save to localStorage for future use (optional)
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('utm_source', utm_source);
+  }
+
+  return utm_source;
+}
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const initialized = useRef(false);
-
-  console.log('MIXPANEL TOKEN:', process.env.NEXT_PUBLIC_MIXPANEL_TOKEN);
-
 
   useEffect(() => {
     if (!initialized.current) {
@@ -25,9 +34,28 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
 
   useEffect(() => {
     if (initialized.current && typeof mixpanel.track === 'function') {
-      mixpanel.track('Page Viewed', { pathname });
+      const utm_source = getUtmSource(searchParams);
+
+      // Track page view with just utm_source
+      mixpanel.track('Page Viewed', {
+        pathname,
+        utm_source,
+      });
+
+      // Set it on the user profile once
+      mixpanel.people?.set_once({
+        'UTM Source': utm_source,
+      });
+
+      // Clean URL by removing query params
+      if (typeof window !== 'undefined' && window.location.search.includes('utm_')) {
+        setTimeout(() => {
+          const cleanUrl = window.location.pathname + window.location.hash;
+          window.history.replaceState(null, '', cleanUrl);
+        }, 500);
+      }
     }
-  }, [pathname]);
+  }, [pathname, searchParams]);
 
   return <>{children}</>;
 }

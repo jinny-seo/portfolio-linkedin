@@ -2,16 +2,18 @@
   "name": "design-portfolio-2025",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "preview": "opennextjs-cloudflare preview && wrangler dev",
-  "deploy": "opennextjs-cloudflare deploy && wrangler deploy",
-  "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
-},
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare preview && wrangler dev",
+    "deploy": "opennextjs-cloudflare deploy && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+  },
   "dependencies": {
+    "mixpanel-browser": "^2.63.0",
+    "mixpanel-react-native": "^3.0.8",
     "next": "15.1.7",
     "node": "^23.9.0",
     "react": "^19.0.0",

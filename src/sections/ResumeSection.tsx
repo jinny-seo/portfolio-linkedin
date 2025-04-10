@@ -3,6 +3,8 @@ import Image from "next/image";
 import { icon } from "@/assets/icon";
 import NotebookPaperContainer from "@/components/NotebookPaperContainer";
 import ResumeExperience from "./ResumeExperience";
+import mixpanel from 'mixpanel-browser';
+
 
 export const ResumeSection = () => {
     return (
@@ -12,16 +14,20 @@ export const ResumeSection = () => {
                     <div className="flex mt-[4.5rem]">
                         <h2 className="flex-1 font-Doto -mb-[0.4rem] text-[1.8rem] lg:text-[2rem]">Resume</h2>
                         <a 
-                            href="/seo-resume.pdf" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="flex items-center gap-2 -mb-[0.84rem] font-Doto text-blue-800 hover:underline "
-                        >
-                        {/* <div className="flex items-center gap-2 px-6"> */}
-                            <Image src={icon.download} alt="" width={13.5} height={13.5}/>
-                            <p className="mt-[0.1rem]">View PDF</p>    
-                        {/* </div> */}
-                        </a>
+  href="/seo-resume.pdf" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  onClick={() => {
+    mixpanel.track('Resume Clicked', {
+      location: 'About Section', // or 'Hero', 'Footer', etc.
+      timestamp: new Date().toISOString(),
+    });
+  }}
+  className="flex items-center gap-2 -mb-[0.84rem] font-Doto text-blue-800 hover:underline"
+>
+  <Image src={icon.download} alt="" width={13.5} height={13.5} />
+  <p className="mt-[0.1rem]">View PDF</p>    
+</a>
                     </div>
                 </NotebookPaperContainer>
 

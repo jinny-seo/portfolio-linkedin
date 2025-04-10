@@ -21,15 +21,6 @@ import CrayonNavIterations from './project/Crayon_early-iterations.png';
 import CrayonUserTesting1 from './project/Crayon_user-testing-1.png';
 import CrayonUserTesting2 from './project/Crayon_user-testing-2.png';
 import CrayonUserTesting3 from './project/Crayon_user-testing-3.png';
-import MimicOld from './project/Mimic_old.png';
-import MimicNewNodesOverview from './project/Mimic_new-nodes-overview.png';
-import MimicNewNodesDetails1 from './project/Mimic_new-node-details-1.png';
-import MimicNewNodesDetails2 from './project/Mimic_new-node-details-2.png';
-import MimicNewNodesDetails3 from './project/Mimic_new-node-details-3.png';
-import MimicDS from './project/Mimic_ds.png';
-import MimicMarketing from './project/Mimic_marketing.png';
-import MimicDiagram from './project/Mimic_diagram.png';
-
 
 
 
@@ -60,15 +51,4 @@ export const caseStudyCrayon = {
     CrayonUserTesting1,
     CrayonUserTesting2,
     CrayonUserTesting3,
-};
-
-export const caseStudyMimic = {
-    MimicOld,
-    MimicNewNodesOverview,
-    MimicNewNodesDetails1,
-    MimicNewNodesDetails2,
-    MimicNewNodesDetails3,
-    MimicDS,
-    MimicMarketing,
-    MimicDiagram,
 };

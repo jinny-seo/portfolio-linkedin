@@ -3,7 +3,7 @@ import projABSecondary from './project/AB_hero-with-nav.png';
 import projCrayon from './project/Crayon_hero-dropdown.png';
 import projCrayonSecondary from './project/Crayon_hero-insights.png';
 import projMimic from './project/Mimic_hero.png';
-import projMimicSecondary from './project/Mimic_hero-node-degraded.png';
+import projMimicSecondary from './project/Mimic_hero.png';
 import projETC from './project/proj-etc.png';
 import projRyan from './project/proj-ryan.png';
 import projOM from './project/proj-om.png';

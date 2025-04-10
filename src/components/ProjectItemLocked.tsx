@@ -34,7 +34,7 @@ export const ProjectItemLocked: React.FC<ProjectItemProps> = ({name, company, de
                 {/* Show description and nav buttons when screen size is small: START */}
                 <div className='md:hidden flex flex-col gap-4 mx-3 mt-4 mb-3'>
                     <p className="">{description}</p>
-                    <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} locked />
+                    <ProjectPreviewNav currProjLink={link} prevProjLink={prevProjLink} nextProjLink={nextProjLink} label="Locked" locked />
                 </div>
                 {/* Show description and nav buttons when screen size is small: END */}
             </Windows95FrameOuter>

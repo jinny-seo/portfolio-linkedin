@@ -8,15 +8,26 @@ interface ProjectPreviewNavProps {
     currProjLink: string;
     prevProjLink: string | null;
     nextProjLink: string | null;
+    label?: string;
+    locked?: boolean;
 }
 
-const ProjectPreviewNav: React.FC<ProjectPreviewNavProps> = ({ currProjLink, prevProjLink, nextProjLink }) => {
+const ProjectPreviewNav: React.FC<ProjectPreviewNavProps> = ({ currProjLink, prevProjLink, nextProjLink, label="View", locked }) => {
     return (
         <div className='flex flex-row gap-2'>
         <div className='w-full' >
-            <TransitionLink href={currProjLink}>
-                <Windows95Button label="View" />
-            </TransitionLink>
+            {locked ? 
+                (
+                    <div className="relative group">
+                    <Windows95Button label={label} disabled />
+                    <div className="absolute left-1/2 -translate-x-1/2 -top-9 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-10 after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-black">
+                      Contact me for access
+                    </div>
+                  </div>
+                )
+                : 
+                (<TransitionLink href={currProjLink}><Windows95Button label={label} /></TransitionLink>)}
+            
         </div>
         <div className="flex flex-row gap-[0.1rem]">
             {prevProjLink ? (

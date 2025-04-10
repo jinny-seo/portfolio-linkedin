@@ -13,7 +13,7 @@ export const HeroSection = () => {
                 <div className="flex flex-1">
                     <div className="lg:pr-12 xl:pr-16">
                         <div className="flex-1 w-full ">
-                            <h1 className="title-hero">Eunji Jinny Seo</h1>
+                            <h1 className="title-hero">Eunji "Jinny" Seo</h1>
                             <p className="subtitle-hero">Enterprise Product Designer</p>
                             <p className="subtitle-hero divider-hero-spacing">. . .</p>
                             <div className="flex flex-col w-full">

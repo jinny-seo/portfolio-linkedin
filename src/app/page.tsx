@@ -8,6 +8,7 @@ import { ProjectItem } from "@/components/ProjectItem";
 import { HeroSection } from "@/sections/HeroSection";
 import { SectionTitle } from "@/sections/SectionTitle";
 import { ResumeSection } from "@/sections/ResumeSection";
+import { ProjectItemLocked } from "@/components/ProjectItemLocked";
 
 export default function Home() {
   const isNavVisible = activeScroll();
@@ -46,6 +47,18 @@ export default function Home() {
                   index < projAssets.length - 1 ? `#project-${projAssets[index + 1].link}` : null;
                 return (
                   <div key={project.name} id={`project-${project.link}`} className="pt-[1rem] md:pt-[2rem] pb-[2rem] md:pb-[4rem] ">
+                  {index === 0 ? (
+                    <ProjectItemLocked
+                      name={project.name}
+                      company={project.company}
+                      date={project.date}
+                      description={project.description}
+                      link={`/projects/${project.link}`}
+                      image={project.image}
+                      prevProjLink={prevProjLink}
+                      nextProjLink={nextProjLink}
+                    />
+                  ) : (
                     <ProjectItem
                       name={project.name}
                       company={project.company}
@@ -56,7 +69,8 @@ export default function Home() {
                       prevProjLink={prevProjLink}
                       nextProjLink={nextProjLink}
                     />
-                  </div>
+                  )}
+                </div>
                 );
             })}
           </div>
